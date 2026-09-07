@@ -1,0 +1,14 @@
+THAIPAIN AI — FINAL DAY CHECKLIST
+
+[ ] Deploy GitHub Pages และทดสอบ QR ด้วย Android + iPhone จริง
+[ ] ทดสอบ Camera permission ผ่าน HTTPS
+[ ] เปิด Demo Case ได้แม้ Live AI มีปัญหา
+[ ] เตรียม hotspot สำรอง
+[ ] เปิดหน้า QR ค้างไว้ก่อนกรรมการเข้า
+[ ] Demo หลักใช้ Office Syndrome
+[ ] Safety Alert ใช้เฉพาะเมื่อกรรมการถามเรื่องความปลอดภัย
+[ ] ห้ามเรียก Head-turn Proxy ว่า validated cervical ROM
+[ ] ห้ามเรียก ThaiPain Score ว่า diagnostic score
+[ ] Impact Dashboard ที่ยังไม่มีข้อมูลจริงต้องติด SIMULATED
+[ ] Pilot 3–5 sites / 100–200 assessments ต้องเรียก proposed targets
+[ ] ปิดด้วย Measure → Care → Evidence → Scale

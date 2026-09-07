@@ -1,0 +1,16 @@
+THAIPAIN AI v7 — JUDGE DEMO CUE
+
+00:00–00:10  เปิด Judge Mode
+“เรากำลังเปลี่ยนคำว่า รู้สึกดีขึ้น ให้เป็นข้อมูลที่วัดและติดตามได้”
+
+00:10–00:20  เปิด Demo Case: Office Syndrome
+Pain 7/10 | R Proxy 41° | Posture 78 | ThaiPain Score 68
+
+00:20–00:30  เปิด THAI SAFE
+ย้ำว่า AI ไม่ได้แทนผู้ประกอบวิชาชีพ และมี safety gate
+
+00:30–00:40  Before / After
+Pain 7 → 3 | R Proxy 41° → 58° | Score 68 → 32
+
+00:40–00:45  Analytics
+ThaiPain AI → Real-world Evidence → THAI MED AI

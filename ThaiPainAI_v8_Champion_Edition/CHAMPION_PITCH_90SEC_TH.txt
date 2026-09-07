@@ -1,0 +1,35 @@
+THAIPAIN AI v8 — CHAMPION PITCH 90 SEC
+
+0–15 วินาที
+“หลังการนวด คนไข้บอกว่าดีขึ้น แต่คำถามคือ ดีขึ้นเท่าไร?”
+ThaiPain AI เปลี่ยนความรู้สึกให้เป็นข้อมูลที่วัดและติดตามได้
+
+15–35 วินาที
+โชว์ Office Syndrome Demo:
+Pain 7/10 + Camera Pose + R Head-turn Proxy 41° + Posture + ThaiPain Score
+ย้ำว่า ROM เป็น camera-estimated movement proxy ไม่ใช่เครื่องมือวินิจฉัย
+
+35–50 วินาที
+THAI SAFE → Safety Gate
+AI Recommendation → Practitioner Review → Care Plan
+“AI ไม่ได้แทนผู้ประกอบวิชาชีพ”
+
+50–65 วินาที
+Before / After:
+Pain 7 → 3
+R Proxy 41° → 58°
+ThaiPain Score 68 → 32
+
+65–78 วินาที
+Validation:
+Camera proxy เทียบ reference measurement
+ICC / SEM / MDC / Bland–Altman
+Pilot 90 วัน: proposed 3–5 sites, 100–200 assessments
+
+78–90 วินาที
+“สิ่งที่เราสร้างไม่ใช่แค่ AI แต่คือวงจรข้อมูล:
+Thai knowledge → standardized assessment → safety → practitioner-reviewed outcomes → evidence”
+
+ปิด:
+Measure → Care → Evidence → Scale
+From Thai Wisdom to Global Evidence.
