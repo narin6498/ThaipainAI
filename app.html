@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="theme-color" content="#062e24">
 <title>ThaiPain AI</title>
-<link rel="manifest" href="manifest.webmanifest?v=8.8.0-fourview">
+<link rel="manifest" href="manifest.webmanifest?v=8.8.5-rightfix">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ThaiPain AI">
@@ -32,6 +32,7 @@ input[type=text],input[type=number],select{width:100%;padding:11px;border:1px so
 .bodywrap{display:grid;grid-template-columns:1.15fr .85fr;gap:8px}.bodysvg{background:linear-gradient(180deg,#0d4638,#082c24);border-radius:18px;padding:6px;min-height:310px;position:relative}.bodysvg svg{width:100%;height:300px}.hot{fill:#f0d8c1;stroke:#baa894;stroke-width:2;cursor:pointer}.hot.sel{fill:#f64f42;stroke:#ffd36b;filter:drop-shadow(0 0 8px #f74)}.bodyNote{font-size:11px;color:white;background:#0008;border-radius:12px;padding:8px;position:absolute;left:10px;right:10px;bottom:10px}
 .sidepanel{display:flex;flex-direction:column;gap:7px}.pill{background:#e8f0e9;color:var(--deep);border-radius:99px;padding:6px 8px;font-size:10px;font-weight:800}.legend{font-size:10px;color:#66756d}
 .camera{position:relative;aspect-ratio:3/4;max-height:500px;border-radius:19px;overflow:hidden;background:#071a15;border:1px solid #426c60}video,canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}.camTag,.camStat,.camGuide{position:absolute;z-index:5;color:white;font-size:10px;border-radius:99px;padding:6px 8px}.camTag{top:9px;left:9px;background:#0a4c3bdd}.camStat{top:9px;right:9px;background:#0009}.camGuide{left:10px;right:10px;bottom:10px;background:#000b;text-align:center;border-radius:11px}
+.romLiveBadge{position:absolute;z-index:6;left:50%;top:14px;transform:translateX(-50%);min-width:118px;text-align:center;background:rgba(3,38,30,.88);border:1px solid rgba(244,215,127,.9);color:#fff;border-radius:15px;padding:8px 12px;box-shadow:0 8px 24px #0006;backdrop-filter:blur(4px)}.romLiveBadge .romLabel{font-size:9px;opacity:.82;letter-spacing:.04em}.romLiveBadge .romValue{font-size:26px;line-height:1;font-weight:900;color:#f4d77f;margin-top:2px}.romLiveBadge .romDir{font-size:9px;margin-top:3px;opacity:.9}.romLiveBadge.measure{box-shadow:0 0 0 3px rgba(244,215,127,.25),0 8px 24px #0006}
 .scorebox{background:linear-gradient(180deg,#0b4939,#062d24);border:1px solid #806c3b;border-radius:18px;padding:14px;color:white;text-align:center}.scorebox .v{font-size:40px;font-weight:900;color:#f4d47d}.grade{height:8px;border-radius:99px;background:linear-gradient(90deg,#35aa69,#efd05a,#e54d4d)}
 .question{padding:9px 0;border-bottom:1px solid #e6dece}.toggle{display:flex;gap:7px;margin-top:6px}.toggle button{flex:1;border:1px solid #d0c3ae;background:white;border-radius:11px;padding:8px}.toggle .selected{background:var(--deep);color:white}.ok{background:#e8f6ec;border-left:5px solid var(--green);border-radius:12px;padding:10px}.warn{background:#fff0ed;border-left:5px solid var(--red);border-radius:12px;padding:10px}
 .qrbox{display:flex;gap:10px;align-items:center;background:#f3ecde;border:1px solid #ddd0b9;border-radius:16px;padding:10px}#qrcode{width:92px;height:92px;background:white;padding:5px;border-radius:8px}.patientText{font-size:12px}.patientText b{font-size:18px;color:var(--deep)}
@@ -79,14 +80,25 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 .camActions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.camStatus{display:flex;gap:7px;align-items:center;border-radius:12px;padding:9px;background:#edf6ef;border:1px solid #c4dbc9;font-size:11px;margin-top:8px}
 
 .realHumanMap{position:relative;background:linear-gradient(180deg,#0d4638,#082c24);border-radius:18px;overflow:hidden;min-height:310px}
-.realHumanMap img{width:100%;height:100%;min-height:310px;object-fit:cover;display:block}.painHot{z-index:3}.painHot:not(.sel){background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.30)}.painHot:not(.sel)::after{background:rgba(255,255,255,.05)}
-.painHot{position:absolute;width:46px;height:46px;border-radius:50%;border:2px solid transparent;background:rgba(255,60,45,.10);cursor:pointer;transform:translate(-50%,-50%)}
-.painHot::after{content:"";position:absolute;inset:10px;border-radius:50%;background:rgba(255,60,45,.25)}
-.painHot.sel{border-color:#ffd36b;background:rgba(255,70,50,.28);box-shadow:0 0 0 12px rgba(255,70,50,.13),0 0 18px rgba(255,70,50,.75)}
+.realHumanMap img{width:100%;height:100%;min-height:310px;object-fit:cover;display:block}.painHot{z-index:3}.painHot:not(.sel){background:transparent;border-color:transparent;box-shadow:none}.painHot:not(.sel)::after{background:transparent}
+.painHot{position:absolute;width:46px;height:46px;border-radius:50%;border:0;background:transparent;cursor:pointer;transform:translate(-50%,-50%);outline:none;-webkit-tap-highlight-color:transparent}
+.painHot::after{content:"";position:absolute;inset:10px;border-radius:50%;background:transparent}
+.painHot:focus,.painHot:focus-visible{outline:none}
+.painHot.sel{border:2px solid #ffd36b;background:rgba(255,70,50,.28);box-shadow:0 0 0 12px rgba(255,70,50,.13),0 0 18px rgba(255,70,50,.75)}
 .painHot.sel::after{background:#f64f42}
 .realHumanMap .bodyNote{z-index:5}
 
 .viewTabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0}.viewTab{border:1px solid #d9cfbd;background:#f4efe5;color:var(--deep);border-radius:12px;padding:8px 4px;font:inherit;font-size:10px;font-weight:800}.viewTab.active{background:var(--deep);color:#fff;border-color:#cda84d;box-shadow:0 0 0 2px #e5c56f inset}.selectedAreas{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.areaTag{font-size:9px;padding:5px 7px;border-radius:99px;background:#fff;border:1px solid #d7c9b2;color:var(--deep);font-weight:700}.realHumanMap img{object-position:center top}.painHot{touch-action:manipulation}.mapHint{font-size:10px;color:#fff;background:#0008;padding:7px 9px;border-radius:10px;position:absolute;left:10px;top:10px;z-index:6}.clearPain{position:absolute;right:10px;top:10px;z-index:6;border:0;border-radius:10px;padding:7px 9px;background:#fffE;color:var(--deep);font-weight:800}
+
+/* v8.8.5: all human assets fit identically on mobile; right view is mirrored left profile */
+.realHumanMap img, #humanViewImg{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+}
+#humanViewImg.view-right{ transform:scaleX(-1) !important; }
+
 </style>
 </head>
 <body>
@@ -129,7 +141,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
  </div>
  <div class="bodywrap">
   <div class="realHumanMap">
-   <img id="painHumanImg" src="human_front.png?v=8.8.0-fourview" alt="Four-view real human pain map">
+   <img id="painHumanImg" src="human_front.png?v=8.8.5-rightfix" alt="Four-view real human pain map">
    <div class="mapHint" id="viewHint">ด้านหน้า</div>
    <button class="clearPain" onclick="clearPainAreas()">ล้างจุด</button>
    <div id="painHotLayer"></div>
@@ -149,7 +161,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 
 <section id="s3" class="screen"><div class="card">
  <div class="titleRow"><div class="num">03</div><div><h2>AI Body Scan</h2><div class="sub">Real-time pose landmarks</div></div></div>
- <div class="camera"><video id="video" autoplay playsinline muted></video><canvas id="overlay"></canvas><div class="camTag">● LIVE POSE AI</div><div id="aiStatus" class="camStat">Not started</div><div class="camGuide">ยืนให้เห็นศีรษะและหัวไหล่ครบ</div></div>
+ <div class="camera"><video id="video" autoplay playsinline muted></video><canvas id="overlay"></canvas><div class="camTag">● LIVE POSE AI <span id="camFacingTag"></span></div><div id="aiStatus" class="camStat">Not started</div><div id="scanRomBadge" class="romLiveBadge"><div class="romLabel">LIVE ROM / HEAD-TURN PROXY</div><div id="scanRomLive" class="romValue">0°</div><div id="scanRomDir" class="romDir">ตรงกลาง</div></div><div class="camGuide">หันศีรษะซ้าย–ขวา • ค่ามุมจะแสดงแบบ Real-time</div></div>
  <div class="conf"><div class="confDot"></div><div><b>AI Data Quality:</b> <span id="confidenceUI">Ready</span><div class="sub" style="margin:0">ระบบจะแจ้งหากแสงน้อยหรือเห็นร่างกายไม่ครบ</div></div></div>
 <button class="btn deep" onclick="startAI()">เปิดกล้อง + AI</button>
 <button class="btn soft" onclick="openCameraHelp()">🛠 แก้ปัญหากล้อง / Camera Permission</button>
@@ -202,7 +214,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 <section id="s9" class="screen"><div class="card">
  <div class="titleRow"><div class="num">09</div><div><h2>Before / After</h2><div class="sub">วัดผลหลังการดูแล</div></div></div>
  <div class="row"><div class="metric"><div class="label">Pain AFTER</div><div class="v"><span id="painAfterTxt">3</span>/10</div><input id="painAfter" class="range" type="range" min="0" max="10" value="3" oninput="painAfterTxt.textContent=this.value"></div><div class="metric"><div class="label">Function AFTER</div><div class="v"><span id="funcAfterTxt">3</span>/10</div><input id="funcAfter" class="range" type="range" min="0" max="10" value="3" oninput="funcAfterTxt.textContent=this.value"></div></div>
- <div class="camera" style="margin-top:8px"><video id="videoAfter" autoplay playsinline muted></video><canvas id="overlayAfter"></canvas><div class="camTag">● AFTER AI</div><div id="aiStatusAfter" class="camStat">Ready</div><div class="camGuide">หันศีรษะซ้าย–ขวา แล้วจับค่า 8 วินาที</div></div>
+ <div class="camera" style="margin-top:8px"><video id="videoAfter" autoplay playsinline muted></video><canvas id="overlayAfter"></canvas><div class="camTag">● AFTER AI <span id="camFacingAfterTag"></span></div><div id="aiStatusAfter" class="camStat">Ready</div><div id="scanRomAfterBadge" class="romLiveBadge"><div class="romLabel">LIVE ROM AFTER</div><div id="scanRomAfterLive" class="romValue">0°</div><div id="scanRomAfterDir" class="romDir">ตรงกลาง</div></div><div class="camGuide">หันศีรษะซ้าย–ขวา • ค่ามุมจะแสดงแบบ Real-time</div></div>
  <div class="grid2" style="margin-top:8px"><div class="metric dark"><div class="label">AFTER LEFT</div><div id="leftAfterMax" class="v">0°</div></div><div class="metric dark"><div class="label">AFTER RIGHT</div><div id="rightAfterMax" class="v">0°</div></div></div>
  <button class="btn gold" onclick="measureAfter()">จับค่า AFTER 8 วินาที</button>
  <button class="btn deep" onclick="finishAfter()">คำนวณผล + บันทึกเคส</button>
@@ -249,7 +261,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 <div class="camWarn"><b>ถ้ายังไม่ได้:</b><br>Android → Settings → Apps → Chrome → Permissions → Camera → Allow while using the app<br>หรือ Chrome → Settings → Site settings → Camera</div>
 <div class="camActions"><button class="btn deep" onclick="retryCameraFromHelp()">🔄 ลองเปิดกล้องอีกครั้ง</button><button class="btn gold" onclick="closeCameraHelp()">ปิด</button></div>
 </div></div>
-<div class="footer">ThaiPain AI v8.8 • Four-View Interactive Pain Map • Ancient Wisdom. Intelligent Care.</div>
+<div class="footer">ThaiPain AI v8.8.2 • Four-View Interactive Pain Map • Ancient Wisdom. Intelligent Care.</div>
 
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
@@ -259,6 +271,9 @@ import {PoseLandmarker,FilesetResolver,DrawingUtils} from "https://cdn.jsdelivr.
 
 window.state={role:'guest',patientId:'TP-'+Date.now().toString().slice(-6),area:'',areas:[],pain:7,func:6,left:0,right:0,posture:78,scoreBefore:68,painAfter:3,funcAfter:3,leftAfter:0,rightAfter:0,scoreAfter:0,treatmentSeconds:0};
 window.ai={landmarker:null,stream:null,phase:'before',measuring:false,leftMax:0,rightMax:0,leftAfterMax:0,rightAfterMax:0,postureSamples:[]};
+const isMobileDevice=()=>/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)||((navigator.maxTouchPoints||0)>1&&Math.min(screen.width,screen.height)<900);
+const preferredFacingMode=()=>isMobileDevice()?'environment':'user';
+function applyCameraMirror(videoEl,canvasEl,facing){const mirror=facing==='user';if(videoEl)videoEl.style.transform=mirror?'scaleX(-1)':'none';if(canvasEl)canvasEl.style.transform=mirror?'scaleX(-1)':'none';}
 const v=document.getElementById('video'),c=document.getElementById('overlay'),cx=c.getContext('2d'),va=document.getElementById('videoAfter'),ca=document.getElementById('overlayAfter'),cxa=ca.getContext('2d');
 progress.innerHTML=Array.from({length:10},(_,i)=>`<div class="prog"></div>`).join('');
 
@@ -266,13 +281,13 @@ window.loginAs=(r)=>{state.role=r;roleBadge.textContent=r==='patient'?'Patient':
 function makeQR(){qrcode.innerHTML='';new QRCode(qrcode,{text:state.patientId,width:82,height:82,colorDark:'#06382d',colorLight:'#ffffff'})}
 window.go=(n)=>{document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));const id=typeof n==='number'?'s'+n:n;document.getElementById(id).classList.add('active');document.querySelectorAll('.prog').forEach((x,i)=>x.classList.toggle('on',typeof n==='number'&&i<n));window.scrollTo({top:0,behavior:'smooth'})};
 const painViews={
- front:{label:'ด้านหน้า',img:'human_front.png?v=8.8.0-fourview',zones:[
+ front:{label:'ด้านหน้า',img:'human_front.png?v=8.8.5-rightfix',zones:[
   ['หน้าผาก',50,10],['คอด้านหน้า',50,19],['ไหล่ขวา',30,25],['ไหล่ซ้าย',70,25],['หน้าอก',50,35],['ท้อง',50,50],['ศอกขวา',18,47],['ศอกซ้าย',82,47],['ข้อมือขวา',14,62],['ข้อมือซ้าย',86,62],['เข่าขวา',34,76],['เข่าซ้าย',66,76],['ข้อเท้าขวา',32,92],['ข้อเท้าซ้าย',68,92]]},
- back:{label:'ด้านหลัง',img:'human_back.png?v=8.8.0-fourview',zones:[
+ back:{label:'ด้านหลัง',img:'human_back.png?v=8.8.5-rightfix',zones:[
   ['คอ',50,21],['บ่าขวา',32,29],['บ่าซ้าย',69,29],['หลังส่วนบน',50,39],['หลังส่วนล่าง',50,62],['ศอกขวา',22,56],['ศอกซ้าย',80,56],['สะโพกขวา',37,86],['สะโพกซ้าย',67,86],['น่องขวา',38,94],['น่องซ้าย',63,94]]},
- left:{label:'ด้านซ้าย',img:'human_left.png?v=8.8.0-fourview',zones:[
+ left:{label:'ด้านซ้าย',img:'human_left.png?v=8.8.5-rightfix',zones:[
   ['ศีรษะซ้าย',52,10],['คอซ้าย',50,19],['หัวไหล่ซ้าย',48,26],['ต้นแขนซ้าย',43,36],['ศอกซ้าย',42,47],['ข้อมือซ้าย',40,60],['สะโพกซ้าย',49,67],['เข่าซ้าย',53,78],['น่องซ้าย',54,87],['ข้อเท้าซ้าย',55,95]]},
- right:{label:'ด้านขวา',img:'human_right.png?v=8.8.0-fourview',zones:[
+ right:{label:'ด้านขวา',img:'human_right.png?v=8.8.5-rightfix',zones:[
   ['ศีรษะขวา',48,10],['คอขวา',50,19],['หัวไหล่ขวา',52,26],['ต้นแขนขวา',57,36],['ศอกขวา',58,47],['ข้อมือขวา',60,60],['สะโพกขวา',51,67],['เข่าขวา',47,78],['น่องขวา',46,87],['ข้อเท้าขวา',45,95]]}
 };
 window.currentPainView='front';
@@ -294,7 +309,7 @@ async function initPose(){
  ai.landmarker=await PoseLandmarker.createFromOptions(vision,{baseOptions:{modelAssetPath:"https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task",delegate:"CPU"},runningMode:"VIDEO",numPoses:1,minPoseDetectionConfidence:.5,minPosePresenceConfidence:.5,minTrackingConfidence:.5});
  aiStatus.textContent='AI Ready';
 }
-window.startAI=async()=>{try{await initPose();if(!ai.stream)ai.stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user',width:{ideal:720},height:{ideal:960}},audio:false});v.srcObject=ai.stream;await v.play();requestAnimationFrame(()=>loop(v,c,cx,'before'))}catch(e){alert('เปิดกล้องไม่ได้: '+e.message)}};
+window.startAI=async()=>{try{await initPose();const facing=preferredFacingMode();if(ai.stream){ai.stream.getTracks().forEach(t=>t.stop());ai.stream=null}ai.stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing},width:{ideal:720},height:{ideal:960}},audio:false});v.srcObject=ai.stream;applyCameraMirror(v,c,facing);if(window.camFacingTag)camFacingTag.textContent=facing==='environment'?'• กล้องหลัง':'• กล้องหน้า';await v.play();requestAnimationFrame(()=>loop(v,c,cx,'before'))}catch(e){alert('เปิดกล้องไม่ได้: '+e.message)}};
 function fit(vv,cc){if(vv.videoWidth&&cc.width!==vv.videoWidth){cc.width=vv.videoWidth;cc.height=vv.videoHeight}}
 function yaw(lm){const n=lm[0],le=lm[7],re=lm[8];if(!n||!le||!re)return 0;const span=Math.max(Math.abs(re.x-le.x),.02),mid=(le.x+re.x)/2;return Math.max(-70,Math.min(70,((n.x-mid)/(span/2))*45))}
 function postureMetric(lm){
@@ -308,12 +323,12 @@ function loop(vv,cc,xx,phase){
   const stat=phase==='before'?aiStatus:aiStatusAfter;
   if(r.landmarks?.length){
    const lm=r.landmarks[0],du=new DrawingUtils(xx);du.drawConnectors(lm,PoseLandmarker.POSE_CONNECTIONS,{color:'#55f0ad',lineWidth:4});du.drawLandmarks(lm,{color:'#f2ce72',radius:3});stat.textContent='Pose detected ✓';
-   const y=yaw(lm);if(phase==='before'){liveYaw.textContent=(y>=0?'+':'')+y.toFixed(0)+'°';ai.postureSamples.push(postureMetric(lm));if(ai.postureSamples.length>30)ai.postureSamples.shift();if(ai.measuring&&ai.phase==='before'){if(y<0)ai.leftMax=Math.max(ai.leftMax,Math.abs(y));else ai.rightMax=Math.max(ai.rightMax,y);leftMax.textContent=ai.leftMax.toFixed(0)+'°';rightMax.textContent=ai.rightMax.toFixed(0)+'°'}}else if(ai.measuring&&ai.phase==='after'){if(y<0)ai.leftAfterMax=Math.max(ai.leftAfterMax,Math.abs(y));else ai.rightAfterMax=Math.max(ai.rightAfterMax,y);leftAfterMax.textContent=ai.leftAfterMax.toFixed(0)+'°';rightAfterMax.textContent=ai.rightAfterMax.toFixed(0)+'°'}
+   const y=yaw(lm);const absY=Math.abs(y);const dir=absY<3?'ตรงกลาง':(y<0?'หันซ้าย':'หันขวา');if(phase==='before'){liveYaw.textContent=(y>=0?'+':'')+y.toFixed(0)+'°';if(window.scanRomLive)scanRomLive.textContent=absY.toFixed(0)+'°';if(window.scanRomDir)scanRomDir.textContent=dir;if(window.scanRomBadge)scanRomBadge.classList.toggle('measure',!!(ai.measuring&&ai.phase==='before'));ai.postureSamples.push(postureMetric(lm));if(ai.postureSamples.length>30)ai.postureSamples.shift();if(ai.measuring&&ai.phase==='before'){if(y<0)ai.leftMax=Math.max(ai.leftMax,absY);else ai.rightMax=Math.max(ai.rightMax,y);leftMax.textContent=ai.leftMax.toFixed(0)+'°';rightMax.textContent=ai.rightMax.toFixed(0)+'°'}}else{if(window.scanRomAfterLive)scanRomAfterLive.textContent=absY.toFixed(0)+'°';if(window.scanRomAfterDir)scanRomAfterDir.textContent=dir;if(window.scanRomAfterBadge)scanRomAfterBadge.classList.toggle('measure',!!(ai.measuring&&ai.phase==='after'));if(ai.measuring&&ai.phase==='after'){if(y<0)ai.leftAfterMax=Math.max(ai.leftAfterMax,absY);else ai.rightAfterMax=Math.max(ai.rightAfterMax,y);leftAfterMax.textContent=ai.leftAfterMax.toFixed(0)+'°';rightAfterMax.textContent=ai.rightAfterMax.toFixed(0)+'°'}}
   }else stat.textContent='No pose';
  }catch(e){}}
  requestAnimationFrame(()=>loop(vv,cc,xx,phase))
 }
-window.measureBefore=()=>{if(!ai.stream){alert('กรุณาเปิดกล้องก่อน');return}ai.leftMax=0;ai.rightMax=0;ai.phase='before';ai.measuring=true;setTimeout(()=>{ai.measuring=false;alert('บันทึก BEFORE แล้ว')},8000)};
+window.measureBefore=()=>{if(!ai.stream){alert('กรุณาเปิดกล้องก่อน');return}ai.leftMax=0;ai.rightMax=0;ai.phase='before';ai.measuring=true;if(window.scanRomBadge)scanRomBadge.classList.add('measure');setTimeout(()=>{ai.measuring=false;if(window.scanRomBadge)scanRomBadge.classList.remove('measure');alert('บันทึก BEFORE แล้ว • ซ้าย '+ai.leftMax.toFixed(0)+'° • ขวา '+ai.rightMax.toFixed(0)+'°')},8000)};
 function calcScore(pain,func,l,r,posture){const rlim=Math.max(0,60-Math.min(l||35,r||35));return Math.round(Math.min(100,pain*4+func*2+rlim*.65+(100-posture)*.18))}
 window.finishBefore=()=>{state.left=Math.round(ai.leftMax||62);state.right=Math.round(ai.rightMax||41);state.posture=Math.round(ai.postureSamples.reduce((a,b)=>a+b,0)/Math.max(1,ai.postureSamples.length))||78;state.scoreBefore=calcScore(state.pain,state.func,state.left,state.right,state.posture);resPain.textContent=state.pain+'/10';resRom.textContent=state.right+'°';postureScore.textContent=state.posture;thaiScore.textContent=state.scoreBefore+' / 100';go(5)};
 
@@ -323,8 +338,8 @@ window.setAns=(i,v,b)=>{ans[i]=v;[...b.parentElement.children].forEach(x=>x.clas
 window.evalSafety=()=>{if(ans.some(Boolean)){safeResult.className='warn';safeResult.innerHTML='<b>⚠ SAFETY ALERT</b><br>หยุด flow คำแนะนำการนวดและควรได้รับการประเมินโดยบุคลากรทางการแพทย์'}else{safeResult.className='ok';safeResult.innerHTML='<b>✓ ไม่พบสัญญาณความเสี่ยงจากการคัดกรองเบื้องต้น</b><br><button class="btn gold" onclick="go(7)">ดำเนินการต่อ →</button>'}};
 
 let sec=0,tm=null;window.toggleTimer=()=>{if(tm){clearInterval(tm);tm=null;return}tm=setInterval(()=>{sec++;state.treatmentSeconds=sec;timer.textContent=[Math.floor(sec/3600),Math.floor(sec%3600/60),sec%60].map(x=>String(x).padStart(2,'0')).join(':')},1000)};
-window.prepareAfterCamera=async()=>{try{await initPose();if(!ai.stream)ai.stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false});va.srcObject=ai.stream;await va.play();requestAnimationFrame(()=>loop(va,ca,cxa,'after'))}catch(e){alert('เปิดกล้อง AFTER ไม่ได้: '+e.message)}};
-window.measureAfter=()=>{if(!ai.stream){alert('กรุณาเปิดกล้องก่อน');return}ai.leftAfterMax=0;ai.rightAfterMax=0;ai.phase='after';ai.measuring=true;setTimeout(()=>{ai.measuring=false;alert('บันทึก AFTER แล้ว')},8000)};
+window.prepareAfterCamera=async()=>{try{await initPose();const facing=preferredFacingMode();if(ai.stream){ai.stream.getTracks().forEach(t=>t.stop());ai.stream=null}ai.stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing},width:{ideal:720},height:{ideal:960}},audio:false});va.srcObject=ai.stream;applyCameraMirror(va,ca,facing);if(window.camFacingAfterTag)camFacingAfterTag.textContent=facing==='environment'?'• กล้องหลัง':'• กล้องหน้า';await va.play();requestAnimationFrame(()=>loop(va,ca,cxa,'after'))}catch(e){alert('เปิดกล้อง AFTER ไม่ได้: '+e.message)}};
+window.measureAfter=()=>{if(!ai.stream){alert('กรุณาเปิดกล้องก่อน');return}ai.leftAfterMax=0;ai.rightAfterMax=0;ai.phase='after';ai.measuring=true;if(window.scanRomAfterBadge)scanRomAfterBadge.classList.add('measure');setTimeout(()=>{ai.measuring=false;if(window.scanRomAfterBadge)scanRomAfterBadge.classList.remove('measure');alert('บันทึก AFTER แล้ว • ซ้าย '+ai.leftAfterMax.toFixed(0)+'° • ขวา '+ai.rightAfterMax.toFixed(0)+'°')},8000)};
 window.finishAfter=()=>{state.painAfter=+painAfter.value;state.funcAfter=+funcAfter.value;state.leftAfter=Math.round(ai.leftAfterMax||Math.min(70,state.left+8));state.rightAfter=Math.round(ai.rightAfterMax||Math.min(70,state.right+15));state.scoreAfter=calcScore(state.painAfter,state.funcAfter,state.leftAfter,state.rightAfter,Math.min(100,state.posture+6));const pi=Math.max(0,(state.pain-state.painAfter)/Math.max(1,state.pain)*100),rc=state.rightAfter-state.right;outcomeBox.className='ok';outcomeBox.innerHTML=`<b>ผลลัพธ์</b><br>Pain ${state.pain} → ${state.painAfter} (${pi.toFixed(0)}% improvement)<br>R Proxy ${state.right}° → ${state.rightAfter}° (${rc>=0?'+':''}${rc}°)<br>ThaiPain Score ${state.scoreBefore} → ${state.scoreAfter}`;saveCase()};
 function saveCase(){const arr=JSON.parse(localStorage.getItem('thaipain_v6')||'[]');const item={...state,createdAt:new Date().toISOString()};const i=arr.findIndex(x=>x.patientId===item.patientId);if(i>=0)arr[i]=item;else arr.push(item);localStorage.setItem('thaipain_v6',JSON.stringify(arr))}
 window.renderAnalytics=()=>{const arr=JSON.parse(localStorage.getItem('thaipain_v6')||'[]');kCases.textContent=arr.length;if(arr.length){const ap=arr.reduce((s,x)=>s+Math.max(0,(x.pain-x.painAfter)/Math.max(1,x.pain)*100),0)/arr.length,ar=arr.reduce((s,x)=>s+(x.rightAfter-x.right),0)/arr.length,as=arr.reduce((s,x)=>s+x.scoreAfter,0)/arr.length;kPain.textContent=ap.toFixed(0)+'%';kRom.textContent=(ar>=0?'+':'')+ar.toFixed(1)+'°';kScore.textContent=as.toFixed(0)}else{kPain.textContent='0%';kRom.textContent='0°';kScore.textContent='0'}rows.innerHTML=arr.slice().reverse().map(x=>`<tr><td>${x.patientId}</td><td>${x.pain}→${x.painAfter}</td><td>${x.right}→${x.rightAfter}°</td><td>${x.scoreBefore}→${x.scoreAfter}</td></tr>`).join('')};
@@ -370,7 +385,7 @@ window.installPWA=async()=>{
   const isiOS=/iPad|iPhone|iPod/.test(ua);
   if(isiOS){const el=document.getElementById('iosInstall');if(el)el.style.display='block';}
   if('serviceWorker' in navigator){
-    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.8.0-fourview').catch(()=>{}));
+    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.8.5-rightfix').catch(()=>{}));
   }
 })();
 </script>
@@ -441,7 +456,8 @@ async function updateCameraPermissionUI(){
 async function retryCameraFromHelp(){
  closeCameraHelp();
  try{
-   const s=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false});
+   const facing=preferredFacingMode();
+   const s=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing}},audio:false});
    s.getTracks().forEach(x=>x.stop());
    const t=document.getElementById('camPermText'); if(t)t.textContent='Allowed';
    setTimeout(()=>startAI(),250);
@@ -464,4 +480,19 @@ window.startAI=async function(){
 };
 window.addEventListener('load',updateCameraPermissionUI);
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const img=document.getElementById('humanViewImg');
+  const sync=()=>{
+    if(!img) return;
+    const active=document.querySelector('.viewTab.active,[data-view].active');
+    const v=active && active.dataset ? active.dataset.view : '';
+    img.classList.toggle('view-right', v==='right');
+  };
+  document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setTimeout(sync,0)));
+  sync();
+});
+</script>
+
 </body></html>
