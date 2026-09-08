@@ -32,7 +32,7 @@ jobs:
       - name: Upload ThaiPain AI
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./ThaiPainAI_v8_Champion_Edition"
+          path: "."
 
       - name: Deploy ThaiPain AI
         id: deployment
