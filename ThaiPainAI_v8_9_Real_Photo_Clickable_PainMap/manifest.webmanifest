@@ -1,0 +1,9 @@
+{
+  "name": "ThaiPain AI",
+  "short_name": "ThaiPain AI",
+  "start_url": "./app.html?v=8.8-mobile-recovery",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#063b2f",
+  "theme_color": "#063b2f"
+}
