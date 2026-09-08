@@ -1,0 +1,8 @@
+ThaiPain AI Clinical v8.3
+
+Judge Mode 45 sec: REMOVED
+Demo Cases: REMOVED
+Champion Strategy: REMOVED
+Pitch Mode รอบชิง: REMOVED
+
+หลัง Deploy ให้ดูข้อความด้านล่างแอป: Clinical Build v8.3 • No Judge/Demo/Pitch menus
