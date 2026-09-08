@@ -1,0 +1,17 @@
+<!doctype html><html lang="th"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
+<meta name="theme-color" content="#062e24"><link rel="manifest" href="manifest.webmanifest?v=8.7.1-hardfix"><title>ThaiPainAI</title>
+<style>body{margin:0;background:#062e24;color:#fff;font-family:system-ui,-apple-system,'Noto Sans Thai',sans-serif;display:grid;place-items:center;min-height:100vh}.box{text-align:center;padding:28px}.spin{font-size:44px}.small{opacity:.8;font-size:13px}</style></head><body><div class="box"><div class="spin">✦</div><h2>ThaiPainAI</h2><div class="small">กำลังเปิดเวอร์ชันล่าสุด…</div></div>
+<script>
+(async()=>{
+  try{
+    if('serviceWorker' in navigator){
+      const regs=await navigator.serviceWorker.getRegistrations();
+      for(const r of regs){await r.unregister();}
+    }
+    if('caches' in window){for(const k of await caches.keys()){await caches.delete(k);}}
+  }catch(e){}
+  location.replace('./app.html?v=8.7.1-hardfix&t='+Date.now());
+})();
+</script></body></html>
