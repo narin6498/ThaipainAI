@@ -1,10 +1,10 @@
 {
-  "name": "ThaiPain AI v8.9.0 Four-View Pain Map",
+  "name": "ThaiPainAI",
   "short_name": "ThaiPainAI",
-  "start_url": "./index.html?v=8.9.0-nearme",
+  "start_url": "./app.html?v=8.9.2-no-patient-qr",
   "display": "standalone",
-  "background_color": "#06382d",
-  "theme_color": "#06382d",
+  "background_color": "#062e24",
+  "theme_color": "#062e24",
   "icons": [
     {
       "src": "icon-192.png",
