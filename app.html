@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="theme-color" content="#062e24">
 <title>ThaiPain AI</title>
-<link rel="manifest" href="manifest.webmanifest?v=8.8.9-singleview">
+<link rel="manifest" href="manifest.webmanifest?v=8.9.0-nearme">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ThaiPain AI">
@@ -90,7 +90,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 
 .viewTabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0}.viewTab{border:1px solid #d9cfbd;background:#f4efe5;color:var(--deep);border-radius:12px;padding:8px 4px;font:inherit;font-size:10px;font-weight:800}.viewTab.active{background:var(--deep);color:#fff;border-color:#cda84d;box-shadow:0 0 0 2px #e5c56f inset}.selectedAreas{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.areaTag{font-size:9px;padding:5px 7px;border-radius:99px;background:#fff;border:1px solid #d7c9b2;color:var(--deep);font-weight:700}.realHumanMap img{object-position:center top}.painHot{touch-action:manipulation}.mapHint{font-size:10px;color:#fff;background:#0008;padding:7px 9px;border-radius:10px;position:absolute;left:10px;top:10px;z-index:6}.clearPain{position:absolute;right:10px;top:10px;z-index:6;border:0;border-radius:10px;padding:7px 9px;background:#fffE;color:var(--deep);font-weight:800}
 
-/* v8.8.9: all human assets fit identically on mobile; right view is mirrored left profile */
+/* v8.9.0: all human assets fit identically on mobile; right view is mirrored left profile */
 .realHumanMap img, #humanViewImg{
   width:100% !important;
   height:100% !important;
@@ -100,7 +100,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{ transform:scaleX(-1) !important; }
 
 
-/* v8.8.9 — Full body, no crop + reliable touch targets */
+/* v8.9.0 — Full body, no crop + reliable touch targets */
 .realHumanMap{
   position:relative !important;
   width:100% !important;
@@ -153,7 +153,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{transform:scaleX(-1) !important;}
 
 
-/* v8.8.9 — Four balanced real-human panels, mobile safe */
+/* v8.9.0 — Four balanced real-human panels, mobile safe */
 .painMapCardV887{padding-top:18px}
 .clearAllPainV887{float:right;margin-top:-42px;border:1px solid #d8cdb9;background:#fffaf0;color:var(--deep);border-radius:12px;padding:8px 11px;font:inherit;font-size:10px;font-weight:800}
 .fourPainGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
@@ -176,7 +176,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.8.9 Clean 4-view Pain Map ===== */
+/* ===== v8.9.0 Clean 4-view Pain Map ===== */
 .painMapV888{padding-top:16px}
 .viewTabsV888{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:14px 0 10px}
 .viewTabV888{border:1px solid #d8ccb7;border-radius:13px;background:#f7f1e6;color:var(--deep);padding:10px 5px;font:inherit;font-weight:800}
@@ -202,7 +202,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.8.9 Single-view Pain Map on desktop + mobile ===== */
+/* ===== v8.9.0 Single-view Pain Map on desktop + mobile ===== */
 .painDeskGridV888{
   display:block !important;
 }
@@ -226,7 +226,60 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
   }
 }
 
+
+/* ===== v8.9.0 Anatomically aligned Pain Areas ===== */
+.painZoneV888{
+  width:30px !important;
+  height:30px !important;
+  border:2px solid rgba(255,255,255,.88) !important;
+  background:rgba(255,255,255,.02) !important;
+  box-shadow:0 0 0 1px rgba(0,0,0,.10) !important;
+}
+.painZoneV888::before{
+  content:"";
+  position:absolute;
+  inset:-8px;
+  border-radius:50%;
+}
+.painZoneV888.selected{
+  background:#ef4444 !important;
+  border-color:#fff !important;
+  box-shadow:0 0 0 4px rgba(239,68,68,.20),0 0 14px rgba(239,68,68,.75) !important;
+}
+@media(max-width:720px){
+  .painZoneV888{
+    width:34px !important;
+    height:34px !important;
+  }
+}
+
+
+/* ===== v8.9.0 Thai Traditional Medicine Near Me ===== */
+.nearMapWrap{position:relative;border-radius:18px;overflow:hidden;border:1px solid #d8cbb3;background:#eef1ec}
+#thaiNearMap{height:420px;width:100%;background:#e7ece8}
+.nearToolbar{display:grid;grid-template-columns:1.25fr .75fr;gap:8px;margin:10px 0}
+.nearStatus{background:#e8f2eb;border:1px solid #cfe0d3;border-radius:13px;padding:10px;font-size:11px;line-height:1.5;color:#345047}
+.nearList{display:grid;gap:8px;margin-top:10px}
+.nearPlace{background:#fff;border:1px solid #ded3c0;border-radius:14px;padding:10px;display:grid;grid-template-columns:auto 1fr auto;gap:9px;align-items:center}
+.nearPlaceIcon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,#0a503e,#063327);border:2px solid #d9ae53}
+.nearPlaceName{font-size:12px;font-weight:800;color:var(--deep);line-height:1.35}
+.nearPlaceMeta{font-size:9px;color:#6b7972;margin-top:3px}
+.nearPlace a{font-size:10px;font-weight:800;color:#0b5b46;text-decoration:none;background:#edf5ef;border-radius:10px;padding:7px 8px}
+.nearLegend{font-size:9px;color:#68766e;line-height:1.5;margin-top:8px}
+.thaiHouseMarker{background:transparent;border:none}
+.thaiHousePin{width:42px;height:50px;filter:drop-shadow(0 3px 4px #0004)}
+.thaiHousePin svg{width:42px;height:50px;display:block}
+.mePin{width:18px;height:18px;border-radius:50%;background:#2b7cff;border:3px solid #fff;box-shadow:0 0 0 5px #2b7cff33}
+.nearSource{margin-top:10px;padding:9px 10px;border-left:4px solid #d9ae53;background:#f6efe2;border-radius:11px;font-size:9px;color:#5f6c66;line-height:1.5}
+@media(max-width:720px){
+  #thaiNearMap{height:360px}
+  .nearToolbar{grid-template-columns:1fr}
+  .nearPlace{grid-template-columns:auto 1fr}
+  .nearPlace a{grid-column:1/-1;text-align:center}
+}
+
 </style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
 <body>
 <div class="app">
@@ -369,10 +422,36 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
  <button class="btn deep" onclick="exportThaiPDF()">Export PDF ภาษาไทย</button>
  <button class="btn soft" onclick="exportCSV()">Export CSV</button>
  <button class="btn red" onclick="clearCases()">ล้างข้อมูล Demo</button>
- <button class="btn deep" onclick="go(1)">กลับหน้าแรก</button>
+ <button class="btn gold" onclick="go(11);setTimeout(initThaiNearMe,80)">🏠 แพทย์แผนไทยใกล้ฉัน →</button>
+  <button class="btn deep" onclick="go(1)">กลับหน้าแรก</button>
 </div></section>
 
 
+
+
+<section id="s11" class="screen"><div class="card">
+  <div class="titleRow"><div class="num">11</div><div><h2>แพทย์แผนไทยใกล้ฉัน</h2><div class="sub">Thai Traditional Medicine Near Me • ขั้นตอนสุดท้าย</div></div></div>
+
+  <div class="nearToolbar">
+    <button class="btn deep" style="margin:0" onclick="findThaiMedicineNearMe()">📍 ใช้ตำแหน่งของฉัน</button>
+    <button class="btn soft" style="margin:0" onclick="refreshThaiMedicineSearch()">🔄 ค้นหาใหม่</button>
+  </div>
+
+  <div id="nearStatus" class="nearStatus">กด “ใช้ตำแหน่งของฉัน” เพื่อค้นหาสถานบริการแพทย์แผนไทยรอบตัวคุณ</div>
+
+  <div class="nearMapWrap"><div id="thaiNearMap"></div></div>
+  <div class="nearLegend">🏠 ไอคอนเรือนไทย = สถานบริการที่พบจากข้อมูลแผนที่สาธารณะ • 🔵 จุดสีน้ำเงิน = ตำแหน่งของคุณ</div>
+
+  <h3>สถานบริการใกล้เคียง</h3>
+  <div id="nearPlaces" class="nearList"></div>
+
+  <div class="nearSource">
+    <b>แหล่งข้อมูล:</b> ระบบค้นหานี้ใช้ตำแหน่งจากอุปกรณ์และข้อมูล OpenStreetMap/Nominatim แบบเรียลไทม์เพื่อวางหมุดบนแผนที่
+    และมีลิงก์ไปยังหน้ารวมคลินิกแพทย์แผนไทยของกรมการแพทย์แผนไทยและการแพทย์ทางเลือกเพื่อช่วยตรวจสอบสถานบริการก่อนเดินทาง
+  </div>
+  <button class="btn gold" onclick="window.open('https://wellnesscenter.dtam.moph.go.th/contentSearch.php?assessmentType=4','_blank')">✓ ตรวจสอบรายชื่อคลินิกกับ DTAM</button>
+  <button class="btn soft" onclick="go(10)">← กลับ Analytics</button>
+</div></section>
 
 <section id="reportScreen" class="screen"><div class="card"><div id="printReport" class="report">
  <div class="reportHeader"><div><h2>ThaiPain AI</h2><div class="reportSmall">รายงานผลการประเมินและติดตามผล</div></div><div style="font-size:26px;color:#d2a849">✦</div></div>
@@ -395,6 +474,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 </div></div>
 <div class="footer">ThaiPain AI v8.8.2 • Four-View Interactive Pain Map • Ancient Wisdom. Intelligent Care.</div>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
@@ -407,7 +487,7 @@ const isMobileDevice=()=>/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userA
 const preferredFacingMode=()=>isMobileDevice()?'environment':'user';
 function applyCameraMirror(videoEl,canvasEl,facing){const mirror=facing==='user';if(videoEl)videoEl.style.transform=mirror?'scaleX(-1)':'none';if(canvasEl)canvasEl.style.transform=mirror?'scaleX(-1)':'none';}
 const v=document.getElementById('video'),c=document.getElementById('overlay'),cx=c.getContext('2d'),va=document.getElementById('videoAfter'),ca=document.getElementById('overlayAfter'),cxa=ca.getContext('2d');
-progress.innerHTML=Array.from({length:10},(_,i)=>`<div class="prog"></div>`).join('');
+progress.innerHTML=Array.from({length:11},(_,i)=>`<div class="prog"></div>`).join('');
 
 window.loginAs=(r)=>{state.role=r;roleBadge.textContent=r==='patient'?'Patient':'Practitioner';patientIdUI.textContent=state.patientId;makeQR();go(1)};
 function makeQR(){qrcode.innerHTML='';new QRCode(qrcode,{text:state.patientId,width:82,height:82,colorDark:'#06382d',colorLight:'#ffffff'})}
@@ -416,23 +496,41 @@ window.go=(n)=>{document.querySelectorAll('.screen').forEach(x=>x.classList.remo
 
 const painZonesV888={
   front:[
-    ['คอด้านหน้า',50,18],['ไหล่ขวา',28,25],['ไหล่ซ้าย',72,25],['หน้าอก',50,34],
-    ['ท้อง',50,47],['สะโพกขวา',30,58],['สะโพกซ้าย',70,58],
-    ['เข่าขวา',31,77],['เข่าซ้าย',69,77],['ข้อเท้าขวา',31,92],['ข้อเท้าซ้าย',69,92]
+    ['คอด้านหน้า',50,22],
+    ['ไหล่ขวา',28,26],['ไหล่ซ้าย',72,26],
+    ['หน้าอก',50,36],
+    ['ท้อง',50,46],
+    ['สะโพกขวา',34,59],['สะโพกซ้าย',66,59],
+    ['เข่าขวา',36,76],['เข่าซ้าย',64,76],
+    ['ข้อเท้าขวา',38,93],['ข้อเท้าซ้าย',62,93]
   ],
   back:[
-    ['คอ',50,18],['บ่าขวา',29,25],['บ่าซ้าย',71,25],['หลังส่วนบน',50,34],
-    ['หลังส่วนล่าง',50,49],['ศอกขวา',18,40],['ศอกซ้าย',82,40],
-    ['สะโพกขวา',35,58],['สะโพกซ้าย',65,58],['เข่าขวา',34,77],['เข่าซ้าย',66,77],
-    ['ข้อเท้าขวา',34,92],['ข้อเท้าซ้าย',66,92]
+    ['คอ',50,21],
+    ['บ่าขวา',31,27],['บ่าซ้าย',69,27],
+    ['หลังส่วนบน',50,35],
+    ['หลังส่วนล่าง',50,48],
+    ['ศอกขวา',22,43],['ศอกซ้าย',78,43],
+    ['สะโพกขวา',37,60],['สะโพกซ้าย',63,60],
+    ['เข่าขวา',37,77],['เข่าซ้าย',63,77],
+    ['ข้อเท้าขวา',39,93],['ข้อเท้าซ้าย',61,93]
   ],
   left:[
-    ['คอซ้าย',50,20],['ไหล่ซ้าย',50,27],['ต้นแขนซ้าย',48,39],['ศอกซ้าย',49,49],
-    ['สะโพกซ้าย',52,59],['เข่าซ้าย',51,77],['ข้อเท้าซ้าย',50,92]
+    ['คอซ้าย',58,22],
+    ['หัวไหล่ซ้าย',55,28],
+    ['ต้นแขนซ้าย',54,40],
+    ['ศอกซ้าย',55,50],
+    ['สะโพกซ้าย',48,60],
+    ['เข่าซ้าย',50,77],
+    ['ข้อเท้าซ้าย',49,93]
   ],
   right:[
-    ['คอขวา',50,20],['ไหล่ขวา',50,27],['ต้นแขนขวา',52,39],['ศอกขวา',51,49],
-    ['สะโพกขวา',48,59],['เข่าขวา',49,77],['ข้อเท้าขวา',50,92]
+    ['คอขวา',42,22],
+    ['หัวไหล่ขวา',45,28],
+    ['ต้นแขนขวา',46,40],
+    ['ศอกขวา',45,50],
+    ['สะโพกขวา',52,60],
+    ['เข่าขวา',50,77],
+    ['ข้อเท้าขวา',51,93]
   ]
 };
 window.currentPainViewV888='front';
@@ -555,7 +653,7 @@ window.installPWA=async()=>{
   const isiOS=/iPad|iPhone|iPod/.test(ua);
   if(isiOS){const el=document.getElementById('iosInstall');if(el)el.style.display='block';}
   if('serviceWorker' in navigator){
-    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.8.9-singleview').catch(()=>{}));
+    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.9.0-nearme').catch(()=>{}));
   }
 })();
 </script>
@@ -675,6 +773,120 @@ window.addEventListener('DOMContentLoaded',()=>{
     }
   },80);
 });
+</script>
+
+
+<script>
+let thaiNearMap=null, thaiNearLayer=null, thaiUserMarker=null, thaiLastPos=null;
+
+function thaiHouseIcon(){
+  const html=`<div class="thaiHousePin">
+  <svg viewBox="0 0 42 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M21 49C17 42 6 34 6 20C6 9 12 2 21 2s15 7 15 18c0 14-11 22-15 29z" fill="#0a4b3a" stroke="#d9ae53" stroke-width="2"/>
+    <path d="M11 20l10-8 10 8-3-1v9H14v-9z" fill="#f4d77d"/>
+    <path d="M8 18l13-10 13 10-4-1-9-6-9 6z" fill="#fff4c8"/>
+    <path d="M17 21h8v7h-8z" fill="#0a4b3a"/>
+    <path d="M15 28v5m12-5v5m-14 0h16" stroke="#f4d77d" stroke-width="2" stroke-linecap="round"/>
+  </svg></div>`;
+  return L.divIcon({className:'thaiHouseMarker',html,iconSize:[42,50],iconAnchor:[21,48],popupAnchor:[0,-44]});
+}
+function ensureThaiNearMap(){
+  if(thaiNearMap)return thaiNearMap;
+  thaiNearMap=L.map('thaiNearMap',{zoomControl:true}).setView([13.7563,100.5018],6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    maxZoom:19,attribution:'© OpenStreetMap contributors'
+  }).addTo(thaiNearMap);
+  thaiNearLayer=L.layerGroup().addTo(thaiNearMap);
+  setTimeout(()=>thaiNearMap.invalidateSize(),120);
+  return thaiNearMap;
+}
+window.initThaiNearMe=()=>{ensureThaiNearMap();setTimeout(()=>thaiNearMap.invalidateSize(),150);};
+
+function haversineKm(a,b,c,d){
+  const R=6371,toRad=x=>x*Math.PI/180;
+  const dLat=toRad(c-a),dLon=toRad(d-b);
+  const q=Math.sin(dLat/2)**2+Math.cos(toRad(a))*Math.cos(toRad(c))*Math.sin(dLon/2)**2;
+  return R*2*Math.atan2(Math.sqrt(q),Math.sqrt(1-q));
+}
+function escapeHtml(v){return String(v||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
+
+async function nominatimSearch(lat,lon){
+  const delta=.32;
+  const viewbox=[lon-delta,lat+delta,lon+delta,lat-delta].join(',');
+  const qs=[
+    'แพทย์แผนไทย',
+    'คลินิกแพทย์แผนไทย',
+    'Thai traditional medicine',
+    'traditional medicine clinic'
+  ];
+  let all=[];
+  for(const q of qs){
+    try{
+      const url='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=12&addressdetails=1&bounded=1'
+        +'&viewbox='+encodeURIComponent(viewbox)+'&q='+encodeURIComponent(q);
+      const r=await fetch(url,{headers:{'Accept-Language':'th,en'}});
+      if(r.ok) all=all.concat(await r.json());
+    }catch(e){}
+  }
+  const seen=new Set();
+  return all.filter(x=>{
+    const key=(x.osm_type||'')+'-'+(x.osm_id||x.place_id);
+    if(seen.has(key))return false;seen.add(key);return true;
+  }).map(x=>({
+    name:x.display_name?.split(',')[0]||'สถานบริการแพทย์แผนไทย',
+    display:x.display_name||'',
+    lat:+x.lat,lon:+x.lon,
+    dist:haversineKm(lat,lon,+x.lat,+x.lon)
+  })).sort((a,b)=>a.dist-b.dist).slice(0,15);
+}
+function renderNearPlaces(list){
+  const box=document.getElementById('nearPlaces');
+  if(!list.length){
+    box.innerHTML='<div class="warn"><b>ยังไม่พบสถานบริการจากข้อมูลแผนที่รอบตำแหน่งนี้</b><br>ลองค้นหาใหม่ หรือใช้ปุ่มตรวจสอบรายชื่อกับ DTAM</div>';
+    return;
+  }
+  box.innerHTML=list.map(p=>`
+    <div class="nearPlace">
+      <div class="nearPlaceIcon">${thaiHouseIcon().options.html}</div>
+      <div><div class="nearPlaceName">${escapeHtml(p.name)}</div><div class="nearPlaceMeta">${p.dist.toFixed(1)} กม. • ${escapeHtml(p.display)}</div></div>
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}">นำทาง →</a>
+    </div>`).join('');
+}
+async function searchAround(lat,lon){
+  const map=ensureThaiNearMap();
+  thaiNearLayer.clearLayers();
+  if(thaiUserMarker)map.removeLayer(thaiUserMarker);
+  thaiUserMarker=L.marker([lat,lon],{icon:L.divIcon({className:'',html:'<div class="mePin"></div>',iconSize:[18,18],iconAnchor:[9,9]})}).addTo(map).bindPopup('ตำแหน่งของฉัน');
+  map.setView([lat,lon],13);
+  const st=document.getElementById('nearStatus');
+  st.innerHTML='กำลังค้นหาสถานบริการแพทย์แผนไทยใกล้คุณ…';
+  const places=await nominatimSearch(lat,lon);
+  places.forEach(p=>L.marker([p.lat,p.lon],{icon:thaiHouseIcon()}).addTo(thaiNearLayer)
+    .bindPopup(`<b>${escapeHtml(p.name)}</b><br>${p.dist.toFixed(1)} กม.<br><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}">เปิดเส้นทาง</a>`));
+  renderNearPlaces(places);
+  st.innerHTML=places.length
+    ? `พบสถานบริการจากข้อมูลแผนที่ <b>${places.length}</b> แห่งรอบตำแหน่งของคุณ • เรียงตามระยะทาง`
+    : 'ยังไม่พบสถานบริการจากข้อมูลแผนที่ในรัศมีที่ค้นหา กรุณาตรวจสอบรายชื่อกับ DTAM';
+  if(places.length){
+    const group=L.featureGroup([thaiUserMarker,...thaiNearLayer.getLayers()]);
+    map.fitBounds(group.getBounds().pad(.18),{maxZoom:14});
+  }
+}
+window.findThaiMedicineNearMe=()=>{
+  ensureThaiNearMap();
+  const st=document.getElementById('nearStatus');
+  if(!navigator.geolocation){st.textContent='อุปกรณ์นี้ไม่รองรับการระบุตำแหน่ง';return;}
+  st.textContent='กำลังขอสิทธิ์ตำแหน่ง…';
+  navigator.geolocation.getCurrentPosition(
+    p=>{thaiLastPos={lat:p.coords.latitude,lon:p.coords.longitude};searchAround(thaiLastPos.lat,thaiLastPos.lon);},
+    e=>{st.innerHTML='ไม่สามารถอ่านตำแหน่งได้ กรุณาอนุญาต Location สำหรับเว็บไซต์ แล้วลองอีกครั้ง';},
+    {enableHighAccuracy:true,timeout:12000,maximumAge:120000}
+  );
+};
+window.refreshThaiMedicineSearch=()=>{
+  if(thaiLastPos)searchAround(thaiLastPos.lat,thaiLastPos.lon);
+  else findThaiMedicineNearMe();
+};
 </script>
 
 </body></html>
