@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="theme-color" content="#062e24">
 <title>ThaiPain AI</title>
-<link rel="manifest" href="manifest.webmanifest?v=8.8.7-balanced4">
+<link rel="manifest" href="manifest.webmanifest?v=8.8.8-cleanhtml">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ThaiPain AI">
@@ -90,7 +90,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 
 .viewTabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0}.viewTab{border:1px solid #d9cfbd;background:#f4efe5;color:var(--deep);border-radius:12px;padding:8px 4px;font:inherit;font-size:10px;font-weight:800}.viewTab.active{background:var(--deep);color:#fff;border-color:#cda84d;box-shadow:0 0 0 2px #e5c56f inset}.selectedAreas{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.areaTag{font-size:9px;padding:5px 7px;border-radius:99px;background:#fff;border:1px solid #d7c9b2;color:var(--deep);font-weight:700}.realHumanMap img{object-position:center top}.painHot{touch-action:manipulation}.mapHint{font-size:10px;color:#fff;background:#0008;padding:7px 9px;border-radius:10px;position:absolute;left:10px;top:10px;z-index:6}.clearPain{position:absolute;right:10px;top:10px;z-index:6;border:0;border-radius:10px;padding:7px 9px;background:#fffE;color:var(--deep);font-weight:800}
 
-/* v8.8.7: all human assets fit identically on mobile; right view is mirrored left profile */
+/* v8.8.8: all human assets fit identically on mobile; right view is mirrored left profile */
 .realHumanMap img, #humanViewImg{
   width:100% !important;
   height:100% !important;
@@ -100,7 +100,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{ transform:scaleX(-1) !important; }
 
 
-/* v8.8.7 — Full body, no crop + reliable touch targets */
+/* v8.8.8 — Full body, no crop + reliable touch targets */
 .realHumanMap{
   position:relative !important;
   width:100% !important;
@@ -153,7 +153,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{transform:scaleX(-1) !important;}
 
 
-/* v8.8.7 — Four balanced real-human panels, mobile safe */
+/* v8.8.8 — Four balanced real-human panels, mobile safe */
 .painMapCardV887{padding-top:18px}
 .clearAllPainV887{float:right;margin-top:-42px;border:1px solid #d8cdb9;background:#fffaf0;color:var(--deep);border-radius:12px;padding:8px 11px;font:inherit;font-size:10px;font-weight:800}
 .fourPainGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
@@ -173,6 +173,32 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
   .painBottomV887{grid-template-columns:1fr 1fr}
   .painSummaryV887{grid-column:1/-1}
   .clearAllPainV887{float:none;display:block;margin:8px 0 0 auto}
+}
+
+
+/* ===== v8.8.8 Clean 4-view Pain Map ===== */
+.painMapV888{padding-top:16px}
+.viewTabsV888{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:14px 0 10px}
+.viewTabV888{border:1px solid #d8ccb7;border-radius:13px;background:#f7f1e6;color:var(--deep);padding:10px 5px;font:inherit;font-weight:800}
+.viewTabV888.active{background:var(--deep);color:#fff;box-shadow:0 0 0 2px #d9ae53}
+.painDeskGridV888{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.humanPanelV888{position:relative;aspect-ratio:5/14;border-radius:15px;overflow:hidden;background:#d7dcde;border:1px solid #d3d7d5}
+.humanPanelV888 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;pointer-events:none;user-select:none}
+.hotLayerV888{position:absolute;inset:0;z-index:5}
+.painZoneV888{position:absolute;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;border:2px solid rgba(255,255,255,.78);background:rgba(255,255,255,.025);box-shadow:0 0 0 1px rgba(0,0,0,.09);cursor:pointer;z-index:8;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.painZoneV888.selected{background:#ef4444;border-color:#fff;box-shadow:0 0 0 5px rgba(239,68,68,.22),0 0 15px rgba(239,68,68,.85)}
+.panelTagV888{position:absolute;z-index:12;left:8px;top:8px;background:#26352fc9;color:#fff;padding:5px 8px;border-radius:9px;font-size:9px}
+.painControlsV888{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px;margin-top:9px}
+.painSummaryV888{background:#e8f0e9;border-radius:15px;padding:10px;position:relative}
+.selectedTextV888{font-size:10px;color:#495a52;line-height:1.5;margin-top:6px}
+.clearPainV888{border:1px solid #d8ccb7;background:#fffaf0;color:var(--deep);border-radius:10px;padding:7px 9px;font:inherit;font-size:9px;font-weight:800;margin-top:8px}
+@media(max-width:720px){
+  .painDeskGridV888{display:block}
+  .humanPanelV888{display:none;width:min(100%,360px);margin:0 auto;aspect-ratio:5/14}
+  .humanPanelV888.mobileActive{display:block}
+  .painZoneV888{width:44px;height:44px}
+  .painControlsV888{grid-template-columns:1fr 1fr}
+  .painSummaryV888{grid-column:1/-1}
 }
 
 </style>
@@ -208,45 +234,36 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 </div></section>
 
 
-<section id="s2" class="screen"><div class="card painMapCardV887">
- <div class="titleRow"><div class="num">02</div><div><h2>Interactive Pain Map</h2><div class="sub">เลือกตำแหน่งที่ปวดจากภาพคนจริง 4 มุม — แตะซ้ำเพื่อยกเลิก</div></div></div>
- <button class="clearAllPainV887" type="button" onclick="clearPainAreas()">↻ ล้างจุดที่เลือก</button>
 
- <div class="fourPainGrid" id="fourPainGrid">
-   <div class="painPanel" data-view="front">
-     <img src="human_front_panel.png?v=8.8.7" alt="ด้านหน้า">
-     <div class="painLayer" id="layer-front"></div>
-   </div>
-   <div class="painPanel" data-view="back">
-     <img src="human_back_panel.png?v=8.8.7" alt="ด้านหลัง">
-     <div class="painLayer" id="layer-back"></div>
-   </div>
-   <div class="painPanel" data-view="left">
-     <img src="human_left_panel.png?v=8.8.7" alt="ด้านซ้าย">
-     <div class="painLayer" id="layer-left"></div>
-   </div>
-   <div class="painPanel" data-view="right">
-     <img src="human_right_panel.png?v=8.8.7" alt="ด้านขวา">
-     <div class="painLayer" id="layer-right"></div>
-   </div>
- </div>
+<section id="s2" class="screen"><div class="card painMapV888">
+  <div class="titleRow"><div class="num">02</div><div><h2>Interactive Pain Map</h2><div class="sub">ภาพคนจริง 4 มุม • ไม่มีวง/จุดฝังในรูป • แตะวงเพื่อเลือกตำแหน่งปวด</div></div></div>
 
- <div class="painBottomV887">
-   <div class="painSummaryV887">
-     <div class="pill">🔴 Pain Area • 4 Views</div>
-     <div id="areaUI" class="areaTextV887">ยังไม่ได้เลือก</div>
-     <div id="selectedAreas" class="selectedAreas"></div>
-   </div>
-   <div class="metric"><div class="label">Pain</div><div class="v"><span id="painTxt">7</span>/10</div>
-     <input id="pain" class="range" type="range" min="0" max="10" value="7" oninput="painTxt.textContent=this.value">
-   </div>
-   <div class="metric"><div class="label">Function limit</div><div class="v"><span id="funcTxt">6</span>/10</div>
-     <input id="func" class="range" type="range" min="0" max="10" value="6" oninput="funcTxt.textContent=this.value">
-   </div>
- </div>
+  <div class="viewTabsV888" role="tablist">
+    <button type="button" class="viewTabV888 active" data-view="front" onclick="setPainViewV888('front')">ด้านหน้า</button>
+    <button type="button" class="viewTabV888" data-view="back" onclick="setPainViewV888('back')">ด้านหลัง</button>
+    <button type="button" class="viewTabV888" data-view="left" onclick="setPainViewV888('left')">ด้านซ้าย</button>
+    <button type="button" class="viewTabV888" data-view="right" onclick="setPainViewV888('right')">ด้านขวา</button>
+  </div>
 
- <div class="legendV887">แตะวงตำแหน่งบนภาพเพื่อเลือก/ยกเลิก • จุดที่เลือกจะแสดงสีแดง</div>
- <button class="btn gold" onclick="savePain();go(3)">เปิด AI Body Scan →</button>
+  <div class="painDeskGridV888">
+    <div class="humanPanelV888" data-panel="front"><img src="human_front_clean.png?v=8.8.8" alt="ด้านหน้า"><div class="hotLayerV888" id="hot-front"></div><span class="panelTagV888">ด้านหน้า</span></div>
+    <div class="humanPanelV888" data-panel="back"><img src="human_back_clean_v888.png?v=8.8.8" alt="ด้านหลัง"><div class="hotLayerV888" id="hot-back"></div><span class="panelTagV888">ด้านหลัง</span></div>
+    <div class="humanPanelV888" data-panel="left"><img src="human_left_clean.png?v=8.8.8" alt="ด้านซ้าย"><div class="hotLayerV888" id="hot-left"></div><span class="panelTagV888">ด้านซ้าย</span></div>
+    <div class="humanPanelV888" data-panel="right"><img src="human_right_clean.png?v=8.8.8" alt="ด้านขวา"><div class="hotLayerV888" id="hot-right"></div><span class="panelTagV888">ด้านขวา</span></div>
+  </div>
+
+  <div class="painControlsV888">
+    <div class="painSummaryV888">
+      <div class="pill">🔴 Pain Area • 4 Views</div>
+      <div class="sub" style="margin-top:7px">จุดแดงจะปรากฏเฉพาะตำแหน่งที่เลือก</div>
+      <div id="areaUI" class="selectedTextV888">ยังไม่ได้เลือก</div>
+      <button type="button" class="clearPainV888" onclick="clearPainV888()">↻ ล้างจุดที่เลือก</button>
+    </div>
+    <div class="metric"><div class="label">Pain</div><div class="v"><span id="painTxt">7</span>/10</div><input id="pain" class="range" type="range" min="0" max="10" value="7" oninput="painTxt.textContent=this.value"></div>
+    <div class="metric"><div class="label">Function limit</div><div class="v"><span id="funcTxt">6</span>/10</div><input id="func" class="range" type="range" min="0" max="10" value="6" oninput="funcTxt.textContent=this.value"></div>
+  </div>
+
+  <button class="btn gold" onclick="savePain();go(3)">เปิด AI Body Scan →</button>
 </div></section>
 
 <section id="s3" class="screen"><div class="card">
@@ -371,35 +388,63 @@ window.loginAs=(r)=>{state.role=r;roleBadge.textContent=r==='patient'?'Patient':
 function makeQR(){qrcode.innerHTML='';new QRCode(qrcode,{text:state.patientId,width:82,height:82,colorDark:'#06382d',colorLight:'#ffffff'})}
 window.go=(n)=>{document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));const id=typeof n==='number'?'s'+n:n;document.getElementById(id).classList.add('active');document.querySelectorAll('.prog').forEach((x,i)=>x.classList.toggle('on',typeof n==='number'&&i<n));window.scrollTo({top:0,behavior:'smooth'})};
 
-const painViews887={
- front:[['คอด้านหน้า',50,20],['ไหล่ขวา',28,25],['ไหล่ซ้าย',72,25],['หน้าอก',50,35],['ท้อง',50,48],['สะโพกขวา',28,58],['สะโพกซ้าย',72,58],['เข่าขวา',30,77],['เข่าซ้าย',70,77],['ข้อเท้าขวา',29,92],['ข้อเท้าซ้าย',71,92]],
- back:[['คอ',50,18],['บ่าขวา',28,25],['บ่าซ้าย',72,25],['หลังส่วนบน',50,34],['หลังส่วนล่าง',50,49],['ศอกขวา',16,40],['ศอกซ้าย',84,40],['สะโพกขวา',34,58],['สะโพกซ้าย',66,58],['เข่าขวา',33,77],['เข่าซ้าย',67,77],['ข้อเท้าขวา',34,92],['ข้อเท้าซ้าย',66,92]],
- left:[['คอซ้าย',50,20],['หัวไหล่ซ้าย',49,27],['ต้นแขนซ้าย',47,39],['ศอกซ้าย',46,49],['สะโพกซ้าย',51,59],['เข่าซ้าย',51,77],['ข้อเท้าซ้าย',50,92]],
- right:[['คอขวา',50,20],['หัวไหล่ขวา',51,27],['ต้นแขนขวา',53,39],['ศอกขวา',54,49],['สะโพกขวา',49,59],['เข่าขวา',49,77],['ข้อเท้าขวา',50,92]]
+
+const painZonesV888={
+  front:[
+    ['คอด้านหน้า',50,18],['ไหล่ขวา',28,25],['ไหล่ซ้าย',72,25],['หน้าอก',50,34],
+    ['ท้อง',50,47],['สะโพกขวา',30,58],['สะโพกซ้าย',70,58],
+    ['เข่าขวา',31,77],['เข่าซ้าย',69,77],['ข้อเท้าขวา',31,92],['ข้อเท้าซ้าย',69,92]
+  ],
+  back:[
+    ['คอ',50,18],['บ่าขวา',29,25],['บ่าซ้าย',71,25],['หลังส่วนบน',50,34],
+    ['หลังส่วนล่าง',50,49],['ศอกขวา',18,40],['ศอกซ้าย',82,40],
+    ['สะโพกขวา',35,58],['สะโพกซ้าย',65,58],['เข่าขวา',34,77],['เข่าซ้าย',66,77],
+    ['ข้อเท้าขวา',34,92],['ข้อเท้าซ้าย',66,92]
+  ],
+  left:[
+    ['คอซ้าย',50,20],['ไหล่ซ้าย',50,27],['ต้นแขนซ้าย',48,39],['ศอกซ้าย',49,49],
+    ['สะโพกซ้าย',52,59],['เข่าซ้าย',51,77],['ข้อเท้าซ้าย',50,92]
+  ],
+  right:[
+    ['คอขวา',50,20],['ไหล่ขวา',50,27],['ต้นแขนขวา',52,39],['ศอกขวา',51,49],
+    ['สะโพกขวา',48,59],['เข่าขวา',49,77],['ข้อเท้าขวา',50,92]
+  ]
 };
-function renderFourPainViews(){
-  Object.entries(painViews887).forEach(([view,zones])=>{
-    const layer=document.getElementById('layer-'+view); if(!layer)return;
-    layer.innerHTML=zones.map(([name,x,y])=>`<button type="button" class="painTap ${state.areas.includes(name)?'sel':''}" style="left:${x}%;top:${y}%" aria-label="${name}" data-area="${name}"></button>`).join('');
+window.currentPainViewV888='front';
+function renderPainZonesV888(){
+  Object.entries(painZonesV888).forEach(([view,zones])=>{
+    const layer=document.getElementById('hot-'+view); if(!layer)return;
+    layer.innerHTML=zones.map(([name,x,y])=>`<button type="button" class="painZoneV888 ${state.areas.includes(name)?'selected':''}" style="left:${x}%;top:${y}%" data-area="${name}" aria-label="${name}"></button>`).join('');
   });
+  setPainViewV888(currentPainViewV888);
 }
-window.pickPain887=(name,btn)=>{
+window.setPainViewV888=(view)=>{
+  currentPainViewV888=view;
+  document.querySelectorAll('.viewTabV888').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
+  document.querySelectorAll('.humanPanelV888').forEach(p=>p.classList.toggle('mobileActive',p.dataset.panel===view));
+};
+window.togglePainAreaV888=(name)=>{
   const i=state.areas.indexOf(name);
   if(i>=0)state.areas.splice(i,1); else state.areas.push(name);
   state.area=state.areas.join(', ');
-  btn?.classList.toggle('sel',state.areas.includes(name));
   areaUI.textContent=state.areas.length?state.areas.join(' • '):'ยังไม่ได้เลือก';
-  selectedAreas.innerHTML=state.areas.map(x=>`<span class="areaTag">${x}</span>`).join('');
   if(window.tArea)tArea.textContent=state.area||'-';
+  renderPainZonesV888();
 };
 document.addEventListener('click',e=>{
-  const b=e.target.closest('.painTap'); if(!b)return;
+  const btn=e.target.closest('.painZoneV888');
+  if(!btn)return;
   e.preventDefault(); e.stopPropagation();
-  pickPain887(b.dataset.area,b);
+  togglePainAreaV888(btn.dataset.area);
 },true);
-window.clearPainAreas=()=>{state.areas=[];state.area='';areaUI.textContent='ยังไม่ได้เลือก';selectedAreas.innerHTML='';renderFourPainViews();};
-window.addEventListener('DOMContentLoaded',()=>setTimeout(renderFourPainViews,30));
+window.clearPainV888=()=>{
+  state.areas=[]; state.area='';
+  areaUI.textContent='ยังไม่ได้เลือก';
+  renderPainZonesV888();
+};
+window.addEventListener('DOMContentLoaded',()=>setTimeout(renderPainZonesV888,50));
 window.savePain=()=>{state.pain=+pain.value;state.func=+func.value};
+
 
 
 async function initPose(){
@@ -485,7 +530,7 @@ window.installPWA=async()=>{
   const isiOS=/iPad|iPhone|iPod/.test(ua);
   if(isiOS){const el=document.getElementById('iosInstall');if(el)el.style.display='block';}
   if('serviceWorker' in navigator){
-    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.8.7-balanced4').catch(()=>{}));
+    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.8.8-cleanhtml').catch(()=>{}));
   }
 })();
 </script>
