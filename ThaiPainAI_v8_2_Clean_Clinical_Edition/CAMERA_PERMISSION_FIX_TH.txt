@@ -1,0 +1,15 @@
+ThaiPain AI v8.1 — Camera Permission Fix
+
+เพิ่ม:
+- ตรวจสถานะกล้อง Allowed / Blocked / Ask on use
+- ถ้ากล้องถูกบล็อก จะแสดงหน้าช่วยเหลืออัตโนมัติ
+- ปุ่ม “แก้ปัญหากล้อง / Camera Permission”
+- ปุ่ม “ลองเปิดกล้องอีกครั้ง”
+- คำแนะนำ Android Chrome และ Android App Permissions
+
+อัปเดต GitHub:
+1) อัปโหลดไฟล์ทั้งหมดจาก ZIP นี้ทับ repository เดิม
+2) Commit changes
+3) ไป Actions รอ Deploy สำเร็จ
+4) เปิดเว็บแล้ว Refresh
+5) ถ้ายังเห็นหน้าเก่า ให้ล้าง Site data/cache ของเว็บไซต์แล้วเปิดใหม่

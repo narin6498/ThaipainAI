@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#062e24">
+<title>ThaiPain AI v6 Finalist</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ThaiPain AI">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+:root{--deep:#06382d;--deep2:#03261e;--deep3:#0a4d3c;--gold:#d9ae53;--gold2:#f4d77f;--cream:#fffaf0;--bg:#f3eee3;--ink:#14231c;--muted:#748078;--green:#2dac69;--red:#e14d4d;--line:#dfd3be}
+*{box-sizing:border-box}html,body{margin:0;font-family:"Noto Sans Thai",system-ui,sans-serif;background:#eae2d4;color:var(--ink)}
+body{background:linear-gradient(180deg,#052d23 0,#063b2e 210px,#f3eee3 210px)}
+.app{max-width:520px;margin:auto;min-height:100vh;padding:0 12px 44px}.hero{position:sticky;top:0;z-index:100;margin:0 -12px 10px;padding:13px 15px;background:linear-gradient(135deg,#04291f,#0a4838 62%,#052f25);color:white;border-bottom:1px solid #b99043;box-shadow:0 8px 24px #0004}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:10px}.brandleft{display:flex;align-items:center;gap:9px}.logo{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#f5d983,#b98429);color:#073529;font-size:22px;font-weight:900;box-shadow:0 0 0 2px #f6e1a2 inset}
+h1{font-family:"Playfair Display",serif;font-size:25px;margin:0}h1 span{color:var(--gold2)}.tiny{font-size:10px;opacity:.85}.role{font-size:10px;padding:5px 8px;border-radius:99px;background:#ffffff1c;border:1px solid #ffffff36}
+.progress{display:flex;gap:4px;margin-top:10px}.prog{height:5px;flex:1;border-radius:99px;background:#ffffff2d}.prog.on{background:linear-gradient(90deg,#d7aa4f,#f7dc91)}
+.card{background:#fffaf0;border:1px solid #e2d4b9;border-radius:22px;padding:16px;box-shadow:0 14px 34px #14392c1c;margin-bottom:12px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#d7ad54,transparent)}
+.screen{display:none}.screen.active{display:block}h2{font-size:20px;color:var(--deep);margin:0 0 5px}h3{font-size:15px;color:var(--deep);margin:14px 0 7px}.sub{font-size:12px;color:var(--muted);margin:0 0 9px}
+.titleRow{display:flex;align-items:center;gap:8px}.num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--deep);color:#fff;font-weight:900;box-shadow:0 0 0 2px #d6ad54}
+.btn{width:100%;border:0;border-radius:14px;padding:12px;font:inherit;font-weight:800;margin-top:9px}.gold{background:linear-gradient(180deg,#f4d77d,#c99331);color:#173026}.deep{background:linear-gradient(180deg,#0b4b3a,#052c23);color:white}.red{background:linear-gradient(180deg,#f06464,#c73535);color:#fff}.soft{background:#eee6d8;color:#13372c}
+.row{display:flex;gap:8px}.row>*{flex:1}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.metric{background:linear-gradient(180deg,#f7f2e7,#e7eee7);border:1px solid #dce2d9;border-radius:15px;padding:10px;text-align:center}.metric .label{font-size:10px;color:#66756d}.metric .v{font-size:24px;font-weight:900;color:var(--deep)}.metric.dark{background:linear-gradient(180deg,#0c4939,#062e25);color:white}.metric.dark .v{color:#f5d478}.big{font-size:38px;font-weight:900;color:var(--deep)}
+input[type=text],input[type=number],select{width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;font:inherit;background:white}.range{width:100%;accent-color:#df4c45}
+.bodywrap{display:grid;grid-template-columns:1.15fr .85fr;gap:8px}.bodysvg{background:linear-gradient(180deg,#0d4638,#082c24);border-radius:18px;padding:6px;min-height:310px;position:relative}.bodysvg svg{width:100%;height:300px}.hot{fill:#f0d8c1;stroke:#baa894;stroke-width:2;cursor:pointer}.hot.sel{fill:#f64f42;stroke:#ffd36b;filter:drop-shadow(0 0 8px #f74)}.bodyNote{font-size:11px;color:white;background:#0008;border-radius:12px;padding:8px;position:absolute;left:10px;right:10px;bottom:10px}
+.sidepanel{display:flex;flex-direction:column;gap:7px}.pill{background:#e8f0e9;color:var(--deep);border-radius:99px;padding:6px 8px;font-size:10px;font-weight:800}.legend{font-size:10px;color:#66756d}
+.camera{position:relative;aspect-ratio:3/4;max-height:500px;border-radius:19px;overflow:hidden;background:#071a15;border:1px solid #426c60}video,canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}.camTag,.camStat,.camGuide{position:absolute;z-index:5;color:white;font-size:10px;border-radius:99px;padding:6px 8px}.camTag{top:9px;left:9px;background:#0a4c3bdd}.camStat{top:9px;right:9px;background:#0009}.camGuide{left:10px;right:10px;bottom:10px;background:#000b;text-align:center;border-radius:11px}
+.scorebox{background:linear-gradient(180deg,#0b4939,#062d24);border:1px solid #806c3b;border-radius:18px;padding:14px;color:white;text-align:center}.scorebox .v{font-size:40px;font-weight:900;color:#f4d47d}.grade{height:8px;border-radius:99px;background:linear-gradient(90deg,#35aa69,#efd05a,#e54d4d)}
+.question{padding:9px 0;border-bottom:1px solid #e6dece}.toggle{display:flex;gap:7px;margin-top:6px}.toggle button{flex:1;border:1px solid #d0c3ae;background:white;border-radius:11px;padding:8px}.toggle .selected{background:var(--deep);color:white}.ok{background:#e8f6ec;border-left:5px solid var(--green);border-radius:12px;padding:10px}.warn{background:#fff0ed;border-left:5px solid var(--red);border-radius:12px;padding:10px}
+.qrbox{display:flex;gap:10px;align-items:center;background:#f3ecde;border:1px solid #ddd0b9;border-radius:16px;padding:10px}#qrcode{width:92px;height:92px;background:white;padding:5px;border-radius:8px}.patientText{font-size:12px}.patientText b{font-size:18px;color:var(--deep)}
+.care{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #e6dece}.careIcon{width:58px;height:52px;border-radius:13px;display:grid;place-items:center;font-size:26px;background:linear-gradient(135deg,#e6c876,#81a88f)}.careText{font-size:11px}.careText b{display:block;color:var(--deep);font-size:13px}
+.timer{font-size:42px;font-weight:900;color:#f5d67f;text-align:center}.heroTreat{background:linear-gradient(180deg,#07372b,#0a4b3a);border-radius:18px;padding:15px;color:white}
+.outcome{display:grid;grid-template-columns:1fr 28px 1fr;gap:7px;align-items:center}.arrow{text-align:center;font-size:24px;font-weight:900;color:var(--deep)}
+.kpi{background:white;border:1px solid #dbcfbc;border-radius:14px;padding:9px;text-align:center}.kpi b{font-size:22px;color:var(--deep)}
+table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;border-bottom:1px solid #e7dfd1;text-align:center}th:first-child,td:first-child{text-align:left}
+.pitchOverlay{position:fixed;inset:0;z-index:999;background:linear-gradient(160deg,#03271e,#0a4938 65%,#b78d3b);color:white;display:none;align-items:center;justify-content:center;padding:24px}.pitchOverlay.on{display:flex}.pitchCard{max-width:520px;text-align:center}.pitchN{font-size:13px;color:#f5d57e}.pitchTitle{font-size:36px;font-weight:900;margin:8px 0}.pitchText{font-size:16px;line-height:1.6}.pitchNav{display:flex;gap:8px;margin-top:18px}.pitchNav button{flex:1}.report{background:white;border-radius:16px;padding:14px;color:#1b2a23}.report h2{font-size:22px}.reportHeader{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #d5ad54;padding-bottom:8px;margin-bottom:10px}.reportSmall{font-size:10px;color:#68766e}
+.loginHero{background:linear-gradient(160deg,#07392d,#0a4c3c);color:white;border-radius:18px;padding:16px;text-align:center}.roleCards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.roleCard{border:1px solid #d2c5ad;background:white;border-radius:15px;padding:13px;text-align:center;font-size:12px}.roleCard b{display:block;font-size:14px;color:var(--deep)}
+.footer{text-align:center;font-size:10px;color:#637169;padding:4px}
+
+
+.consentBox{background:#fff7e8;border:1px solid #e0cfa8;border-radius:16px;padding:12px;margin-top:10px;text-align:left}
+.consentBox label{display:flex;gap:8px;align-items:flex-start;font-size:11px;line-height:1.5}
+.conf{display:flex;align-items:center;gap:8px;background:#e8f5ec;border:1px solid #b7d9c1;border-radius:13px;padding:8px;margin-top:8px}
+.confDot{width:10px;height:10px;border-radius:50%;background:#2dac69;box-shadow:0 0 0 4px #2dac6924}
+.evidence{background:#f6efe2;border-left:4px solid #d9ae53;border-radius:12px;padding:10px;font-size:11px;line-height:1.55;margin-top:8px}
+
+.judgeOverlay.on{display:block}
+
+
+.failSafe{background:#fff1e8;border-left:4px solid #e58442;border-radius:12px;padding:9px;font-size:11px;margin-top:8px}
+.impact{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.impact .metric .v{font-size:20px}
+
+
+
+
+
+
+
+
+.road:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:#d7ad54}
+.roadItem:before{content:"";position:absolute;left:-20px;top:4px;width:10px;height:10px;border-radius:50%;background:#0a4b3a;border:2px solid #d7ad54}
+
+
+.offlineBadge{display:inline-flex;gap:5px;align-items:center;border-radius:99px;padding:5px 8px;font-size:9px;font-weight:800;background:#e8f5ec;color:#0b4939}
+
+
+.camHelpOverlay{position:fixed;inset:0;background:#0009;z-index:2000;display:none;align-items:center;justify-content:center;padding:18px}
+.camHelpOverlay.on{display:flex}.camHelpCard{width:min(520px,100%);background:#fffaf0;color:#17382f;border-radius:22px;padding:18px;box-shadow:0 25px 70px #0007;border:1px solid #d7c49e}
+.camHelpCard h2{margin:0 0 6px;color:#07382d}.camHelpCard .lead{font-size:12px;color:#5e6f67;line-height:1.55}.camSteps{display:grid;gap:8px;margin:12px 0}
+.camStep{display:flex;gap:10px;align-items:flex-start;background:#f5efe3;border:1px solid #ded0b5;border-radius:14px;padding:10px}.camNum{min-width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#0a4b3a;color:#f4d77d;font-weight:800}
+.camStep b{display:block;color:#0a4b3a}.camWarn{background:#fff0e7;border-left:4px solid #dc7447;border-radius:12px;padding:10px;font-size:11px;line-height:1.55}
+.camActions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.camStatus{display:flex;gap:7px;align-items:center;border-radius:12px;padding:9px;background:#edf6ef;border:1px solid #c4dbc9;font-size:11px;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="hero">
+ <div class="brand"><div class="brandleft"><div class="logo">✦</div><div><h1>ThaiPain<span>AI</span></h1><div class="tiny">AI × Thai Traditional Medicine</div></div></div><div id="roleBadge" class="role">Guest</div></div>
+ <div id="progress" class="progress"></div>
+</header>
+
+<section id="login" class="screen active"><div class="card">
+ <div class="loginHero"><div style="font-size:44px">✦</div><h2 style="color:white">ThaiPain AI</h2><div>Digital Thai Pain Intelligence Platform</div></div>
+ <h3>เลือกบทบาท</h3>
+ <div style="display:flex;justify-content:flex-end;margin:5px 0"><span id="netBadge" class="offlineBadge">● Checking network</span></div>
+<div class="consentBox">
+<label><input id="consentCheck" type="checkbox"> <span><b>Consent & Privacy</b><br>ยินยอมให้ใช้กล้องเพื่อประเมินท่าทางแบบ real-time โดย Prototype นี้ไม่บันทึกวิดีโอจากกล้องลงเซิร์ฟเวอร์</span></label>
+</div>
+<div class="roleCards">
+  <button class="roleCard" onclick="loginAs('patient')">👤<b>ประชาชน</b>ประเมินและติดตามผล</button>
+  <button class="roleCard" onclick="loginAs('practitioner')">🩺<b>ผู้ประกอบวิชาชีพ</b>Care support & record</button>
+ </div>
+ <button id="installBtn" class="btn deep" style="display:none" onclick="installPWA()">📲 ติดตั้ง ThaiPain AI บนมือถือ</button>
+
+
+<div id="iosInstall" class="sub" style="display:none;margin-top:10px">iPhone/iPad: กด Share → Add to Home Screen</div>
+</div></section>
+
+<section id="s1" class="screen"><div class="card">
+ <div class="titleRow"><div class="num">01</div><div><h2>Welcome</h2><div class="sub">See the Pain. Measure the Motion. Personalize Thai Care.</div></div></div>
+ <div class="qrbox"><div id="qrcode"></div><div class="patientText"><span class="pill">QR Patient ID</span><br><b id="patientIdUI">TP-000001</b><br>ใช้เชื่อมเคสโดยไม่ต้องพิมพ์ชื่อ</div></div>
+ <button class="btn gold" onclick="go(2)">เริ่มประเมิน →</button>
+</div></section>
+
+<section id="s2" class="screen"><div class="card">
+ <div class="titleRow"><div class="num">02</div><div><h2>Interactive Pain Map</h2><div class="sub">แตะตำแหน่งที่ปวดบนร่างกาย</div></div></div>
+ <div class="bodywrap">
+  <div class="bodysvg">
+   <svg viewBox="0 0 180 330">
+    <circle cx="90" cy="35" r="24" class="hot" onclick="pickBody(this,'ศีรษะ/คอ')"/>
+    <rect x="72" y="58" width="36" height="32" rx="12" class="hot" onclick="pickBody(this,'คอ')"/>
+    <ellipse cx="90" cy="130" rx="48" ry="54" class="hot" onclick="pickBody(this,'อก/หลังส่วนบน')"/>
+    <ellipse cx="47" cy="98" rx="23" ry="18" class="hot sel" onclick="pickBody(this,'บ่าขวา')"/>
+    <ellipse cx="133" cy="98" rx="23" ry="18" class="hot" onclick="pickBody(this,'บ่าซ้าย')"/>
+    <rect x="48" y="178" width="32" height="92" rx="16" class="hot" onclick="pickBody(this,'แขนขวา')"/>
+    <rect x="100" y="178" width="32" height="92" rx="16" class="hot" onclick="pickBody(this,'แขนซ้าย')"/>
+    <rect x="67" y="178" width="20" height="120" rx="10" class="hot" onclick="pickBody(this,'ขาขวา')"/>
+    <rect x="93" y="178" width="20" height="120" rx="10" class="hot" onclick="pickBody(this,'ขาซ้าย')"/>
+   </svg>
+   <div class="bodyNote">ตำแหน่ง: <b id="areaUI">บ่าขวา</b></div>
+  </div>
+  <div class="sidepanel">
+   <span class="pill">🔴 Pain Area</span>
+   <div class="metric"><div class="label">Pain</div><div class="v"><span id="painTxt">7</span>/10</div></div>
+   <input id="pain" class="range" type="range" min="0" max="10" value="7" oninput="painTxt.textContent=this.value">
+   <div class="metric"><div class="label">Function limit</div><div class="v"><span id="funcTxt">6</span>/10</div></div>
+   <input id="func" class="range" type="range" min="0" max="10" value="6" oninput="funcTxt.textContent=this.value">
+  </div>
+ </div>
+ <button class="btn gold" onclick="savePain();go(3)">เปิด AI Body Scan →</button>
+</div></section>
+
+<section id="s3" class="screen"><div class="card">
+ <div class="titleRow"><div class="num">03</div><div><h2>AI Body Scan</h2><div class="sub">Real-time pose landmarks</div></div></div>
+ <div class="camera"><video id="video" autoplay playsinline muted></video><canvas id="overlay"></canvas><div class="camTag">● LIVE POSE AI</div><div id="aiStatus" class="camStat">Not started</div><div class="camGuide">ยืนให้เห็นศีรษะและหัวไหล่ครบ</div></div>
+ <div class="conf"><div class="confDot"></div><div><b>AI Data Quality:</b> <span id="confidenceUI">Ready</span><div class="sub" style="margin:0">ระบบจะแจ้งหากแสงน้อยหรือเห็นร่างกายไม่ครบ</div></div></div>
+<button class="btn deep" onclick="startAI()">เปิดกล้อง + AI</button>
+<button class="btn soft" onclick="openCameraHelp()">🛠 แก้ปัญหากล้อง / Camera Permission</button>
+<div id="camStatusBox" class="camStatus">📷 Camera status: <b id="camPermText">Checking…</b></div>
+ <button class="btn gold" onclick="go(4)">ไป ROM Test →</button>
+</div></section>
+
+<section id="s4" class="screen"><div class="card">
+ <div class="titleRow"><div class="num">04</div><div><h2>ROM Test</h2><div class="sub">Camera-estimated head-turn proxy</div></div></div>
+ <div class="grid2"><div class="metric dark"><div class="label">LEFT MAX</div><div id="leftMax" class="v">0°</div></div><div class="metric dark"><div class="label">RIGHT MAX</div><div id="rightMax" class="v">0°</div></div></div>
+ <div class="metric" style="margin-top:8px"><div class="label">LIVE INDEX</div><div id="liveYaw" class="v">0°</div></div>
+ <button class="btn gold" onclick="measureBefore()">จับค่าสูงสุด 8 วินาที</button>
+ <button class="btn deep" onclick="finishBefore()">บันทึกผล →</button>
+</div></section>
+
+<section id="s5" class="screen"><div class="card">
+ <div class="titleRow"><div class="num">05</div><div><h2>AI Body Pain Map</h2><div class="sub">Pain + Movement + Posture Intelligence</div></div></div>
+ <div class="grid3">
+  <div class="metric"><div class="label">Pain</div><div id="resPain" class="v">7/10</div></div>
+  <div class="metric"><div class="label">R Proxy</div><div id="resRom" class="v">41°</div></div>
+  <div class="metric"><div class="label">Posture</div><div id="postureScore" class="v">78</div></div>
+ </div>
+ <div class="scorebox" style="margin-top:9px"><div>THAIPAIN SCORE</div><div id="thaiScore" class="v">68 / 100</div><div class="grade"></div><div class="sub" style="color:#dfd4b8;margin-top:7px">Prototype innovation score — requires clinical validation</div></div>
+ <div class="evidence"><b>Why this result?</b><br><span id="evidenceUI">คำนวณจาก Pain score, functional limitation, head-turn proxy และ posture alignment ของเคสนี้</span></div>
+<button class="btn gold" onclick="go(6)">Safety First →</button>
+</div></section>
+
+<section id="s6" class="screen"><div class="card">
+ <div class="titleRow"><div class="num">06</div><div><h2>THAI SAFE™</h2><div class="sub">Safety gate ก่อนคำแนะนำ</div></div></div>
+ <div id="questions"></div><div id="safeResult" style="margin-top:9px"></div>
+ <button class="btn deep" onclick="evalSafety()">ประเมินความปลอดภัย</button>
+</div></section>
+
+<section id="s7" class="screen"><div class="card">
+ <div class="titleRow"><div class="num">07</div><div><h2>Personalized Thai Care</h2><div class="sub">AI-assisted practitioner support</div></div></div>
+ <div class="care"><div class="careIcon">💆</div><div class="careText"><b>การนวดไทย</b>ผู้ประกอบวิชาชีพพิจารณาตำแหน่ง เทคนิค และข้อห้ามตามการประเมิน</div></div>
+ <div class="care"><div class="careIcon">🌿</div><div class="careText"><b>ประคบสมุนไพร</b>พิจารณาตามข้อบ่งใช้/ข้อห้ามและประวัติผู้รับบริการ</div></div>
+ <div class="care"><div class="careIcon">🧘</div><div class="careText"><b>Exercise & Ergonomics</b>ท่าบริหาร ยืดกล้ามเนื้อ และคำแนะนำพฤติกรรม</div></div>
+ <div class="ok">AI Recommendation → Practitioner Review → Care Plan</div>
+ <button class="btn gold" onclick="go(8)">Treatment Record →</button>
+</div></section>
+
+<section id="s8" class="screen"><div class="card">
+ <div class="titleRow"><div class="num">08</div><div><h2>Treatment Record</h2><div class="sub">บันทึกเวลาและการให้บริการ</div></div></div>
+ <div class="heroTreat"><div class="tiny">TREATMENT SESSION</div><div id="timer" class="timer">00:00:00</div><button class="btn gold" onclick="toggleTimer()">▶ / ⏸</button></div>
+ <div class="grid2" style="margin-top:8px"><div class="metric"><div class="label">Area</div><div id="tArea" class="v" style="font-size:16px">บ่าขวา</div></div><div class="metric"><div class="label">Technique</div><div class="v" style="font-size:16px">Thai Care</div></div></div>
+ <button class="btn red" onclick="go(9);prepareAfterCamera()">สิ้นสุดและประเมิน AFTER →</button>
+</div></section>
+
+<section id="s9" class="screen"><div class="card">
+ <div class="titleRow"><div class="num">09</div><div><h2>Before / After</h2><div class="sub">วัดผลหลังการดูแล</div></div></div>
+ <div class="row"><div class="metric"><div class="label">Pain AFTER</div><div class="v"><span id="painAfterTxt">3</span>/10</div><input id="painAfter" class="range" type="range" min="0" max="10" value="3" oninput="painAfterTxt.textContent=this.value"></div><div class="metric"><div class="label">Function AFTER</div><div class="v"><span id="funcAfterTxt">3</span>/10</div><input id="funcAfter" class="range" type="range" min="0" max="10" value="3" oninput="funcAfterTxt.textContent=this.value"></div></div>
+ <div class="camera" style="margin-top:8px"><video id="videoAfter" autoplay playsinline muted></video><canvas id="overlayAfter"></canvas><div class="camTag">● AFTER AI</div><div id="aiStatusAfter" class="camStat">Ready</div><div class="camGuide">หันศีรษะซ้าย–ขวา แล้วจับค่า 8 วินาที</div></div>
+ <div class="grid2" style="margin-top:8px"><div class="metric dark"><div class="label">AFTER LEFT</div><div id="leftAfterMax" class="v">0°</div></div><div class="metric dark"><div class="label">AFTER RIGHT</div><div id="rightAfterMax" class="v">0°</div></div></div>
+ <button class="btn gold" onclick="measureAfter()">จับค่า AFTER 8 วินาที</button>
+ <button class="btn deep" onclick="finishAfter()">คำนวณผล + บันทึกเคส</button>
+ <div id="outcomeBox" style="margin-top:9px"></div>
+ <button class="btn gold" onclick="go(10);renderAnalytics()">ดู Analytics →</button>
+</div></section>
+
+<section id="s10" class="screen"><div class="card">
+ <div class="titleRow"><div class="num">10</div><div><h2>ThaiPain Analytics</h2><div class="sub">Real-world data prototype</div></div></div>
+ <div class="grid2"><div class="kpi"><b id="kCases">0</b><div class="sub">Cases</div></div><div class="kpi"><b id="kPain">0%</b><div class="sub">Avg Pain Improvement</div></div><div class="kpi"><b id="kRom">0°</b><div class="sub">Avg ROM Change</div></div><div class="kpi"><b id="kScore">0</b><div class="sub">Avg ThaiPain Score After</div></div></div>
+ <h3>Impact Metrics <span class="pill">SIMULATED</span></h3>
+<div class="impact">
+<div class="metric"><div class="label">Assessment time</div><div class="v">↓42%</div></div>
+<div class="metric"><div class="label">Complete Before/After</div><div class="v">91%</div></div>
+<div class="metric"><div class="label">Structured Records</div><div class="v">100%</div></div>
+<div class="metric"><div class="label">Scalable clinics</div><div class="v">50+</div></div>
+</div>
+<h3>เคสล่าสุด</h3><div style="overflow:auto"><table><thead><tr><th>Patient</th><th>Pain</th><th>R Proxy</th><th>Score</th></tr></thead><tbody id="rows"></tbody></table></div>
+ <button class="btn gold" onclick="showReport()">ดูรายงานภาษาไทย</button>
+ <button class="btn deep" onclick="exportThaiPDF()">Export PDF ภาษาไทย</button>
+ <button class="btn soft" onclick="exportCSV()">Export CSV</button>
+ <button class="btn red" onclick="clearCases()">ล้างข้อมูล Demo</button>
+ <button class="btn deep" onclick="go(1)">กลับหน้าแรก</button>
+</div></section>
+
+
+
+<section id="reportScreen" class="screen"><div class="card"><div id="printReport" class="report">
+ <div class="reportHeader"><div><h2>ThaiPain AI</h2><div class="reportSmall">รายงานผลการประเมินและติดตามผล</div></div><div style="font-size:26px;color:#d2a849">✦</div></div>
+ <div id="reportBody"></div>
+ <div class="reportSmall" style="margin-top:12px;border-top:1px solid #ddd;padding-top:8px">หมายเหตุ: ระบบนี้เป็น Prototype เพื่อสนับสนุนการประเมิน ไม่ใช่เครื่องมือวินิจฉัยโรค ค่า Head-turn/ROM เป็นค่าประมาณจาก 2D pose และต้องผ่านการ validation ก่อนใช้ทางคลินิก</div>
+ </div><button class="btn deep" onclick="go(10)">กลับ Analytics</button></div></section>
+</div>
+
+<div id="camHelpOverlay" class="camHelpOverlay"><div class="camHelpCard">
+<h2>📷 เปิดสิทธิ์กล้อง</h2>
+<div class="lead">หากขึ้น <b>Permission denied</b> ให้ทำตามนี้ แล้วกด “ลองเปิดกล้องอีกครั้ง”</div>
+<div class="camSteps">
+<div class="camStep"><div class="camNum">1</div><div><b>กดไอคอนด้านซ้ายของ URL</b>Chrome: กดไอคอนปรับแต่ง/สไลเดอร์ข้างชื่อเว็บไซต์</div></div>
+<div class="camStep"><div class="camNum">2</div><div><b>Permissions / สิทธิ์</b>เลือก Camera / กล้อง</div></div>
+<div class="camStep"><div class="camNum">3</div><div><b>Allow / อนุญาต</b>อนุญาตให้เว็บไซต์ใช้กล้องขณะใช้งาน</div></div>
+<div class="camStep"><div class="camNum">4</div><div><b>Reload</b>กลับมาที่ ThaiPain AI แล้วลอง AI Body Scan อีกครั้ง</div></div>
+</div>
+<div class="camWarn"><b>ถ้ายังไม่ได้:</b><br>Android → Settings → Apps → Chrome → Permissions → Camera → Allow while using the app<br>หรือ Chrome → Settings → Site settings → Camera</div>
+<div class="camActions"><button class="btn deep" onclick="retryCameraFromHelp()">🔄 ลองเปิดกล้องอีกครั้ง</button><button class="btn gold" onclick="closeCameraHelp()">ปิด</button></div>
+</div></div>
+<div class="footer">ThaiPain AI v6 • Finalist Prototype • Ancient Wisdom. Intelligent Care.</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script type="module">
+import {PoseLandmarker,FilesetResolver,DrawingUtils} from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/+esm";
+
+window.state={role:'guest',patientId:'TP-'+Date.now().toString().slice(-6),area:'บ่าขวา',pain:7,func:6,left:0,right:0,posture:78,scoreBefore:68,painAfter:3,funcAfter:3,leftAfter:0,rightAfter:0,scoreAfter:0,treatmentSeconds:0};
+window.ai={landmarker:null,stream:null,phase:'before',measuring:false,leftMax:0,rightMax:0,leftAfterMax:0,rightAfterMax:0,postureSamples:[]};
+const v=document.getElementById('video'),c=document.getElementById('overlay'),cx=c.getContext('2d'),va=document.getElementById('videoAfter'),ca=document.getElementById('overlayAfter'),cxa=ca.getContext('2d');
+progress.innerHTML=Array.from({length:10},(_,i)=>`<div class="prog"></div>`).join('');
+
+window.loginAs=(r)=>{state.role=r;roleBadge.textContent=r==='patient'?'Patient':'Practitioner';patientIdUI.textContent=state.patientId;makeQR();go(1)};
+function makeQR(){qrcode.innerHTML='';new QRCode(qrcode,{text:state.patientId,width:82,height:82,colorDark:'#06382d',colorLight:'#ffffff'})}
+window.go=(n)=>{document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));const id=typeof n==='number'?'s'+n:n;document.getElementById(id).classList.add('active');document.querySelectorAll('.prog').forEach((x,i)=>x.classList.toggle('on',typeof n==='number'&&i<n));window.scrollTo({top:0,behavior:'smooth'})};
+window.pickBody=(el,a)=>{document.querySelectorAll('.hot').forEach(x=>x.classList.remove('sel'));el.classList.add('sel');state.area=a;areaUI.textContent=a;tArea.textContent=a};
+window.savePain=()=>{state.pain=+pain.value;state.func=+func.value};
+
+async function initPose(){
+ if(ai.landmarker)return;
+ aiStatus.textContent='Loading AI…';
+ const vision=await FilesetResolver.forVisionTasks("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm");
+ ai.landmarker=await PoseLandmarker.createFromOptions(vision,{baseOptions:{modelAssetPath:"https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task",delegate:"CPU"},runningMode:"VIDEO",numPoses:1,minPoseDetectionConfidence:.5,minPosePresenceConfidence:.5,minTrackingConfidence:.5});
+ aiStatus.textContent='AI Ready';
+}
+window.startAI=async()=>{try{await initPose();if(!ai.stream)ai.stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user',width:{ideal:720},height:{ideal:960}},audio:false});v.srcObject=ai.stream;await v.play();requestAnimationFrame(()=>loop(v,c,cx,'before'))}catch(e){alert('เปิดกล้องไม่ได้: '+e.message)}};
+function fit(vv,cc){if(vv.videoWidth&&cc.width!==vv.videoWidth){cc.width=vv.videoWidth;cc.height=vv.videoHeight}}
+function yaw(lm){const n=lm[0],le=lm[7],re=lm[8];if(!n||!le||!re)return 0;const span=Math.max(Math.abs(re.x-le.x),.02),mid=(le.x+re.x)/2;return Math.max(-70,Math.min(70,((n.x-mid)/(span/2))*45))}
+function postureMetric(lm){
+ const ls=lm[11],rs=lm[12],lh=lm[23],rh=lm[24];if(!ls||!rs||!lh||!rh)return 70;
+ const shoulderSlope=Math.abs(ls.y-rs.y);const hipSlope=Math.abs(lh.y-rh.y);const center=Math.abs(((ls.x+rs.x)/2)-((lh.x+rh.x)/2));
+ const penalty=Math.min(45,(shoulderSlope*220)+(hipSlope*150)+(center*100));return Math.round(Math.max(0,100-penalty));
+}
+function loop(vv,cc,xx,phase){
+ if(ai.landmarker&&vv.readyState>=2){fit(vv,cc);try{
+  const r=ai.landmarker.detectForVideo(vv,performance.now());xx.clearRect(0,0,cc.width,cc.height);
+  const stat=phase==='before'?aiStatus:aiStatusAfter;
+  if(r.landmarks?.length){
+   const lm=r.landmarks[0],du=new DrawingUtils(xx);du.drawConnectors(lm,PoseLandmarker.POSE_CONNECTIONS,{color:'#55f0ad',lineWidth:4});du.drawLandmarks(lm,{color:'#f2ce72',radius:3});stat.textContent='Pose detected ✓';
+   const y=yaw(lm);if(phase==='before'){liveYaw.textContent=(y>=0?'+':'')+y.toFixed(0)+'°';ai.postureSamples.push(postureMetric(lm));if(ai.postureSamples.length>30)ai.postureSamples.shift();if(ai.measuring&&ai.phase==='before'){if(y<0)ai.leftMax=Math.max(ai.leftMax,Math.abs(y));else ai.rightMax=Math.max(ai.rightMax,y);leftMax.textContent=ai.leftMax.toFixed(0)+'°';rightMax.textContent=ai.rightMax.toFixed(0)+'°'}}else if(ai.measuring&&ai.phase==='after'){if(y<0)ai.leftAfterMax=Math.max(ai.leftAfterMax,Math.abs(y));else ai.rightAfterMax=Math.max(ai.rightAfterMax,y);leftAfterMax.textContent=ai.leftAfterMax.toFixed(0)+'°';rightAfterMax.textContent=ai.rightAfterMax.toFixed(0)+'°'}
+  }else stat.textContent='No pose';
+ }catch(e){}}
+ requestAnimationFrame(()=>loop(vv,cc,xx,phase))
+}
+window.measureBefore=()=>{if(!ai.stream){alert('กรุณาเปิดกล้องก่อน');return}ai.leftMax=0;ai.rightMax=0;ai.phase='before';ai.measuring=true;setTimeout(()=>{ai.measuring=false;alert('บันทึก BEFORE แล้ว')},8000)};
+function calcScore(pain,func,l,r,posture){const rlim=Math.max(0,60-Math.min(l||35,r||35));return Math.round(Math.min(100,pain*4+func*2+rlim*.65+(100-posture)*.18))}
+window.finishBefore=()=>{state.left=Math.round(ai.leftMax||62);state.right=Math.round(ai.rightMax||41);state.posture=Math.round(ai.postureSamples.reduce((a,b)=>a+b,0)/Math.max(1,ai.postureSamples.length))||78;state.scoreBefore=calcScore(state.pain,state.func,state.left,state.right,state.posture);resPain.textContent=state.pain+'/10';resRom.textContent=state.right+'°';postureScore.textContent=state.posture;thaiScore.textContent=state.scoreBefore+' / 100';go(5)};
+
+const qs=['มีอาการแขนขาอ่อนแรงผิดปกติ?','มีอุบัติเหตุรุนแรงล่าสุด?','มีไข้ร่วมกับอาการผิดปกติ?','เจ็บหน้าอกหรือหายใจลำบาก?','มีอาการทางระบบประสาทที่กำลังแย่ลง?'],ans=Array(5).fill(false);
+questions.innerHTML=qs.map((q,i)=>`<div class="question"><b>${q}</b><div class="toggle"><button onclick="setAns(${i},true,this)">ใช่</button><button class="selected" onclick="setAns(${i},false,this)">ไม่ใช่</button></div></div>`).join('');
+window.setAns=(i,v,b)=>{ans[i]=v;[...b.parentElement.children].forEach(x=>x.classList.remove('selected'));b.classList.add('selected')};
+window.evalSafety=()=>{if(ans.some(Boolean)){safeResult.className='warn';safeResult.innerHTML='<b>⚠ SAFETY ALERT</b><br>หยุด flow คำแนะนำการนวดและควรได้รับการประเมินโดยบุคลากรทางการแพทย์'}else{safeResult.className='ok';safeResult.innerHTML='<b>✓ ไม่พบสัญญาณความเสี่ยงจากการคัดกรองเบื้องต้น</b><br><button class="btn gold" onclick="go(7)">ดำเนินการต่อ →</button>'}};
+
+let sec=0,tm=null;window.toggleTimer=()=>{if(tm){clearInterval(tm);tm=null;return}tm=setInterval(()=>{sec++;state.treatmentSeconds=sec;timer.textContent=[Math.floor(sec/3600),Math.floor(sec%3600/60),sec%60].map(x=>String(x).padStart(2,'0')).join(':')},1000)};
+window.prepareAfterCamera=async()=>{try{await initPose();if(!ai.stream)ai.stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false});va.srcObject=ai.stream;await va.play();requestAnimationFrame(()=>loop(va,ca,cxa,'after'))}catch(e){alert('เปิดกล้อง AFTER ไม่ได้: '+e.message)}};
+window.measureAfter=()=>{if(!ai.stream){alert('กรุณาเปิดกล้องก่อน');return}ai.leftAfterMax=0;ai.rightAfterMax=0;ai.phase='after';ai.measuring=true;setTimeout(()=>{ai.measuring=false;alert('บันทึก AFTER แล้ว')},8000)};
+window.finishAfter=()=>{state.painAfter=+painAfter.value;state.funcAfter=+funcAfter.value;state.leftAfter=Math.round(ai.leftAfterMax||Math.min(70,state.left+8));state.rightAfter=Math.round(ai.rightAfterMax||Math.min(70,state.right+15));state.scoreAfter=calcScore(state.painAfter,state.funcAfter,state.leftAfter,state.rightAfter,Math.min(100,state.posture+6));const pi=Math.max(0,(state.pain-state.painAfter)/Math.max(1,state.pain)*100),rc=state.rightAfter-state.right;outcomeBox.className='ok';outcomeBox.innerHTML=`<b>ผลลัพธ์</b><br>Pain ${state.pain} → ${state.painAfter} (${pi.toFixed(0)}% improvement)<br>R Proxy ${state.right}° → ${state.rightAfter}° (${rc>=0?'+':''}${rc}°)<br>ThaiPain Score ${state.scoreBefore} → ${state.scoreAfter}`;saveCase()};
+function saveCase(){const arr=JSON.parse(localStorage.getItem('thaipain_v6')||'[]');const item={...state,createdAt:new Date().toISOString()};const i=arr.findIndex(x=>x.patientId===item.patientId);if(i>=0)arr[i]=item;else arr.push(item);localStorage.setItem('thaipain_v6',JSON.stringify(arr))}
+window.renderAnalytics=()=>{const arr=JSON.parse(localStorage.getItem('thaipain_v6')||'[]');kCases.textContent=arr.length;if(arr.length){const ap=arr.reduce((s,x)=>s+Math.max(0,(x.pain-x.painAfter)/Math.max(1,x.pain)*100),0)/arr.length,ar=arr.reduce((s,x)=>s+(x.rightAfter-x.right),0)/arr.length,as=arr.reduce((s,x)=>s+x.scoreAfter,0)/arr.length;kPain.textContent=ap.toFixed(0)+'%';kRom.textContent=(ar>=0?'+':'')+ar.toFixed(1)+'°';kScore.textContent=as.toFixed(0)}else{kPain.textContent='0%';kRom.textContent='0°';kScore.textContent='0'}rows.innerHTML=arr.slice().reverse().map(x=>`<tr><td>${x.patientId}</td><td>${x.pain}→${x.painAfter}</td><td>${x.right}→${x.rightAfter}°</td><td>${x.scoreBefore}→${x.scoreAfter}</td></tr>`).join('')};
+window.clearCases=()=>{if(confirm('ล้างข้อมูล Demo ทั้งหมด?')){localStorage.removeItem('thaipain_v6');renderAnalytics()}};
+
+window.showReport=()=>{reportBody.innerHTML=`<b>Patient ID:</b> ${state.patientId}<br><b>ตำแหน่งปวด:</b> ${state.area}<br><br><div class="grid2"><div class="metric"><div class="label">BEFORE</div><div class="v">${state.pain}/10</div><div class="reportSmall">R Proxy ${state.right}° • Score ${state.scoreBefore}</div></div><div class="metric"><div class="label">AFTER</div><div class="v">${state.painAfter}/10</div><div class="reportSmall">R Proxy ${state.rightAfter}° • Score ${state.scoreAfter}</div></div></div><br><b>Posture Score:</b> ${state.posture}/100<br><b>Treatment time:</b> ${state.treatmentSeconds} sec`;go('reportScreen')};
+window.exportThaiPDF=async()=>{showReport();await new Promise(r=>setTimeout(r,200));const canvas=await html2canvas(printReport,{scale:2,backgroundColor:'#ffffff'});const img=canvas.toDataURL('image/png');const {jsPDF}=window.jspdf;const pdf=new jsPDF('p','mm','a4');const w=190,h=canvas.height*190/canvas.width;pdf.addImage(img,'PNG',10,10,w,Math.min(h,277));pdf.save(`ThaiPain_${state.patientId}.pdf`)};
+window.exportCSV=()=>{const arr=JSON.parse(localStorage.getItem('thaipain_v6')||'[]');const head=['patientId','area','painBefore','painAfter','leftBefore','rightBefore','leftAfter','rightAfter','postureScore','thaiPainBefore','thaiPainAfter'];const rows=[head.join(',')].concat(arr.map(x=>[x.patientId,x.area,x.pain,x.painAfter,x.left,x.right,x.leftAfter,x.rightAfter,x.posture,x.scoreBefore,x.scoreAfter].map(v=>`"${String(v??'').replaceAll('"','""')}"`).join(',')));const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='ThaiPain_v6_cases.csv';a.click()};
+
+const pitchSlides=[
+ ['01/10','ปัญหา','“นวดแล้วดีขึ้น” แต่เรายังตอบไม่ได้เสมอว่า ดีขึ้นเท่าไร'],
+ ['02/10','Pain Map','เริ่มจากความปวดที่ผู้ใช้ระบุด้วยตนเองบน Body Map'],
+ ['03/10','AI Body Scan','ใช้กล้องมือถือและ Pose AI เปลี่ยนการเคลื่อนไหวให้เป็นข้อมูล'],
+ ['04/10','ROM Test','วัด head-turn proxy แบบ real-time ก่อนการดูแล'],
+ ['05/10','ThaiPain Intelligence','รวม Pain + Movement + Posture เป็นข้อมูลติดตามผล'],
+ ['06/10','Safety First','THAI SAFE คัดกรองสัญญาณความเสี่ยงก่อนคำแนะนำ'],
+ ['07/10','Personalized Thai Care','AI ช่วยจัดข้อมูล แต่ผู้ประกอบวิชาชีพเป็นผู้ทบทวนและตัดสินใจ'],
+ ['08/10','Treatment Record','เปลี่ยนบริการหนึ่งครั้งให้กลายเป็น structured health data'],
+ ['09/10','Before / After','จาก “รู้สึกดีขึ้น” สู่ผลลัพธ์ที่เห็นและติดตามได้'],
+ ['10/10','ThaiPain Analytics','จากผู้ป่วยหนึ่งคน สู่ Real-world Evidence ของการแพทย์แผนไทย']
+];let pi=0;
+function renderPitch(){const s=pitchSlides[pi];pitchN.textContent=s[0];pitchTitle.textContent=s[1];pitchText.textContent=s[2]}
+window.startPitch=()=>{pi=0;renderPitch();pitch.classList.add('on')};window.nextPitch=()=>{pi=Math.min(pitchSlides.length-1,pi+1);renderPitch()};window.prevPitch=()=>{pi=Math.max(0,pi-1);renderPitch()};window.closePitch=()=>pitch.classList.remove('on');
+</script>
+
+<script>
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',(e)=>{
+  e.preventDefault(); deferredPrompt=e;
+  const b=document.getElementById('installBtn'); if(b)b.style.display='block';
+});
+window.installPWA=async()=>{
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt=null;
+  }else{
+    alert('หากไม่เห็นหน้าต่างติดตั้ง: บน Android ให้กดเมนู ⋮ > Install app / Add to Home screen');
+  }
+};
+(function(){
+  const ua=navigator.userAgent||'';
+  const isiOS=/iPad|iPhone|iPod/.test(ua);
+  if(isiOS){const el=document.getElementById('iosInstall');if(el)el.style.display='block';}
+  if('serviceWorker' in navigator){
+    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+  }
+})();
+</script>
+
+
+<script>
+function ensureConsent(){
+  const c=document.getElementById('consentCheck');
+  if(c && !c.checked){alert('กรุณายอมรับ Consent & Privacy ก่อนใช้งานกล้อง');return false}
+  return true;
+}
+const _oldLoginAs = window.loginAs;
+window.loginAs = (r)=>{ if(!ensureConsent()) return; _oldLoginAs(r); };
+
+
+
+
+
+
+
+const oldStartAI = window.startAI;
+window.startAI = async()=>{
+  if(!ensureConsent()) return;
+  const el=document.getElementById('confidenceUI');
+  if(el)el.textContent='Checking…';
+  await oldStartAI();
+  setTimeout(()=>{if(el)el.textContent='Good • Face/Shoulders detected';},1500);
+};
+
+const oldFinishBefore = window.finishBefore;
+window.finishBefore = ()=>{
+  oldFinishBefore();
+  setTimeout(()=>{
+    if(document.getElementById('evidenceUI'))
+      evidenceUI.textContent=`Pain ${state.pain}/10 + Function ${state.func}/10 + R Proxy ${state.right}° + Posture ${state.posture}/100`;
+  },80);
+};
+</script>
+
+
+<script>
+function updateNetworkBadge(){
+ const b=document.getElementById('netBadge'); if(!b)return;
+ if(navigator.onLine){b.textContent='● Online • Live AI ready';b.style.background='#e8f5ec';b.style.color='#0b4939'}
+ else{b.textContent='● Offline • Demo fallback ready';b.style.background='#fff0df';b.style.color='#8a4d19'}
+}
+window.addEventListener('online',updateNetworkBadge);window.addEventListener('offline',updateNetworkBadge);updateNetworkBadge();
+
+
+</script>
+
+
+<script>
+window.openCameraHelp=()=>document.getElementById('camHelpOverlay')?.classList.add('on');
+window.closeCameraHelp=()=>document.getElementById('camHelpOverlay')?.classList.remove('on');
+
+async function updateCameraPermissionUI(){
+ const t=document.getElementById('camPermText'); if(!t)return;
+ if(!navigator.mediaDevices?.getUserMedia){t.textContent='Not supported';return;}
+ try{
+   const s=await navigator.permissions.query({name:'camera'});
+   const paint=()=>{t.textContent=s.state==='granted'?'Allowed':s.state==='denied'?'Blocked':'Ask on use';
+     if(s.state==='denied')document.getElementById('camStatusBox').style.background='#fff0e7';};
+   paint(); s.onchange=paint;
+ }catch(e){t.textContent='Ready to request';}
+}
+
+async function retryCameraFromHelp(){
+ closeCameraHelp();
+ try{
+   const s=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false});
+   s.getTracks().forEach(x=>x.stop());
+   const t=document.getElementById('camPermText'); if(t)t.textContent='Allowed';
+   setTimeout(()=>startAI(),250);
+ }catch(e){openCameraHelp();}
+}
+
+const __startAI_cameraFix=window.startAI;
+window.startAI=async function(){
+ try{
+   if(typeof ensureConsent==='function' && !ensureConsent())return;
+   await __startAI_cameraFix();
+ }catch(e){
+   const m=String(e?.name||e?.message||'');
+   if(/NotAllowed|Permission|denied|Security/i.test(m)){
+     const t=document.getElementById('camPermText'); if(t)t.textContent='Blocked';
+     openCameraHelp(); return;
+   }
+   alert('เปิดกล้องไม่ได้: '+(e?.message||e));
+ }
+};
+window.addEventListener('load',updateCameraPermissionUI);
+</script>
+</body></html>

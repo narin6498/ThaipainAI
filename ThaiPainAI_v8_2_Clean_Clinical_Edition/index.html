@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="th"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#062e24">
+<title>Install ThaiPain AI</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800&display=swap');
+:root{--g:#062e24;--g2:#0a4b3a;--gold:#d8ae55;--gold2:#f4d77e;--cream:#fffaf0}
+*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans Thai",system-ui;background:linear-gradient(160deg,#03261e,#0b4c3b 60%,#b18739);min-height:100vh;padding:24px;color:white}
+.wrap{max-width:520px;margin:auto}.card{background:rgba(255,250,240,.98);color:#163128;border-radius:26px;padding:22px;box-shadow:0 24px 60px #0005;border:1px solid #d8c49a;text-align:center}
+.logo{width:72px;height:72px;margin:auto;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#f4d77e,#b98328);font-size:38px;color:#073529;box-shadow:0 0 0 3px #fff0b7 inset}
+h1{font-size:32px;margin:10px 0 3px;color:var(--g)}h1 span{color:#b88729}.tag{font-size:13px;color:#6c786f}.qr{width:210px;height:210px;background:white;margin:18px auto 8px;border-radius:18px;padding:10px;border:1px solid #d8cfbe}.qr img,.qr canvas{width:100%!important;height:100%!important}
+.btn{display:block;width:100%;border:0;border-radius:15px;padding:14px;font:inherit;font-weight:800;margin-top:10px;text-decoration:none}
+.open{background:linear-gradient(180deg,#0a4b3a,#052d24);color:white}.install{background:linear-gradient(180deg,#f4d77d,#c99432);color:#153027}.small{font-size:11px;color:#68776e;line-height:1.6}.steps{margin:15px 0;text-align:left;background:#f1eadc;border-radius:15px;padding:12px;font-size:12px}.badge{display:inline-block;background:#e7f4ea;color:#0b4838;border-radius:99px;padding:5px 9px;font-size:10px;font-weight:800}.url{word-break:break-all;font-size:10px;color:#66746c;margin-top:7px}
+.footer{text-align:center;font-size:10px;opacity:.8;margin-top:14px}
+</style></head><body>
+<div class="wrap"><div class="card">
+<div class="logo">✦</div>
+<h1>ThaiPain<span>AI</span></h1>
+<div class="tag">Scan • Open • Install • Demo</div>
+<div style="margin-top:8px"><span class="badge">Clinical Edition • Digital Health Hackathon</span></div>
+<div id="qr" class="qr"></div>
+<div class="small">สแกน QR นี้จากโทรศัพท์เครื่องอื่น หรือกดปุ่มด้านล่างเพื่อเปิดแอป</div>
+<a class="btn open" href="./app.html">เปิด ThaiPain AI v8 — Champion</a>
+<button id="installBtn" class="btn install" style="display:none">📲 ติดตั้งบนมือถือ</button>
+<div id="iosBox" class="steps" style="display:none"><b>iPhone / iPad</b><br>1. เปิดหน้านี้ด้วย Safari<br>2. กด Share<br>3. เลือก <b>Add to Home Screen</b></div>
+<div id="androidBox" class="steps"><b>Android</b><br>กด “ติดตั้งบนมือถือ” หรือ Chrome ⋮ → <b>Install app / Add to Home screen</b></div>
+<div class="url" id="urlText"></div>
+</div><div class="footer">ThaiPain AI • AI × Thai Traditional Medicine</div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+const appUrl=new URL('./app.html',location.href).href;
+urlText.textContent=appUrl;
+new QRCode(document.getElementById('qr'),{text:appUrl,width:190,height:190,colorDark:'#06382d',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;installBtn.style.display='block';});
+installBtn.onclick=async()=>{if(deferredPrompt){deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;}else location.href='./app.html'};
+const isiOS=/iPad|iPhone|iPod/.test(navigator.userAgent);
+if(isiOS){iosBox.style.display='block';androidBox.style.display='none'}
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
+</script></body></html>
