@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="theme-color" content="#062e24">
 <title>ThaiPain AI</title>
-<link rel="manifest" href="manifest.webmanifest?v=8.9.2-no-patient-qr">
+<link rel="manifest" href="manifest.webmanifest?v=8.9.3-qr-working">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ThaiPain AI">
@@ -90,7 +90,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 
 .viewTabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0}.viewTab{border:1px solid #d9cfbd;background:#f4efe5;color:var(--deep);border-radius:12px;padding:8px 4px;font:inherit;font-size:10px;font-weight:800}.viewTab.active{background:var(--deep);color:#fff;border-color:#cda84d;box-shadow:0 0 0 2px #e5c56f inset}.selectedAreas{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.areaTag{font-size:9px;padding:5px 7px;border-radius:99px;background:#fff;border:1px solid #d7c9b2;color:var(--deep);font-weight:700}.realHumanMap img{object-position:center top}.painHot{touch-action:manipulation}.mapHint{font-size:10px;color:#fff;background:#0008;padding:7px 9px;border-radius:10px;position:absolute;left:10px;top:10px;z-index:6}.clearPain{position:absolute;right:10px;top:10px;z-index:6;border:0;border-radius:10px;padding:7px 9px;background:#fffE;color:var(--deep);font-weight:800}
 
-/* v8.9.2: all human assets fit identically on mobile; right view is mirrored left profile */
+/* v8.9.3: all human assets fit identically on mobile; right view is mirrored left profile */
 .realHumanMap img, #humanViewImg{
   width:100% !important;
   height:100% !important;
@@ -100,7 +100,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{ transform:scaleX(-1) !important; }
 
 
-/* v8.9.2 — Full body, no crop + reliable touch targets */
+/* v8.9.3 — Full body, no crop + reliable touch targets */
 .realHumanMap{
   position:relative !important;
   width:100% !important;
@@ -153,7 +153,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{transform:scaleX(-1) !important;}
 
 
-/* v8.9.2 — Four balanced real-human panels, mobile safe */
+/* v8.9.3 — Four balanced real-human panels, mobile safe */
 .painMapCardV887{padding-top:18px}
 .clearAllPainV887{float:right;margin-top:-42px;border:1px solid #d8cdb9;background:#fffaf0;color:var(--deep);border-radius:12px;padding:8px 11px;font:inherit;font-size:10px;font-weight:800}
 .fourPainGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
@@ -176,7 +176,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.9.2 Clean 4-view Pain Map ===== */
+/* ===== v8.9.3 Clean 4-view Pain Map ===== */
 .painMapV888{padding-top:16px}
 .viewTabsV888{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:14px 0 10px}
 .viewTabV888{border:1px solid #d8ccb7;border-radius:13px;background:#f7f1e6;color:var(--deep);padding:10px 5px;font:inherit;font-weight:800}
@@ -202,7 +202,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.9.2 Single-view Pain Map on desktop + mobile ===== */
+/* ===== v8.9.3 Single-view Pain Map on desktop + mobile ===== */
 .painDeskGridV888{
   display:block !important;
 }
@@ -227,7 +227,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.9.2 Anatomically aligned Pain Areas ===== */
+/* ===== v8.9.3 Anatomically aligned Pain Areas ===== */
 .painZoneV888{
   width:30px !important;
   height:30px !important;
@@ -254,7 +254,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.9.2 Thai Traditional Medicine Near Me ===== */
+/* ===== v8.9.3 Thai Traditional Medicine Near Me ===== */
 .nearMapWrap{position:relative;border-radius:18px;overflow:hidden;border:1px solid #d8cbb3;background:#eef1ec}
 #thaiNearMap{height:420px;width:100%;background:#e7ece8}
 .nearToolbar{display:grid;grid-template-columns:1.25fr .75fr;gap:8px;margin:10px 0}
@@ -279,7 +279,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.9.2 Home QR + Mobile Responsive ===== */
+/* ===== v8.9.3 Home QR + Mobile Responsive ===== */
 .homeQrCard{padding-top:16px}
 .appQrHero{display:grid;grid-template-columns:minmax(150px,190px) 1fr;gap:18px;align-items:center;margin-top:14px;background:#f2eadb;border:1px solid #dccfb8;border-radius:18px;padding:16px}
 .appQrBox{width:100%;aspect-ratio:1/1;max-width:190px;margin:auto;background:#fff;border-radius:16px;padding:10px;display:grid;place-items:center;box-shadow:0 6px 18px #00000012}
@@ -291,6 +291,8 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 @media(max-width:720px){.appQrHero{grid-template-columns:1fr;text-align:center;gap:12px;padding:14px}.appQrBox{width:min(62vw,230px);max-width:230px}.appQrText .pill{display:inline-block}.qrCopyBtn{width:100%}}
 @media(max-width:390px){.appQrBox{width:min(68vw,210px)}}
 
+
+.staticAppQR{display:block;width:100%;height:100%;object-fit:contain;border-radius:8px}
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
@@ -320,6 +322,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 
 
 
+
 <section id="s1" class="screen"><div class="card homeQrCard">
   <div class="titleRow">
     <div class="num">01</div>
@@ -328,15 +331,13 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 
   <div class="appQrHero">
     <div class="appQrBox">
-      <div id="appEntryQR" class="appQrCanvas"></div>
+      <img src="qr-thaipainai-app.png?v=8.9.3" alt="Scan to Open ThaiPainAI" class="staticAppQR">
     </div>
     <div class="appQrText">
       <span class="pill">📱 Scan to Open ThaiPainAI</span>
       <h3 style="margin:8px 0 4px">สแกนเพื่อเข้าใช้งาน ThaiPainAI</h3>
-      <div class="sub" style="margin:0">
-        ใช้กล้องมือถือสแกน QR Code เพื่อเปิด ThaiPainAI Web App ได้ทันที
-      </div>
-      <div id="appQrUrl" class="appQrUrl"></div>
+      <div class="sub" style="margin:0">ใช้กล้องมือถือสแกน QR Code เพื่อเปิด Web App ได้ทันที</div>
+      <div class="appQrUrl">https://narin6498.github.io/ThaipainAI/</div>
       <button type="button" class="btn soft qrCopyBtn" onclick="copyAppLink()">🔗 คัดลอกลิงก์แอพ</button>
     </div>
   </div>
@@ -511,7 +512,6 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 <div class="footer">ThaiPain AI v8.8.2 • Four-View Interactive Pain Map • Ancient Wisdom. Intelligent Care.</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 <script type="module">
@@ -525,26 +525,8 @@ function applyCameraMirror(videoEl,canvasEl,facing){const mirror=facing==='user'
 const v=document.getElementById('video'),c=document.getElementById('overlay'),cx=c.getContext('2d'),va=document.getElementById('videoAfter'),ca=document.getElementById('overlayAfter'),cxa=ca.getContext('2d');
 progress.innerHTML=Array.from({length:11},(_,i)=>`<div class="prog"></div>`).join('');
 
-window.loginAs=(r)=>{state.role=r;roleBadge.textContent=r==='patient'?'Patient':'Practitioner';makeQR();go(1)};
-function makeQR(){
-  const box=document.getElementById('appEntryQR');
-  if(!box || typeof QRCode==='undefined') return;
-  box.innerHTML='';
-  const base=location.origin + location.pathname.replace(/\/[^\/]*$/, '/');
-  const appUrl=base;
-  window.__thaiPainAppUrl=appUrl;
-  const u=document.getElementById('appQrUrl');
-  if(u)u.textContent=appUrl;
-  new QRCode(box,{
-    text:appUrl,
-    width:220,
-    height:220,
-    colorDark:'#06382d',
-    colorLight:'#ffffff',
-    correctLevel:QRCode.CorrectLevel.M
-  });
-});
-})}
+window.loginAs=(r)=>{state.role=r;roleBadge.textContent=r==='patient'?'Patient':'Practitioner';go(1)};
+
 window.go=(n)=>{document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));const id=typeof n==='number'?'s'+n:n;document.getElementById(id).classList.add('active');document.querySelectorAll('.prog').forEach((x,i)=>x.classList.toggle('on',typeof n==='number'&&i<n));window.scrollTo({top:0,behavior:'smooth'})};
 
 
@@ -619,338 +601,6 @@ window.clearPainV888=()=>{
   areaUI.textContent='ยังไม่ได้เลือก';
   renderPainZonesV888();
 };
-window.addEventListener('DOMContentLoaded',()=>setTimeout(renderPainZonesV888,50));
-window.savePain=()=>{state.pain=+pain.value;state.func=+func.value};
-
-
-
-async function initPose(){
- if(ai.landmarker)return;
- aiStatus.textContent='Loading AI…';
- const vision=await FilesetResolver.forVisionTasks("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm");
- ai.landmarker=await PoseLandmarker.createFromOptions(vision,{baseOptions:{modelAssetPath:"https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task",delegate:"CPU"},runningMode:"VIDEO",numPoses:1,minPoseDetectionConfidence:.5,minPosePresenceConfidence:.5,minTrackingConfidence:.5});
- aiStatus.textContent='AI Ready';
-}
-window.startAI=async()=>{try{await initPose();const facing=preferredFacingMode();if(ai.stream){ai.stream.getTracks().forEach(t=>t.stop());ai.stream=null}ai.stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing},width:{ideal:720},height:{ideal:960}},audio:false});v.srcObject=ai.stream;applyCameraMirror(v,c,facing);if(window.camFacingTag)camFacingTag.textContent=facing==='environment'?'• กล้องหลัง':'• กล้องหน้า';await v.play();requestAnimationFrame(()=>loop(v,c,cx,'before'))}catch(e){alert('เปิดกล้องไม่ได้: '+e.message)}};
-function fit(vv,cc){if(vv.videoWidth&&cc.width!==vv.videoWidth){cc.width=vv.videoWidth;cc.height=vv.videoHeight}}
-function yaw(lm){const n=lm[0],le=lm[7],re=lm[8];if(!n||!le||!re)return 0;const span=Math.max(Math.abs(re.x-le.x),.02),mid=(le.x+re.x)/2;return Math.max(-70,Math.min(70,((n.x-mid)/(span/2))*45))}
-function postureMetric(lm){
- const ls=lm[11],rs=lm[12],lh=lm[23],rh=lm[24];if(!ls||!rs||!lh||!rh)return 70;
- const shoulderSlope=Math.abs(ls.y-rs.y);const hipSlope=Math.abs(lh.y-rh.y);const center=Math.abs(((ls.x+rs.x)/2)-((lh.x+rh.x)/2));
- const penalty=Math.min(45,(shoulderSlope*220)+(hipSlope*150)+(center*100));return Math.round(Math.max(0,100-penalty));
-}
-function loop(vv,cc,xx,phase){
- if(ai.landmarker&&vv.readyState>=2){fit(vv,cc);try{
-  const r=ai.landmarker.detectForVideo(vv,performance.now());xx.clearRect(0,0,cc.width,cc.height);
-  const stat=phase==='before'?aiStatus:aiStatusAfter;
-  if(r.landmarks?.length){
-   const lm=r.landmarks[0],du=new DrawingUtils(xx);du.drawConnectors(lm,PoseLandmarker.POSE_CONNECTIONS,{color:'#55f0ad',lineWidth:4});du.drawLandmarks(lm,{color:'#f2ce72',radius:3});stat.textContent='Pose detected ✓';
-   const y=yaw(lm);const absY=Math.abs(y);const dir=absY<3?'ตรงกลาง':(y<0?'หันซ้าย':'หันขวา');if(phase==='before'){liveYaw.textContent=(y>=0?'+':'')+y.toFixed(0)+'°';if(window.scanRomLive)scanRomLive.textContent=absY.toFixed(0)+'°';if(window.scanRomDir)scanRomDir.textContent=dir;if(window.scanRomBadge)scanRomBadge.classList.toggle('measure',!!(ai.measuring&&ai.phase==='before'));ai.postureSamples.push(postureMetric(lm));if(ai.postureSamples.length>30)ai.postureSamples.shift();if(ai.measuring&&ai.phase==='before'){if(y<0)ai.leftMax=Math.max(ai.leftMax,absY);else ai.rightMax=Math.max(ai.rightMax,y);leftMax.textContent=ai.leftMax.toFixed(0)+'°';rightMax.textContent=ai.rightMax.toFixed(0)+'°'}}else{if(window.scanRomAfterLive)scanRomAfterLive.textContent=absY.toFixed(0)+'°';if(window.scanRomAfterDir)scanRomAfterDir.textContent=dir;if(window.scanRomAfterBadge)scanRomAfterBadge.classList.toggle('measure',!!(ai.measuring&&ai.phase==='after'));if(ai.measuring&&ai.phase==='after'){if(y<0)ai.leftAfterMax=Math.max(ai.leftAfterMax,absY);else ai.rightAfterMax=Math.max(ai.rightAfterMax,y);leftAfterMax.textContent=ai.leftAfterMax.toFixed(0)+'°';rightAfterMax.textContent=ai.rightAfterMax.toFixed(0)+'°'}}
-  }else stat.textContent='No pose';
- }catch(e){}}
- requestAnimationFrame(()=>loop(vv,cc,xx,phase))
-}
-window.measureBefore=()=>{if(!ai.stream){alert('กรุณาเปิดกล้องก่อน');return}ai.leftMax=0;ai.rightMax=0;ai.phase='before';ai.measuring=true;if(window.scanRomBadge)scanRomBadge.classList.add('measure');setTimeout(()=>{ai.measuring=false;if(window.scanRomBadge)scanRomBadge.classList.remove('measure');alert('บันทึก BEFORE แล้ว • ซ้าย '+ai.leftMax.toFixed(0)+'° • ขวา '+ai.rightMax.toFixed(0)+'°')},8000)};
-function calcScore(pain,func,l,r,posture){const rlim=Math.max(0,60-Math.min(l||35,r||35));return Math.round(Math.min(100,pain*4+func*2+rlim*.65+(100-posture)*.18))}
-window.finishBefore=()=>{state.left=Math.round(ai.leftMax||62);state.right=Math.round(ai.rightMax||41);state.posture=Math.round(ai.postureSamples.reduce((a,b)=>a+b,0)/Math.max(1,ai.postureSamples.length))||78;state.scoreBefore=calcScore(state.pain,state.func,state.left,state.right,state.posture);resPain.textContent=state.pain+'/10';resRom.textContent=state.right+'°';postureScore.textContent=state.posture;thaiScore.textContent=state.scoreBefore+' / 100';go(5)};
-
-const qs=['มีอาการแขนขาอ่อนแรงผิดปกติ?','มีอุบัติเหตุรุนแรงล่าสุด?','มีไข้ร่วมกับอาการผิดปกติ?','เจ็บหน้าอกหรือหายใจลำบาก?','มีอาการทางระบบประสาทที่กำลังแย่ลง?'],ans=Array(5).fill(false);
-questions.innerHTML=qs.map((q,i)=>`<div class="question"><b>${q}</b><div class="toggle"><button onclick="setAns(${i},true,this)">ใช่</button><button class="selected" onclick="setAns(${i},false,this)">ไม่ใช่</button></div></div>`).join('');
-window.setAns=(i,v,b)=>{ans[i]=v;[...b.parentElement.children].forEach(x=>x.classList.remove('selected'));b.classList.add('selected')};
-window.evalSafety=()=>{if(ans.some(Boolean)){safeResult.className='warn';safeResult.innerHTML='<b>⚠ SAFETY ALERT</b><br>หยุด flow คำแนะนำการนวดและควรได้รับการประเมินโดยบุคลากรทางการแพทย์'}else{safeResult.className='ok';safeResult.innerHTML='<b>✓ ไม่พบสัญญาณความเสี่ยงจากการคัดกรองเบื้องต้น</b><br><button class="btn gold" onclick="go(7)">ดำเนินการต่อ →</button>'}};
-
-let sec=0,tm=null;window.toggleTimer=()=>{if(tm){clearInterval(tm);tm=null;return}tm=setInterval(()=>{sec++;state.treatmentSeconds=sec;timer.textContent=[Math.floor(sec/3600),Math.floor(sec%3600/60),sec%60].map(x=>String(x).padStart(2,'0')).join(':')},1000)};
-window.prepareAfterCamera=async()=>{try{await initPose();const facing=preferredFacingMode();if(ai.stream){ai.stream.getTracks().forEach(t=>t.stop());ai.stream=null}ai.stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing},width:{ideal:720},height:{ideal:960}},audio:false});va.srcObject=ai.stream;applyCameraMirror(va,ca,facing);if(window.camFacingAfterTag)camFacingAfterTag.textContent=facing==='environment'?'• กล้องหลัง':'• กล้องหน้า';await va.play();requestAnimationFrame(()=>loop(va,ca,cxa,'after'))}catch(e){alert('เปิดกล้อง AFTER ไม่ได้: '+e.message)}};
-window.measureAfter=()=>{if(!ai.stream){alert('กรุณาเปิดกล้องก่อน');return}ai.leftAfterMax=0;ai.rightAfterMax=0;ai.phase='after';ai.measuring=true;if(window.scanRomAfterBadge)scanRomAfterBadge.classList.add('measure');setTimeout(()=>{ai.measuring=false;if(window.scanRomAfterBadge)scanRomAfterBadge.classList.remove('measure');alert('บันทึก AFTER แล้ว • ซ้าย '+ai.leftAfterMax.toFixed(0)+'° • ขวา '+ai.rightAfterMax.toFixed(0)+'°')},8000)};
-window.finishAfter=()=>{state.painAfter=+painAfter.value;state.funcAfter=+funcAfter.value;state.leftAfter=Math.round(ai.leftAfterMax||Math.min(70,state.left+8));state.rightAfter=Math.round(ai.rightAfterMax||Math.min(70,state.right+15));state.scoreAfter=calcScore(state.painAfter,state.funcAfter,state.leftAfter,state.rightAfter,Math.min(100,state.posture+6));const pi=Math.max(0,(state.pain-state.painAfter)/Math.max(1,state.pain)*100),rc=state.rightAfter-state.right;outcomeBox.className='ok';outcomeBox.innerHTML=`<b>ผลลัพธ์</b><br>Pain ${state.pain} → ${state.painAfter} (${pi.toFixed(0)}% improvement)<br>R Proxy ${state.right}° → ${state.rightAfter}° (${rc>=0?'+':''}${rc}°)<br>ThaiPain Score ${state.scoreBefore} → ${state.scoreAfter}`;saveCase()};
-function saveCase(){const arr=JSON.parse(localStorage.getItem('thaipain_v6')||'[]');const item={...state,createdAt:new Date().toISOString()};const i=arr.findIndex(x=>x.patientId===item.patientId);if(i>=0)arr[i]=item;else arr.push(item);localStorage.setItem('thaipain_v6',JSON.stringify(arr))}
-window.renderAnalytics=()=>{const arr=JSON.parse(localStorage.getItem('thaipain_v6')||'[]');kCases.textContent=arr.length;if(arr.length){const ap=arr.reduce((s,x)=>s+Math.max(0,(x.pain-x.painAfter)/Math.max(1,x.pain)*100),0)/arr.length,ar=arr.reduce((s,x)=>s+(x.rightAfter-x.right),0)/arr.length,as=arr.reduce((s,x)=>s+x.scoreAfter,0)/arr.length;kPain.textContent=ap.toFixed(0)+'%';kRom.textContent=(ar>=0?'+':'')+ar.toFixed(1)+'°';kScore.textContent=as.toFixed(0)}else{kPain.textContent='0%';kRom.textContent='0°';kScore.textContent='0'}rows.innerHTML=arr.slice().reverse().map(x=>`<tr><td>${x.patientId}</td><td>${x.pain}→${x.painAfter}</td><td>${x.right}→${x.rightAfter}°</td><td>${x.scoreBefore}→${x.scoreAfter}</td></tr>`).join('')};
-window.clearCases=()=>{if(confirm('ล้างข้อมูล Demo ทั้งหมด?')){localStorage.removeItem('thaipain_v6');renderAnalytics()}};
-
-window.showReport=()=>{reportBody.innerHTML=`<b>Patient ID:</b> ${state.patientId}<br><b>ตำแหน่งปวด:</b> ${state.area}<br><br><div class="grid2"><div class="metric"><div class="label">BEFORE</div><div class="v">${state.pain}/10</div><div class="reportSmall">R Proxy ${state.right}° • Score ${state.scoreBefore}</div></div><div class="metric"><div class="label">AFTER</div><div class="v">${state.painAfter}/10</div><div class="reportSmall">R Proxy ${state.rightAfter}° • Score ${state.scoreAfter}</div></div></div><br><b>Posture Score:</b> ${state.posture}/100<br><b>Treatment time:</b> ${state.treatmentSeconds} sec`;go('reportScreen')};
-window.exportThaiPDF=async()=>{showReport();await new Promise(r=>setTimeout(r,200));const canvas=await html2canvas(printReport,{scale:2,backgroundColor:'#ffffff'});const img=canvas.toDataURL('image/png');const {jsPDF}=window.jspdf;const pdf=new jsPDF('p','mm','a4');const w=190,h=canvas.height*190/canvas.width;pdf.addImage(img,'PNG',10,10,w,Math.min(h,277));pdf.save(`ThaiPain_${state.patientId}.pdf`)};
-window.exportCSV=()=>{const arr=JSON.parse(localStorage.getItem('thaipain_v6')||'[]');const head=['patientId','area','painBefore','painAfter','leftBefore','rightBefore','leftAfter','rightAfter','postureScore','thaiPainBefore','thaiPainAfter'];const rows=[head.join(',')].concat(arr.map(x=>[x.patientId,x.area,x.pain,x.painAfter,x.left,x.right,x.leftAfter,x.rightAfter,x.posture,x.scoreBefore,x.scoreAfter].map(v=>`"${String(v??'').replaceAll('"','""')}"`).join(',')));const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='ThaiPain_v6_cases.csv';a.click()};
-
-const pitchSlides=[
- ['01/10','ปัญหา','“นวดแล้วดีขึ้น” แต่เรายังตอบไม่ได้เสมอว่า ดีขึ้นเท่าไร'],
- ['02/10','Pain Map','เริ่มจากความปวดที่ผู้ใช้ระบุด้วยตนเองบน Body Map'],
- ['03/10','AI Body Scan','ใช้กล้องมือถือและ Pose AI เปลี่ยนการเคลื่อนไหวให้เป็นข้อมูล'],
- ['04/10','ROM Test','วัด head-turn proxy แบบ real-time ก่อนการดูแล'],
- ['05/10','ThaiPain Intelligence','รวม Pain + Movement + Posture เป็นข้อมูลติดตามผล'],
- ['06/10','Safety First','THAI SAFE คัดกรองสัญญาณความเสี่ยงก่อนคำแนะนำ'],
- ['07/10','Personalized Thai Care','AI ช่วยจัดข้อมูล แต่ผู้ประกอบวิชาชีพเป็นผู้ทบทวนและตัดสินใจ'],
- ['08/10','Treatment Record','เปลี่ยนบริการหนึ่งครั้งให้กลายเป็น structured health data'],
- ['09/10','Before / After','จาก “รู้สึกดีขึ้น” สู่ผลลัพธ์ที่เห็นและติดตามได้'],
- ['10/10','ThaiPain Analytics','จากผู้ป่วยหนึ่งคน สู่ Real-world Evidence ของการแพทย์แผนไทย']
-];let pi=0;
-function renderPitch(){const s=pitchSlides[pi];pitchN.textContent=s[0];pitchTitle.textContent=s[1];pitchText.textContent=s[2]}
-window.startPitch=()=>{pi=0;renderPitch();pitch.classList.add('on')};window.nextPitch=()=>{pi=Math.min(pitchSlides.length-1,pi+1);renderPitch()};window.prevPitch=()=>{pi=Math.max(0,pi-1);renderPitch()};window.closePitch=()=>pitch.classList.remove('on');
-</script>
-
-<script>
-let deferredPrompt=null;
-window.addEventListener('beforeinstallprompt',(e)=>{
-  e.preventDefault(); deferredPrompt=e;
-  const b=document.getElementById('installBtn'); if(b)b.style.display='block';
-});
-window.installPWA=async()=>{
-  if(deferredPrompt){
-    deferredPrompt.prompt();
-    await deferredPrompt.userChoice;
-    deferredPrompt=null;
-  }else{
-    alert('หากไม่เห็นหน้าต่างติดตั้ง: บน Android ให้กดเมนู ⋮ > Install app / Add to Home screen');
-  }
-};
-(function(){
-  const ua=navigator.userAgent||'';
-  const isiOS=/iPad|iPhone|iPod/.test(ua);
-  if(isiOS){const el=document.getElementById('iosInstall');if(el)el.style.display='block';}
-  if('serviceWorker' in navigator){
-    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.9.2-no-patient-qr').catch(()=>{}));
-  }
-})();
-</script>
-
-
-<script>
-function ensureConsent(){
-  const c=document.getElementById('consentCheck');
-  if(c && !c.checked){alert('กรุณายอมรับ Consent & Privacy ก่อนใช้งานกล้อง');return false}
-  return true;
-}
-const _oldLoginAs = window.loginAs;
-window.loginAs = (r)=>{ if(!ensureConsent()) return; _oldLoginAs(r); };
-
-
-
-
-
-
-
-const oldStartAI = window.startAI;
-window.startAI = async()=>{
-  if(!ensureConsent()) return;
-  const el=document.getElementById('confidenceUI');
-  if(el)el.textContent='Checking…';
-  await oldStartAI();
-  setTimeout(()=>{if(el)el.textContent='Good • Face/Shoulders detected';},1500);
-};
-
-const oldFinishBefore = window.finishBefore;
-window.finishBefore = ()=>{
-  oldFinishBefore();
-  setTimeout(()=>{
-    if(document.getElementById('evidenceUI'))
-      evidenceUI.textContent=`Pain ${state.pain}/10 + Function ${state.func}/10 + R Proxy ${state.right}° + Posture ${state.posture}/100`;
-  },80);
-};
-</script>
-
-
-<script>
-function updateNetworkBadge(){
- const b=document.getElementById('netBadge'); if(!b)return;
- if(navigator.onLine){b.textContent='● Online • Live AI ready';b.style.background='#e8f5ec';b.style.color='#0b4939'}
- else{b.textContent='● Offline • Demo fallback ready';b.style.background='#fff0df';b.style.color='#8a4d19'}
-}
-window.addEventListener('online',updateNetworkBadge);window.addEventListener('offline',updateNetworkBadge);updateNetworkBadge();
-
-
-</script>
-
-
-<script>
-window.openCameraHelp=()=>document.getElementById('camHelpOverlay')?.classList.add('on');
-window.closeCameraHelp=()=>document.getElementById('camHelpOverlay')?.classList.remove('on');
-
-async function updateCameraPermissionUI(){
- const t=document.getElementById('camPermText'); if(!t)return;
- if(!navigator.mediaDevices?.getUserMedia){t.textContent='Not supported';return;}
- try{
-   const s=await navigator.permissions.query({name:'camera'});
-   const paint=()=>{t.textContent=s.state==='granted'?'Allowed':s.state==='denied'?'Blocked':'Ask on use';
-     if(s.state==='denied')document.getElementById('camStatusBox').style.background='#fff0e7';};
-   paint(); s.onchange=paint;
- }catch(e){t.textContent='Ready to request';}
-}
-
-async function retryCameraFromHelp(){
- closeCameraHelp();
- try{
-   const facing=preferredFacingMode();
-   const s=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing}},audio:false});
-   s.getTracks().forEach(x=>x.stop());
-   const t=document.getElementById('camPermText'); if(t)t.textContent='Allowed';
-   setTimeout(()=>startAI(),250);
- }catch(e){openCameraHelp();}
-}
-
-const __startAI_cameraFix=window.startAI;
-window.startAI=async function(){
- try{
-   if(typeof ensureConsent==='function' && !ensureConsent())return;
-   await __startAI_cameraFix();
- }catch(e){
-   const m=String(e?.name||e?.message||'');
-   if(/NotAllowed|Permission|denied|Security/i.test(m)){
-     const t=document.getElementById('camPermText'); if(t)t.textContent='Blocked';
-     openCameraHelp(); return;
-   }
-   alert('เปิดกล้องไม่ได้: '+(e?.message||e));
- }
-};
-window.addEventListener('load',updateCameraPermissionUI);
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded',()=>{
-  const img=document.getElementById('humanViewImg');
-  const sync=()=>{
-    if(!img) return;
-    const active=document.querySelector('.viewTab.active,[data-view].active');
-    const v=active && active.dataset ? active.dataset.view : '';
-    img.classList.toggle('view-right', v==='right');
-  };
-  document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setTimeout(sync,0)));
-  sync();
-});
-</script>
-
-
-
-<script>
-window.addEventListener('DOMContentLoaded',()=>{
-  setTimeout(()=>{
-    if(typeof setPainViewV888==='function'){
-      setPainViewV888(window.currentPainViewV888 || 'front');
-    }
-  },80);
-});
-</script>
-
-
-<script>
-let thaiNearMap=null, thaiNearLayer=null, thaiUserMarker=null, thaiLastPos=null;
-
-function thaiHouseIcon(){
-  const html=`<div class="thaiHousePin">
-  <svg viewBox="0 0 42 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M21 49C17 42 6 34 6 20C6 9 12 2 21 2s15 7 15 18c0 14-11 22-15 29z" fill="#0a4b3a" stroke="#d9ae53" stroke-width="2"/>
-    <path d="M11 20l10-8 10 8-3-1v9H14v-9z" fill="#f4d77d"/>
-    <path d="M8 18l13-10 13 10-4-1-9-6-9 6z" fill="#fff4c8"/>
-    <path d="M17 21h8v7h-8z" fill="#0a4b3a"/>
-    <path d="M15 28v5m12-5v5m-14 0h16" stroke="#f4d77d" stroke-width="2" stroke-linecap="round"/>
-  </svg></div>`;
-  return L.divIcon({className:'thaiHouseMarker',html,iconSize:[42,50],iconAnchor:[21,48],popupAnchor:[0,-44]});
-}
-function ensureThaiNearMap(){
-  if(thaiNearMap)return thaiNearMap;
-  thaiNearMap=L.map('thaiNearMap',{zoomControl:true}).setView([13.7563,100.5018],6);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    maxZoom:19,attribution:'© OpenStreetMap contributors'
-  }).addTo(thaiNearMap);
-  thaiNearLayer=L.layerGroup().addTo(thaiNearMap);
-  setTimeout(()=>thaiNearMap.invalidateSize(),120);
-  return thaiNearMap;
-}
-window.initThaiNearMe=()=>{ensureThaiNearMap();setTimeout(()=>thaiNearMap.invalidateSize(),150);};
-
-function haversineKm(a,b,c,d){
-  const R=6371,toRad=x=>x*Math.PI/180;
-  const dLat=toRad(c-a),dLon=toRad(d-b);
-  const q=Math.sin(dLat/2)**2+Math.cos(toRad(a))*Math.cos(toRad(c))*Math.sin(dLon/2)**2;
-  return R*2*Math.atan2(Math.sqrt(q),Math.sqrt(1-q));
-}
-function escapeHtml(v){return String(v||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
-
-async function nominatimSearch(lat,lon){
-  const delta=.32;
-  const viewbox=[lon-delta,lat+delta,lon+delta,lat-delta].join(',');
-  const qs=[
-    'แพทย์แผนไทย',
-    'คลินิกแพทย์แผนไทย',
-    'Thai traditional medicine',
-    'traditional medicine clinic'
-  ];
-  let all=[];
-  for(const q of qs){
-    try{
-      const url='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=12&addressdetails=1&bounded=1'
-        +'&viewbox='+encodeURIComponent(viewbox)+'&q='+encodeURIComponent(q);
-      const r=await fetch(url,{headers:{'Accept-Language':'th,en'}});
-      if(r.ok) all=all.concat(await r.json());
-    }catch(e){}
-  }
-  const seen=new Set();
-  return all.filter(x=>{
-    const key=(x.osm_type||'')+'-'+(x.osm_id||x.place_id);
-    if(seen.has(key))return false;seen.add(key);return true;
-  }).map(x=>({
-    name:x.display_name?.split(',')[0]||'สถานบริการแพทย์แผนไทย',
-    display:x.display_name||'',
-    lat:+x.lat,lon:+x.lon,
-    dist:haversineKm(lat,lon,+x.lat,+x.lon)
-  })).sort((a,b)=>a.dist-b.dist).slice(0,15);
-}
-function renderNearPlaces(list){
-  const box=document.getElementById('nearPlaces');
-  if(!list.length){
-    box.innerHTML='<div class="warn"><b>ยังไม่พบสถานบริการจากข้อมูลแผนที่รอบตำแหน่งนี้</b><br>ลองค้นหาใหม่ หรือใช้ปุ่มตรวจสอบรายชื่อกับ DTAM</div>';
-    return;
-  }
-  box.innerHTML=list.map(p=>`
-    <div class="nearPlace">
-      <div class="nearPlaceIcon">${thaiHouseIcon().options.html}</div>
-      <div><div class="nearPlaceName">${escapeHtml(p.name)}</div><div class="nearPlaceMeta">${p.dist.toFixed(1)} กม. • ${escapeHtml(p.display)}</div></div>
-      <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}">นำทาง →</a>
-    </div>`).join('');
-}
-async function searchAround(lat,lon){
-  const map=ensureThaiNearMap();
-  thaiNearLayer.clearLayers();
-  if(thaiUserMarker)map.removeLayer(thaiUserMarker);
-  thaiUserMarker=L.marker([lat,lon],{icon:L.divIcon({className:'',html:'<div class="mePin"></div>',iconSize:[18,18],iconAnchor:[9,9]})}).addTo(map).bindPopup('ตำแหน่งของฉัน');
-  map.setView([lat,lon],13);
-  const st=document.getElementById('nearStatus');
-  st.innerHTML='กำลังค้นหาสถานบริการแพทย์แผนไทยใกล้คุณ…';
-  const places=await nominatimSearch(lat,lon);
-  places.forEach(p=>L.marker([p.lat,p.lon],{icon:thaiHouseIcon()}).addTo(thaiNearLayer)
-    .bindPopup(`<b>${escapeHtml(p.name)}</b><br>${p.dist.toFixed(1)} กม.<br><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}">เปิดเส้นทาง</a>`));
-  renderNearPlaces(places);
-  st.innerHTML=places.length
-    ? `พบสถานบริการจากข้อมูลแผนที่ <b>${places.length}</b> แห่งรอบตำแหน่งของคุณ • เรียงตามระยะทาง`
-    : 'ยังไม่พบสถานบริการจากข้อมูลแผนที่ในรัศมีที่ค้นหา กรุณาตรวจสอบรายชื่อกับ DTAM';
-  if(places.length){
-    const group=L.featureGroup([thaiUserMarker,...thaiNearLayer.getLayers()]);
-    map.fitBounds(group.getBounds().pad(.18),{maxZoom:14});
-  }
-}
-window.findThaiMedicineNearMe=()=>{
-  ensureThaiNearMap();
-  const st=document.getElementById('nearStatus');
-  if(!navigator.geolocation){st.textContent='อุปกรณ์นี้ไม่รองรับการระบุตำแหน่ง';return;}
-  st.textContent='กำลังขอสิทธิ์ตำแหน่ง…';
-  navigator.geolocation.getCurrentPosition(
-    p=>{thaiLastPos={lat:p.coords.latitude,lon:p.coords.longitude};searchAround(thaiLastPos.lat,thaiLastPos.lon);},
-    e=>{st.innerHTML='ไม่สามารถอ่านตำแหน่งได้ กรุณาอนุญาต Location สำหรับเว็บไซต์ แล้วลองอีกครั้ง';},
-    {enableHighAccuracy:true,timeout:12000,maximumAge:120000}
-  );
-};
-window.refreshThaiMedicineSearch=()=>{
-  if(thaiLastPos)searchAround(thaiLastPos.lat,thaiLastPos.lon);
-  else findThaiMedicineNearMe();
-};
-</script>
-
-
-<script>
-window.copyAppLink=async()=>{
-  const url=window.__thaiPainAppUrl || (location.origin + location.pathname.replace(/\/[^\/]*$/, '/'));
-  try{await navigator.clipboard.writeText(url);alert('คัดลอกลิงก์ ThaiPainAI แล้ว');}
-  catch(e){prompt('คัดลอกลิงก์นี้',url);}
-};
-window.addEventListener('DOMContentLoaded',()=>setTimeout(()=>{if(typeof makeQR==='function')makeQR();},120));
 </script>
 
 </body></html>

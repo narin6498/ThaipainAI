@@ -1,7 +1,7 @@
 {
   "name": "ThaiPainAI",
   "short_name": "ThaiPainAI",
-  "start_url": "./app.html?v=8.9.2-no-patient-qr",
+  "start_url": "./app.html?v=8.9.3-qr-working",
   "display": "standalone",
   "background_color": "#062e24",
   "theme_color": "#062e24",
