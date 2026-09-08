@@ -1,7 +1,7 @@
 {
-  "name": "ThaiPain AI v8.8.6 Four-View Pain Map",
+  "name": "ThaiPain AI v8.8.7 Four-View Pain Map",
   "short_name": "ThaiPainAI",
-  "start_url": "./index.html?v=8.8.6-fullbody-click",
+  "start_url": "./index.html?v=8.8.7-balanced4",
   "display": "standalone",
   "background_color": "#06382d",
   "theme_color": "#06382d",
