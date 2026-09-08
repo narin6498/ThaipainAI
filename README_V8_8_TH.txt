@@ -1,0 +1,7 @@
+ThaiPainAI v8.8 Four-View Pain Map
+- คนจริง 4 มุม: หน้า/หลัง/ซ้าย/ขวา
+- Pain Area เป็น HTML buttons กดจริง
+- เลือกหลายตำแหน่งข้ามมุมได้
+- ล้างจุดได้
+- Service Worker cache v8.8
+อัปโหลดไฟล์ทั้งหมดในโฟลเดอร์นี้ไว้ที่ root ของ GitHub repo แล้ว Deploy path: .

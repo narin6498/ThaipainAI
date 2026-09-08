@@ -1,14 +1,20 @@
 {
-  "id":"./?v=8.7.1-hardfix",
-  "name":"ThaiPainAI",
-  "short_name":"ThaiPainAI",
-  "start_url":"./app.html?v=8.7.1-hardfix",
-  "scope":"./",
-  "display":"standalone",
-  "background_color":"#062e24",
-  "theme_color":"#062e24",
-  "icons":[
-    {"src":"icon-192.png","sizes":"192x192","type":"image/png"},
-    {"src":"icon-512.png","sizes":"512x512","type":"image/png"}
+  "name": "ThaiPain AI v8.8 Four-View Pain Map",
+  "short_name": "ThaiPainAI",
+  "start_url": "./index.html?v=8.8.0-fourview",
+  "display": "standalone",
+  "background_color": "#06382d",
+  "theme_color": "#06382d",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }
