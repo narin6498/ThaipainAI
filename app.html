@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="theme-color" content="#062e24">
 <title>ThaiPain AI</title>
-<link rel="manifest" href="manifest.webmanifest?v=8.11.2-rom-live-camera">
+<link rel="manifest" href="manifest.webmanifest?v=8.11.3-rom-skeleton-lines">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ThaiPain AI">
@@ -90,7 +90,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 
 .viewTabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0}.viewTab{border:1px solid #d9cfbd;background:#f4efe5;color:var(--deep);border-radius:12px;padding:8px 4px;font:inherit;font-size:10px;font-weight:800}.viewTab.active{background:var(--deep);color:#fff;border-color:#cda84d;box-shadow:0 0 0 2px #e5c56f inset}.selectedAreas{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.areaTag{font-size:9px;padding:5px 7px;border-radius:99px;background:#fff;border:1px solid #d7c9b2;color:var(--deep);font-weight:700}.realHumanMap img{object-position:center top}.painHot{touch-action:manipulation}.mapHint{font-size:10px;color:#fff;background:#0008;padding:7px 9px;border-radius:10px;position:absolute;left:10px;top:10px;z-index:6}.clearPain{position:absolute;right:10px;top:10px;z-index:6;border:0;border-radius:10px;padding:7px 9px;background:#fffE;color:var(--deep);font-weight:800}
 
-/* v8.11.2: all human assets fit identically on mobile; right view is mirrored left profile */
+/* v8.11.3: all human assets fit identically on mobile; right view is mirrored left profile */
 .realHumanMap img, #humanViewImg{
   width:100% !important;
   height:100% !important;
@@ -100,7 +100,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{ transform:scaleX(-1) !important; }
 
 
-/* v8.11.2 — Full body, no crop + reliable touch targets */
+/* v8.11.3 — Full body, no crop + reliable touch targets */
 .realHumanMap{
   position:relative !important;
   width:100% !important;
@@ -153,7 +153,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{transform:scaleX(-1) !important;}
 
 
-/* v8.11.2 — Four balanced real-human panels, mobile safe */
+/* v8.11.3 — Four balanced real-human panels, mobile safe */
 .painMapCardV887{padding-top:18px}
 .clearAllPainV887{float:right;margin-top:-42px;border:1px solid #d8cdb9;background:#fffaf0;color:var(--deep);border-radius:12px;padding:8px 11px;font:inherit;font-size:10px;font-weight:800}
 .fourPainGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
@@ -176,7 +176,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Clean 4-view Pain Map ===== */
+/* ===== v8.11.3 Clean 4-view Pain Map ===== */
 .painMapV888{padding-top:16px}
 .viewTabsV888{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:14px 0 10px}
 .viewTabV888{border:1px solid #d8ccb7;border-radius:13px;background:#f7f1e6;color:var(--deep);padding:10px 5px;font:inherit;font-weight:800}
@@ -202,7 +202,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Single-view Pain Map on desktop + mobile ===== */
+/* ===== v8.11.3 Single-view Pain Map on desktop + mobile ===== */
 .painDeskGridV888{
   display:block !important;
 }
@@ -227,7 +227,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Anatomically aligned Pain Areas ===== */
+/* ===== v8.11.3 Anatomically aligned Pain Areas ===== */
 .painZoneV888{
   width:30px !important;
   height:30px !important;
@@ -254,7 +254,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Thai Traditional Medicine Near Me ===== */
+/* ===== v8.11.3 Thai Traditional Medicine Near Me ===== */
 .nearMapWrap{position:relative;border-radius:18px;overflow:hidden;border:1px solid #d8cbb3;background:#eef1ec}
 #thaiNearMap{height:420px;width:100%;background:#e7ece8}
 .nearToolbar{display:grid;grid-template-columns:1.25fr .75fr;gap:8px;margin:10px 0}
@@ -279,7 +279,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 QR App Entry ===== */
+/* ===== v8.11.3 QR App Entry ===== */
 .appQrHero{display:grid;grid-template-columns:minmax(150px,190px) 1fr;gap:18px;align-items:center;margin-top:14px;background:#f2eadb;border:1px solid #dccfb8;border-radius:18px;padding:16px}
 .appQrBox{width:100%;aspect-ratio:1/1;max-width:190px;margin:auto;background:#fff;border-radius:16px;padding:10px;display:grid;place-items:center}
 .staticAppQR{display:block;width:100%;height:100%;object-fit:contain}
@@ -289,7 +289,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 @media(max-width:720px){.appQrHero{grid-template-columns:1fr;text-align:center}.appQrBox{width:min(62vw,230px);max-width:230px}.qrCopyBtn{width:100%}}
 
 
-/* ===== v8.11.2 Responsive Clean 4-View Pain Map ===== */
+/* ===== v8.11.3 Responsive Clean 4-View Pain Map ===== */
 .painMapV896{padding-top:16px}
 .viewTabsV896{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 12px}
 .viewTabV896{border:1px solid #d8ccb7;border-radius:13px;background:#f8f2e7;color:var(--deep);padding:11px 8px;font:inherit;font-weight:800}
@@ -356,7 +356,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Balanced Pain Area ===== */
+/* ===== v8.11.3 Balanced Pain Area ===== */
 /* Desktop 4-view: small visible rings, large invisible touch target */
 .painZoneV896{
   width:20px !important;
@@ -406,7 +406,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 HARD FIX: Mobile = one view only ===== */
+/* ===== v8.11.3 HARD FIX: Mobile = one view only ===== */
 @media (max-width:900px), (hover:none) and (pointer:coarse){
   .viewTabsV896{
     display:grid !important;
@@ -454,7 +454,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Mobile Full-Screen UX ===== */
+/* ===== v8.11.3 Mobile Full-Screen UX ===== */
 @media (max-width:900px), (hover:none) and (pointer:coarse){
   html,body{
     width:100%;
@@ -533,7 +533,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Pain Area aligned to clean body assets ===== */
+/* ===== v8.11.3 Pain Area aligned to clean body assets ===== */
 @media (min-width:901px) and (hover:hover){
   .painZoneV896{
     width:18px !important;
@@ -551,7 +551,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Camera recovery UI ===== */
+/* ===== v8.11.3 Camera recovery UI ===== */
 .cameraRecovery{
   margin-top:9px;padding:10px 11px;border-radius:13px;
   background:#fff5de;border:1px solid #e3c98e;
@@ -568,7 +568,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 .cameraDiag{margin-top:7px;padding:8px 10px;background:#eef3ef;border-radius:10px;font-size:9px;color:#516259;white-space:pre-wrap}
 
 
-/* v8.11.2 visible circles are small; touch targets remain large */
+/* v8.11.3 visible circles are small; touch targets remain large */
 @media(min-width:901px) and (hover:hover){
   .painZoneV896{width:16px!important;height:16px!important;border-width:1.5px!important}
   .painZoneV896::before{inset:-12px!important}
@@ -579,7 +579,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Camera Recovery Pro ===== */
+/* ===== v8.11.3 Camera Recovery Pro ===== */
 .cameraV8102Tools{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px}
 .cameraV8102Tools .btn{margin:0;text-align:center}
 .cameraV8102Error{display:none;margin-top:8px;padding:10px;border-radius:12px;background:#fff0e7;border:1px solid #e7b39d;color:#723d2a;font-size:10px;line-height:1.55;white-space:pre-wrap}
@@ -590,7 +590,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Mobile No-Scroll AI Body Scan ===== */
+/* ===== v8.11.3 Mobile No-Scroll AI Body Scan ===== */
 .scanTopV8103{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .scanCloseV8103{
   width:38px;height:38px;border:0;border-radius:50%;background:#e9e1d3;color:#083b2f;
@@ -748,7 +748,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Joint ROM CTA on Camera ===== */
+/* ===== v8.11.3 Joint ROM CTA on Camera ===== */
 .jointRomCtaV8111{
   width:100%;min-height:64px;border:1px solid #f6d36f;border-radius:16px;
   background:linear-gradient(135deg,#f7d878,#e9b93d);color:#083c30;
@@ -787,7 +787,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.2 Joint ROM with Live Camera ===== */
+/* ===== v8.11.3 Joint ROM with Live Camera ===== */
 .romCameraWrapV8112{
   position:relative;margin:10px 0 12px;border-radius:18px;overflow:hidden;
   background:#071a15;aspect-ratio:4/3;min-height:240px;border:1px solid #173e33
@@ -821,6 +821,16 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
   .romCamGuideV8112{bottom:56px}
   .romCameraActionsV8112 button{min-height:40px;font-size:11px}
 }
+
+
+/* ===== v8.11.3 ROM skeleton visibility fix ===== */
+.romCameraWrapV8112 video{z-index:1}
+.romCameraWrapV8112 canvas{
+  z-index:3 !important;
+  opacity:1 !important;
+  mix-blend-mode:normal !important;
+}
+.romCamTagV8112,.romCamStatusV8112,.romCamGuideV8112,.romCameraActionsV8112{z-index:5}
 
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
@@ -1207,7 +1217,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 
 <script>
-/* ===== v8.11.2 Permission-first mobile camera bridge ===== */
+/* ===== v8.11.3 Permission-first mobile camera bridge ===== */
 window.__cameraBridgeStream = null;
 
 window.isThaiPainMobile = function(){
@@ -1407,7 +1417,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 
 <script>
-/* ===== ThaiPainAI v8.11.2 Camera Manager: independent from MediaPipe ===== */
+/* ===== ThaiPainAI v8.11.3 Camera Manager: independent from MediaPipe ===== */
 window.tpCamera = {
   stream:null,
   facing:'environment',
@@ -2106,7 +2116,7 @@ window.installPWA=async()=>{
   const isiOS=/iPad|iPhone|iPod/.test(ua);
   if(isiOS){const el=document.getElementById('iosInstall');if(el)el.style.display='block';}
   if('serviceWorker' in navigator){
-    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.11.2-rom-live-camera').catch(()=>{}));
+    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.11.3-rom-skeleton-lines').catch(()=>{}));
   }
 })();
 </script>
@@ -2373,7 +2383,7 @@ window.copyAppLink=async()=>{
 
 
 <script>
-/* v8.11.2 final camera overrides — keep one path only */
+/* v8.11.3 final camera overrides — keep one path only */
 window.retryCameraFromHelp=function(){
   if(typeof closeCameraHelp==='function')closeCameraHelp();
   window.startCameraV8102();
@@ -2383,7 +2393,7 @@ window.startAI=function(){return window.startCameraV8102();};
 
 
 <script>
-/* ===== v8.11.2 Direct AI Joint ROM navigation ===== */
+/* ===== v8.11.3 Direct AI Joint ROM navigation ===== */
 window.openJointROMV8111=function(){
   if(window.fullRom){
     const first=document.querySelector('#romJointTabs button[data-joint="neck"]');
@@ -2398,7 +2408,7 @@ window.openJointROMV8111=function(){
 
 
 <script>
-/* ===== v8.11.2 ROM live camera bridge ===== */
+/* ===== v8.11.3 ROM live camera bridge ===== */
 window.romCameraLoopV8112Active=false;
 
 window.attachRomCameraV8112=async function(){
@@ -2435,6 +2445,66 @@ window.attachRomCameraV8112=async function(){
   }
 };
 
+
+/* ===== v8.11.3 Robust ROM skeleton renderer =====
+   Draws lines manually so ROM screen does not depend on DrawingUtils.drawConnectors().
+*/
+window.ROM_POSE_EDGES_V8113=[
+  [0,1],[1,2],[2,3],[3,7],
+  [0,4],[4,5],[5,6],[6,8],
+  [9,10],
+  [11,12],
+  [11,13],[13,15],[15,17],[15,19],[15,21],[17,19],
+  [12,14],[14,16],[16,18],[16,20],[16,22],[18,20],
+  [11,23],[12,24],[23,24],
+  [23,25],[25,27],[27,29],[29,31],[27,31],
+  [24,26],[26,28],[28,30],[30,32],[28,32]
+];
+
+window.drawRomSkeletonV8113=function(ctx,lm,w,h){
+  if(!ctx||!lm||!w||!h)return;
+
+  // Lines first
+  ctx.save();
+  ctx.strokeStyle='#55f0ad';
+  ctx.lineWidth=Math.max(3,Math.min(7,w/140));
+  ctx.lineCap='round';
+  ctx.lineJoin='round';
+
+  for(const [a,b] of window.ROM_POSE_EDGES_V8113){
+    const p1=lm[a],p2=lm[b];
+    if(!p1||!p2)continue;
+    if(Number.isFinite(p1.visibility)&&p1.visibility<0.35)continue;
+    if(Number.isFinite(p2.visibility)&&p2.visibility<0.35)continue;
+
+    const x1=p1.x*w, y1=p1.y*h;
+    const x2=p2.x*w, y2=p2.y*h;
+    if(!Number.isFinite(x1+y1+x2+y2))continue;
+
+    ctx.beginPath();
+    ctx.moveTo(x1,y1);
+    ctx.lineTo(x2,y2);
+    ctx.stroke();
+  }
+
+  // Landmark dots on top
+  ctx.fillStyle='#f2ce72';
+  ctx.strokeStyle='#083f31';
+  ctx.lineWidth=Math.max(1.5,w/500);
+  const radius=Math.max(3.5,Math.min(7,w/170));
+  lm.forEach(p=>{
+    if(!p)return;
+    if(Number.isFinite(p.visibility)&&p.visibility<0.35)return;
+    const x=p.x*w,y=p.y*h;
+    if(!Number.isFinite(x+y))return;
+    ctx.beginPath();
+    ctx.arc(x,y,radius,0,Math.PI*2);
+    ctx.fill();
+    ctx.stroke();
+  });
+  ctx.restore();
+};
+
 window.romCameraLoopV8112=async function(){
   const rv=document.getElementById('romVideoV8112');
   const rc=document.getElementById('romOverlayV8112');
@@ -2455,9 +2525,7 @@ window.romCameraLoopV8112=async function(){
       ctx.clearRect(0,0,rc.width,rc.height);
       if(r.landmarks?.length){
         const lm=r.landmarks[0];
-        const du=new DrawingUtils(ctx);
-        du.drawConnectors(lm,PoseLandmarker.POSE_CONNECTIONS,{color:'#55f0ad',lineWidth:4});
-        du.drawLandmarks(lm,{color:'#f2ce72',radius:3});
+        window.drawRomSkeletonV8113(ctx,lm,rc.width,rc.height);
         if(typeof window.updateFullRomFromPose==='function')window.updateFullRomFromPose(lm);
         if(rs)rs.textContent='Pose detected ✓';
       }else{
