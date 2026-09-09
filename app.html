@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="theme-color" content="#062e24">
 <title>ThaiPain AI</title>
-<link rel="manifest" href="manifest.webmanifest?v=8.10.1-permission-first">
+<link rel="manifest" href="manifest.webmanifest?v=8.10.2-camera-recovery-pro">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ThaiPain AI">
@@ -90,7 +90,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 
 .viewTabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0}.viewTab{border:1px solid #d9cfbd;background:#f4efe5;color:var(--deep);border-radius:12px;padding:8px 4px;font:inherit;font-size:10px;font-weight:800}.viewTab.active{background:var(--deep);color:#fff;border-color:#cda84d;box-shadow:0 0 0 2px #e5c56f inset}.selectedAreas{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.areaTag{font-size:9px;padding:5px 7px;border-radius:99px;background:#fff;border:1px solid #d7c9b2;color:var(--deep);font-weight:700}.realHumanMap img{object-position:center top}.painHot{touch-action:manipulation}.mapHint{font-size:10px;color:#fff;background:#0008;padding:7px 9px;border-radius:10px;position:absolute;left:10px;top:10px;z-index:6}.clearPain{position:absolute;right:10px;top:10px;z-index:6;border:0;border-radius:10px;padding:7px 9px;background:#fffE;color:var(--deep);font-weight:800}
 
-/* v8.10.1: all human assets fit identically on mobile; right view is mirrored left profile */
+/* v8.10.2: all human assets fit identically on mobile; right view is mirrored left profile */
 .realHumanMap img, #humanViewImg{
   width:100% !important;
   height:100% !important;
@@ -100,7 +100,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{ transform:scaleX(-1) !important; }
 
 
-/* v8.10.1 — Full body, no crop + reliable touch targets */
+/* v8.10.2 — Full body, no crop + reliable touch targets */
 .realHumanMap{
   position:relative !important;
   width:100% !important;
@@ -153,7 +153,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{transform:scaleX(-1) !important;}
 
 
-/* v8.10.1 — Four balanced real-human panels, mobile safe */
+/* v8.10.2 — Four balanced real-human panels, mobile safe */
 .painMapCardV887{padding-top:18px}
 .clearAllPainV887{float:right;margin-top:-42px;border:1px solid #d8cdb9;background:#fffaf0;color:var(--deep);border-radius:12px;padding:8px 11px;font:inherit;font-size:10px;font-weight:800}
 .fourPainGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
@@ -176,7 +176,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.1 Clean 4-view Pain Map ===== */
+/* ===== v8.10.2 Clean 4-view Pain Map ===== */
 .painMapV888{padding-top:16px}
 .viewTabsV888{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:14px 0 10px}
 .viewTabV888{border:1px solid #d8ccb7;border-radius:13px;background:#f7f1e6;color:var(--deep);padding:10px 5px;font:inherit;font-weight:800}
@@ -202,7 +202,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.1 Single-view Pain Map on desktop + mobile ===== */
+/* ===== v8.10.2 Single-view Pain Map on desktop + mobile ===== */
 .painDeskGridV888{
   display:block !important;
 }
@@ -227,7 +227,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.1 Anatomically aligned Pain Areas ===== */
+/* ===== v8.10.2 Anatomically aligned Pain Areas ===== */
 .painZoneV888{
   width:30px !important;
   height:30px !important;
@@ -254,7 +254,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.1 Thai Traditional Medicine Near Me ===== */
+/* ===== v8.10.2 Thai Traditional Medicine Near Me ===== */
 .nearMapWrap{position:relative;border-radius:18px;overflow:hidden;border:1px solid #d8cbb3;background:#eef1ec}
 #thaiNearMap{height:420px;width:100%;background:#e7ece8}
 .nearToolbar{display:grid;grid-template-columns:1.25fr .75fr;gap:8px;margin:10px 0}
@@ -279,7 +279,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.1 QR App Entry ===== */
+/* ===== v8.10.2 QR App Entry ===== */
 .appQrHero{display:grid;grid-template-columns:minmax(150px,190px) 1fr;gap:18px;align-items:center;margin-top:14px;background:#f2eadb;border:1px solid #dccfb8;border-radius:18px;padding:16px}
 .appQrBox{width:100%;aspect-ratio:1/1;max-width:190px;margin:auto;background:#fff;border-radius:16px;padding:10px;display:grid;place-items:center}
 .staticAppQR{display:block;width:100%;height:100%;object-fit:contain}
@@ -289,7 +289,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 @media(max-width:720px){.appQrHero{grid-template-columns:1fr;text-align:center}.appQrBox{width:min(62vw,230px);max-width:230px}.qrCopyBtn{width:100%}}
 
 
-/* ===== v8.10.1 Responsive Clean 4-View Pain Map ===== */
+/* ===== v8.10.2 Responsive Clean 4-View Pain Map ===== */
 .painMapV896{padding-top:16px}
 .viewTabsV896{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 12px}
 .viewTabV896{border:1px solid #d8ccb7;border-radius:13px;background:#f8f2e7;color:var(--deep);padding:11px 8px;font:inherit;font-weight:800}
@@ -356,7 +356,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.1 Balanced Pain Area ===== */
+/* ===== v8.10.2 Balanced Pain Area ===== */
 /* Desktop 4-view: small visible rings, large invisible touch target */
 .painZoneV896{
   width:20px !important;
@@ -406,7 +406,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.1 HARD FIX: Mobile = one view only ===== */
+/* ===== v8.10.2 HARD FIX: Mobile = one view only ===== */
 @media (max-width:900px), (hover:none) and (pointer:coarse){
   .viewTabsV896{
     display:grid !important;
@@ -454,7 +454,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.1 Mobile Full-Screen UX ===== */
+/* ===== v8.10.2 Mobile Full-Screen UX ===== */
 @media (max-width:900px), (hover:none) and (pointer:coarse){
   html,body{
     width:100%;
@@ -533,7 +533,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.1 Pain Area aligned to clean body assets ===== */
+/* ===== v8.10.2 Pain Area aligned to clean body assets ===== */
 @media (min-width:901px) and (hover:hover){
   .painZoneV896{
     width:18px !important;
@@ -551,7 +551,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.1 Camera recovery UI ===== */
+/* ===== v8.10.2 Camera recovery UI ===== */
 .cameraRecovery{
   margin-top:9px;padding:10px 11px;border-radius:13px;
   background:#fff5de;border:1px solid #e3c98e;
@@ -568,7 +568,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 .cameraDiag{margin-top:7px;padding:8px 10px;background:#eef3ef;border-radius:10px;font-size:9px;color:#516259;white-space:pre-wrap}
 
 
-/* v8.10.1 visible circles are small; touch targets remain large */
+/* v8.10.2 visible circles are small; touch targets remain large */
 @media(min-width:901px) and (hover:hover){
   .painZoneV896{width:16px!important;height:16px!important;border-width:1.5px!important}
   .painZoneV896::before{inset:-12px!important}
@@ -576,6 +576,17 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 @media(max-width:900px),(hover:none) and (pointer:coarse){
   .painZoneV896{width:25px!important;height:25px!important;border-width:1.5px!important}
   .painZoneV896::before{inset:-11px!important}
+}
+
+
+/* ===== v8.10.2 Camera Recovery Pro ===== */
+.cameraV8102Tools{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px}
+.cameraV8102Tools .btn{margin:0;text-align:center}
+.cameraV8102Error{display:none;margin-top:8px;padding:10px;border-radius:12px;background:#fff0e7;border:1px solid #e7b39d;color:#723d2a;font-size:10px;line-height:1.55;white-space:pre-wrap}
+.cameraV8102Error.on{display:block}
+@media(max-width:720px){
+  .cameraV8102Tools{grid-template-columns:1fr}
+  .cameraV8102Tools .btn{min-height:48px}
 }
 
 </style>
@@ -695,11 +706,17 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
  <div class="titleRow"><div class="num">03</div><div><h2>AI Body Scan</h2><div class="sub">Real-time pose landmarks</div></div></div>
  <div class="camera"><video id="video" autoplay playsinline muted></video><canvas id="overlay"></canvas><div class="camTag">● LIVE POSE AI <span id="camFacingTag"></span></div><div id="aiStatus" class="camStat">Not started</div><div id="scanRomBadge" class="romLiveBadge"><div class="romLabel">LIVE ROM / HEAD-TURN PROXY</div><div id="scanRomLive" class="romValue">0°</div><div id="scanRomDir" class="romDir">ตรงกลาง</div></div><div class="camGuide">หันศีรษะซ้าย–ขวา • ค่ามุมจะแสดงแบบ Real-time</div></div>
  <div class="conf"><div class="confDot"></div><div><b>AI Data Quality:</b> <span id="confidenceUI">Ready</span><div class="sub" style="margin:0">ระบบจะแจ้งหากแสงน้อยหรือเห็นร่างกายไม่ครบ</div></div></div>
-<button class="btn deep" id="openCameraBtn" onclick="startMobileCameraBridge()">📷 เปิดกล้องหลัง + AI Body Scan</button>
+<button class="btn deep" id="openCameraBtn" type="button" onclick="startCameraV8102()">📷 เปิดกล้องหลัง + AI Body Scan</button>
 <div id="mobileCameraHint" class="nearStatus" style="margin-top:8px">
   บนมือถือระบบจะขอใช้ <b>กล้องหลัง</b> อัตโนมัติ • กรุณากด Allow/อนุญาต เมื่อเบราว์เซอร์ถามสิทธิ์กล้อง
 </div>
 <button class="btn soft" onclick="openCameraHelp()">🛠 แก้ปัญหากล้อง / Camera Permission</button>
+<div class="cameraV8102Tools">
+  <button type="button" class="btn soft" onclick="switchCameraV8102()">🔄 สลับกล้อง หน้า/หลัง</button>
+  <a class="btn soft" href="./camera-test.html?v=8.10.2" target="_blank" rel="noopener">🧪 ทดสอบกล้องแบบไม่ใช้ AI</a>
+</div>
+<div id="cameraV8102Error" class="cameraV8102Error"></div>
+
 <div id="camStatusBox" class="camStatus">📷 Camera status: <b id="camPermText">Checking…</b></div>
 <div id="cameraRecovery" class="cameraRecovery">
   <b>กล้องยังเปิดไม่ได้</b><br>
@@ -840,7 +857,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 
 <script>
-/* ===== v8.10.1 Permission-first mobile camera bridge ===== */
+/* ===== v8.10.2 Permission-first mobile camera bridge ===== */
 window.__cameraBridgeStream = null;
 
 window.isThaiPainMobile = function(){
@@ -1038,6 +1055,223 @@ window.addEventListener('DOMContentLoaded',()=>{
 });
 </script>
 
+
+<script>
+/* ===== ThaiPainAI v8.10.2 Camera Manager: independent from MediaPipe ===== */
+window.tpCamera = {
+  stream:null,
+  facing:'environment',
+  lastDeviceId:null,
+  devices:[]
+};
+
+window.tpIsMobile = function(){
+  return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ||
+         (navigator.maxTouchPoints||0)>0 ||
+         window.matchMedia('(pointer:coarse)').matches;
+};
+
+window.tpEmbeddedBrowser = function(){
+  const ua=navigator.userAgent||'';
+  return /FBAN|FBAV|Instagram|Line\/|MicroMessenger|; wv|GSA\//i.test(ua);
+};
+
+window.tpStopCamera = function(){
+  if(window.tpCamera.stream){
+    try{window.tpCamera.stream.getTracks().forEach(t=>t.stop())}catch(e){}
+    window.tpCamera.stream=null;
+  }
+  if(window.ai && window.ai.stream){
+    try{window.ai.stream.getTracks().forEach(t=>t.stop())}catch(e){}
+    window.ai.stream=null;
+  }
+};
+
+window.tpSetCamError = function(msg){
+  const el=document.getElementById('cameraV8102Error');
+  if(el){el.textContent=msg||'';el.classList.toggle('on',!!msg);}
+};
+
+window.tpCameraDiagnostics = function(error){
+  const parts=[
+    'URL: '+location.href,
+    'HTTPS: '+window.isSecureContext,
+    'mediaDevices: '+!!navigator.mediaDevices,
+    'getUserMedia: '+!!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia),
+    'embedded browser: '+window.tpEmbeddedBrowser(),
+    'UA: '+navigator.userAgent
+  ];
+  if(error){
+    parts.push('ERROR: '+(error.name||'Error')+' — '+(error.message||String(error)));
+  }
+  return parts.join('\n');
+};
+
+window.tpListCameras = async function(){
+  if(!navigator.mediaDevices?.enumerateDevices)return [];
+  const all=await navigator.mediaDevices.enumerateDevices();
+  const cams=all.filter(d=>d.kind==='videoinput');
+  window.tpCamera.devices=cams;
+  return cams;
+};
+
+window.tpChooseCameraDevice = function(cams,wantRear){
+  if(!cams?.length)return null;
+  const rearRx=/back|rear|environment|world|หลัง/i;
+  const frontRx=/front|user|face|หน้า/i;
+  let found=wantRear ? cams.find(d=>rearRx.test(d.label||'')) : cams.find(d=>frontRx.test(d.label||''));
+  if(!found && cams.length>1) found=wantRear ? cams[cams.length-1] : cams[0];
+  return found || cams[0];
+};
+
+window.tpAttachStream = async function(video,stream){
+  video.srcObject=stream;
+  video.muted=true;
+  video.autoplay=true;
+  video.playsInline=true;
+  video.setAttribute('playsinline','');
+  video.setAttribute('autoplay','');
+  await new Promise((resolve,reject)=>{
+    let done=false;
+    const ok=()=>{if(done)return;done=true;resolve();};
+    const fail=(e)=>{if(done)return;done=true;reject(e||new Error('Video play failed'));};
+    video.onloadedmetadata=async()=>{
+      try{await video.play();ok();}catch(e){fail(e);}
+    };
+    setTimeout(async()=>{
+      if(done)return;
+      try{await video.play();ok();}catch(e){fail(e);}
+    },1500);
+  });
+};
+
+window.tpOpenCamera = async function(videoId,canvasId,statusId,facingTagId,wantRear=true){
+  if(!window.isSecureContext) throw new Error('SecurityError: กล้องต้องเปิดจาก HTTPS');
+  if(!navigator.mediaDevices?.getUserMedia) throw new Error('NotSupportedError: เบราว์เซอร์นี้ไม่มี getUserMedia');
+
+  window.tpStopCamera();
+  window.tpSetCamError('');
+
+  const video=document.getElementById(videoId);
+  const canvas=document.getElementById(canvasId);
+  const status=document.getElementById(statusId);
+  const facingTag=document.getElementById(facingTagId);
+  if(!video) throw new Error('Video element not found');
+
+  /* 1) Request permission directly from the user's button tap. */
+  let permissionStream=null;
+  try{
+    permissionStream=await navigator.mediaDevices.getUserMedia({
+      audio:false,
+      video: wantRear ? {facingMode:{ideal:'environment'}} : {facingMode:{ideal:'user'}}
+    });
+  }catch(firstErr){
+    /* Some phones reject facingMode before labels are available. */
+    permissionStream=await navigator.mediaDevices.getUserMedia({audio:false,video:true});
+  }
+
+  /* 2) After permission, labels/deviceIds are available. Choose real rear/front device. */
+  let finalStream=permissionStream;
+  try{
+    const cams=await window.tpListCameras();
+    const chosen=window.tpChooseCameraDevice(cams,wantRear);
+    const current=permissionStream.getVideoTracks()[0]?.getSettings?.().deviceId;
+    if(chosen?.deviceId && chosen.deviceId!==current){
+      permissionStream.getTracks().forEach(t=>t.stop());
+      finalStream=await navigator.mediaDevices.getUserMedia({
+        audio:false,
+        video:{deviceId:{exact:chosen.deviceId},width:{ideal:1280},height:{ideal:720}}
+      });
+      window.tpCamera.lastDeviceId=chosen.deviceId;
+    }
+  }catch(e){
+    console.warn('Device selection fallback:',e);
+    if(!finalStream?.active){
+      finalStream=await navigator.mediaDevices.getUserMedia({audio:false,video:true});
+    }
+  }
+
+  window.tpCamera.stream=finalStream;
+  if(window.ai)window.ai.stream=finalStream;
+  await window.tpAttachStream(video,finalStream);
+
+  const settings=finalStream.getVideoTracks()[0]?.getSettings?.()||{};
+  const facing=settings.facingMode || (wantRear?'environment':'user');
+  window.tpCamera.facing=facing;
+
+  video.style.transform=facing==='user'?'scaleX(-1)':'none';
+  if(canvas)canvas.style.transform=facing==='user'?'scaleX(-1)':'none';
+  if(status)status.textContent='Camera ready ✓';
+  if(facingTag)facingTag.textContent=facing==='environment'?'• กล้องหลัง':'• กล้องหน้า';
+
+  return {stream:finalStream,facing,settings};
+};
+
+window.startCameraV8102 = async function(){
+  const btn=document.getElementById('openCameraBtn');
+  const status=document.getElementById('aiStatus');
+  const recover=document.getElementById('cameraRecovery');
+  try{
+    if(recover)recover.classList.remove('show');
+    if(btn){btn.disabled=true;btn.textContent='กำลังขอสิทธิ์กล้อง…';}
+    if(window.camPermText)camPermText.textContent='Requesting…';
+
+    const result=await window.tpOpenCamera('video','overlay','aiStatus','camFacingTag',true);
+
+    if(window.camPermText)camPermText.textContent='Allowed';
+    if(btn){btn.disabled=false;btn.textContent='✓ กล้องหลังเปิดแล้ว';}
+
+    /* AI starts only AFTER camera is proven working. */
+    if(typeof window.startPoseOnExistingCamera==='function'){
+      try{await window.startPoseOnExistingCamera();}
+      catch(e){
+        console.warn(e);
+        if(status)status.textContent='Camera ready ✓ • AI โหลดไม่สำเร็จ';
+      }
+    }else if(status){
+      status.textContent='Camera ready ✓ • กำลังโหลด AI…';
+    }
+  }catch(e){
+    console.error(e);
+    if(btn){btn.disabled=false;btn.textContent='📷 ลองเปิดกล้องอีกครั้ง';}
+    if(window.camPermText)camPermText.textContent=e?.name||'Blocked';
+    if(status)status.textContent='Camera unavailable';
+
+    const diag=window.tpCameraDiagnostics(e);
+    window.tpSetCamError(
+      'เปิดกล้องไม่ได้\n\n'+diag+
+      '\n\nถ้า ERROR = NotAllowedError: ต้องอนุญาต Camera ใน Chrome Site settings ก่อน โค้ดเว็บไม่สามารถข้ามการ Block ของระบบได้'
+    );
+    if(recover)recover.classList.add('show');
+  }
+};
+
+window.switchCameraV8102 = async function(){
+  const wantRear=window.tpCamera.facing==='user';
+  try{
+    const r=await window.tpOpenCamera('video','overlay','aiStatus','camFacingTag',wantRear);
+    if(typeof window.startPoseOnExistingCamera==='function'){
+      try{await window.startPoseOnExistingCamera();}catch(e){}
+    }
+  }catch(e){
+    window.tpSetCamError(window.tpCameraDiagnostics(e));
+  }
+};
+
+window.startAfterCameraV8102 = async function(){
+  try{
+    await window.tpOpenCamera('videoAfter','overlayAfter','aiStatusAfter','camFacingAfterTag',true);
+    if(typeof window.startPoseAfterOnExistingCamera==='function'){
+      try{await window.startPoseAfterOnExistingCamera();}catch(e){}
+    }
+  }catch(e){
+    window.tpSetCamError(window.tpCameraDiagnostics(e));
+  }
+};
+
+window.addEventListener('pagehide',window.tpStopCamera);
+</script>
+
 <script type="module">
 import {PoseLandmarker,FilesetResolver,DrawingUtils} from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/+esm";
 
@@ -1201,8 +1435,8 @@ async function openPreferredCamera(videoEl,canvasEl,statusEl,facingTag){
 
 
 window.startPoseOnExistingCamera=async()=>{
-  const stream=(window.__cameraBridgeStream || ai.stream);
-  if(!stream) throw new Error('ยังไม่มีกล้อง');
+  const stream=window.tpCamera?.stream || ai.stream;
+  if(!stream)throw new Error('ยังไม่มีกล้อง');
   ai.stream=stream;
   v.srcObject=stream;
   await initPose();
@@ -1239,24 +1473,7 @@ window.setAns=(i,v,b)=>{ans[i]=v;[...b.parentElement.children].forEach(x=>x.clas
 window.evalSafety=()=>{if(ans.some(Boolean)){safeResult.className='warn';safeResult.innerHTML='<b>⚠ SAFETY ALERT</b><br>หยุด flow คำแนะนำการนวดและควรได้รับการประเมินโดยบุคลากรทางการแพทย์'}else{safeResult.className='ok';safeResult.innerHTML='<b>✓ ไม่พบสัญญาณความเสี่ยงจากการคัดกรองเบื้องต้น</b><br><button class="btn gold" onclick="go(7)">ดำเนินการต่อ →</button>'}};
 
 let sec=0,tm=null;window.toggleTimer=()=>{if(tm){clearInterval(tm);tm=null;return}tm=setInterval(()=>{sec++;state.treatmentSeconds=sec;timer.textContent=[Math.floor(sec/3600),Math.floor(sec%3600/60),sec%60].map(x=>String(x).padStart(2,'0')).join(':')},1000)};
-window.prepareAfterCamera=async()=>{
-  try{
-    await openPreferredCamera(va,ca,aiStatusAfter,window.camFacingAfterTag);
-    try{
-      await initPose();
-      aiStatusAfter.textContent='AI Ready ✓';
-      requestAnimationFrame(()=>loop(va,ca,cxa,'after'));
-    }catch(aiErr){
-      console.warn(aiErr);
-      aiStatusAfter.textContent='Camera ready • AI loading failed';
-    }
-  }catch(e){
-    alert('เปิดกล้อง AFTER ไม่ได้: '+(e?.message||e));
-    if(/NotAllowed|Permission|Security/i.test(String(e?.name||'')+' '+String(e?.message||''))){
-      if(typeof openCameraHelp==='function')openCameraHelp();
-    }
-  }
-};
+window.prepareAfterCamera=async()=>{return window.startAfterCameraV8102();};
 window.measureAfter=()=>{if(!ai.stream){alert('กรุณาเปิดกล้องก่อน');return}ai.leftAfterMax=0;ai.rightAfterMax=0;ai.phase='after';ai.measuring=true;if(window.scanRomAfterBadge)scanRomAfterBadge.classList.add('measure');setTimeout(()=>{ai.measuring=false;if(window.scanRomAfterBadge)scanRomAfterBadge.classList.remove('measure');alert('บันทึก AFTER แล้ว • ซ้าย '+ai.leftAfterMax.toFixed(0)+'° • ขวา '+ai.rightAfterMax.toFixed(0)+'°')},8000)};
 window.finishAfter=()=>{state.painAfter=+painAfter.value;state.funcAfter=+funcAfter.value;state.leftAfter=Math.round(ai.leftAfterMax||Math.min(70,state.left+8));state.rightAfter=Math.round(ai.rightAfterMax||Math.min(70,state.right+15));state.scoreAfter=calcScore(state.painAfter,state.funcAfter,state.leftAfter,state.rightAfter,Math.min(100,state.posture+6));const pi=Math.max(0,(state.pain-state.painAfter)/Math.max(1,state.pain)*100),rc=state.rightAfter-state.right;outcomeBox.className='ok';outcomeBox.innerHTML=`<b>ผลลัพธ์</b><br>Pain ${state.pain} → ${state.painAfter} (${pi.toFixed(0)}% improvement)<br>R Proxy ${state.right}° → ${state.rightAfter}° (${rc>=0?'+':''}${rc}°)<br>ThaiPain Score ${state.scoreBefore} → ${state.scoreAfter}`;saveCase()};
 function saveCase(){const arr=JSON.parse(localStorage.getItem('thaipain_v6')||'[]');const item={...state,createdAt:new Date().toISOString()};const i=arr.findIndex(x=>x.patientId===item.patientId);if(i>=0)arr[i]=item;else arr.push(item);localStorage.setItem('thaipain_v6',JSON.stringify(arr))}
@@ -1303,7 +1520,7 @@ window.installPWA=async()=>{
   const isiOS=/iPad|iPhone|iPod/.test(ua);
   if(isiOS){const el=document.getElementById('iosInstall');if(el)el.style.display='block';}
   if('serviceWorker' in navigator){
-    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.10.1-permission-first').catch(()=>{}));
+    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.10.2-camera-recovery-pro').catch(()=>{}));
   }
 })();
 </script>
@@ -1566,6 +1783,16 @@ window.copyAppLink=async()=>{
   window.addEventListener('orientationchange',()=>setTimeout(()=>forcePainView(window.currentPainViewV896||'front'),120));
   window.addEventListener('DOMContentLoaded',()=>setTimeout(()=>forcePainView('front'),120));
 })();
+</script>
+
+
+<script>
+/* v8.10.2 final camera overrides — keep one path only */
+window.retryCameraFromHelp=function(){
+  if(typeof closeCameraHelp==='function')closeCameraHelp();
+  window.startCameraV8102();
+};
+window.startAI=function(){return window.startCameraV8102();};
 </script>
 
 </body></html>
