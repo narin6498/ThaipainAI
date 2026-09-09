@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="theme-color" content="#062e24">
 <title>ThaiPain AI</title>
-<link rel="manifest" href="manifest.webmanifest?v=8.11.3-rom-skeleton-lines">
+<link rel="manifest" href="manifest.webmanifest?v=8.12.0-verified-nearme">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ThaiPain AI">
@@ -90,7 +90,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 
 .viewTabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0}.viewTab{border:1px solid #d9cfbd;background:#f4efe5;color:var(--deep);border-radius:12px;padding:8px 4px;font:inherit;font-size:10px;font-weight:800}.viewTab.active{background:var(--deep);color:#fff;border-color:#cda84d;box-shadow:0 0 0 2px #e5c56f inset}.selectedAreas{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.areaTag{font-size:9px;padding:5px 7px;border-radius:99px;background:#fff;border:1px solid #d7c9b2;color:var(--deep);font-weight:700}.realHumanMap img{object-position:center top}.painHot{touch-action:manipulation}.mapHint{font-size:10px;color:#fff;background:#0008;padding:7px 9px;border-radius:10px;position:absolute;left:10px;top:10px;z-index:6}.clearPain{position:absolute;right:10px;top:10px;z-index:6;border:0;border-radius:10px;padding:7px 9px;background:#fffE;color:var(--deep);font-weight:800}
 
-/* v8.11.3: all human assets fit identically on mobile; right view is mirrored left profile */
+/* v8.12.0: all human assets fit identically on mobile; right view is mirrored left profile */
 .realHumanMap img, #humanViewImg{
   width:100% !important;
   height:100% !important;
@@ -100,7 +100,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{ transform:scaleX(-1) !important; }
 
 
-/* v8.11.3 — Full body, no crop + reliable touch targets */
+/* v8.12.0 — Full body, no crop + reliable touch targets */
 .realHumanMap{
   position:relative !important;
   width:100% !important;
@@ -153,7 +153,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{transform:scaleX(-1) !important;}
 
 
-/* v8.11.3 — Four balanced real-human panels, mobile safe */
+/* v8.12.0 — Four balanced real-human panels, mobile safe */
 .painMapCardV887{padding-top:18px}
 .clearAllPainV887{float:right;margin-top:-42px;border:1px solid #d8cdb9;background:#fffaf0;color:var(--deep);border-radius:12px;padding:8px 11px;font:inherit;font-size:10px;font-weight:800}
 .fourPainGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
@@ -176,7 +176,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Clean 4-view Pain Map ===== */
+/* ===== v8.12.0 Clean 4-view Pain Map ===== */
 .painMapV888{padding-top:16px}
 .viewTabsV888{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:14px 0 10px}
 .viewTabV888{border:1px solid #d8ccb7;border-radius:13px;background:#f7f1e6;color:var(--deep);padding:10px 5px;font:inherit;font-weight:800}
@@ -202,7 +202,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Single-view Pain Map on desktop + mobile ===== */
+/* ===== v8.12.0 Single-view Pain Map on desktop + mobile ===== */
 .painDeskGridV888{
   display:block !important;
 }
@@ -227,7 +227,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Anatomically aligned Pain Areas ===== */
+/* ===== v8.12.0 Anatomically aligned Pain Areas ===== */
 .painZoneV888{
   width:30px !important;
   height:30px !important;
@@ -254,7 +254,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Thai Traditional Medicine Near Me ===== */
+/* ===== v8.12.0 Thai Traditional Medicine Near Me ===== */
 .nearMapWrap{position:relative;border-radius:18px;overflow:hidden;border:1px solid #d8cbb3;background:#eef1ec}
 #thaiNearMap{height:420px;width:100%;background:#e7ece8}
 .nearToolbar{display:grid;grid-template-columns:1.25fr .75fr;gap:8px;margin:10px 0}
@@ -279,7 +279,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 QR App Entry ===== */
+/* ===== v8.12.0 QR App Entry ===== */
 .appQrHero{display:grid;grid-template-columns:minmax(150px,190px) 1fr;gap:18px;align-items:center;margin-top:14px;background:#f2eadb;border:1px solid #dccfb8;border-radius:18px;padding:16px}
 .appQrBox{width:100%;aspect-ratio:1/1;max-width:190px;margin:auto;background:#fff;border-radius:16px;padding:10px;display:grid;place-items:center}
 .staticAppQR{display:block;width:100%;height:100%;object-fit:contain}
@@ -289,7 +289,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 @media(max-width:720px){.appQrHero{grid-template-columns:1fr;text-align:center}.appQrBox{width:min(62vw,230px);max-width:230px}.qrCopyBtn{width:100%}}
 
 
-/* ===== v8.11.3 Responsive Clean 4-View Pain Map ===== */
+/* ===== v8.12.0 Responsive Clean 4-View Pain Map ===== */
 .painMapV896{padding-top:16px}
 .viewTabsV896{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 12px}
 .viewTabV896{border:1px solid #d8ccb7;border-radius:13px;background:#f8f2e7;color:var(--deep);padding:11px 8px;font:inherit;font-weight:800}
@@ -356,7 +356,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Balanced Pain Area ===== */
+/* ===== v8.12.0 Balanced Pain Area ===== */
 /* Desktop 4-view: small visible rings, large invisible touch target */
 .painZoneV896{
   width:20px !important;
@@ -406,7 +406,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 HARD FIX: Mobile = one view only ===== */
+/* ===== v8.12.0 HARD FIX: Mobile = one view only ===== */
 @media (max-width:900px), (hover:none) and (pointer:coarse){
   .viewTabsV896{
     display:grid !important;
@@ -454,7 +454,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Mobile Full-Screen UX ===== */
+/* ===== v8.12.0 Mobile Full-Screen UX ===== */
 @media (max-width:900px), (hover:none) and (pointer:coarse){
   html,body{
     width:100%;
@@ -533,7 +533,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Pain Area aligned to clean body assets ===== */
+/* ===== v8.12.0 Pain Area aligned to clean body assets ===== */
 @media (min-width:901px) and (hover:hover){
   .painZoneV896{
     width:18px !important;
@@ -551,7 +551,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Camera recovery UI ===== */
+/* ===== v8.12.0 Camera recovery UI ===== */
 .cameraRecovery{
   margin-top:9px;padding:10px 11px;border-radius:13px;
   background:#fff5de;border:1px solid #e3c98e;
@@ -568,7 +568,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 .cameraDiag{margin-top:7px;padding:8px 10px;background:#eef3ef;border-radius:10px;font-size:9px;color:#516259;white-space:pre-wrap}
 
 
-/* v8.11.3 visible circles are small; touch targets remain large */
+/* v8.12.0 visible circles are small; touch targets remain large */
 @media(min-width:901px) and (hover:hover){
   .painZoneV896{width:16px!important;height:16px!important;border-width:1.5px!important}
   .painZoneV896::before{inset:-12px!important}
@@ -579,7 +579,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Camera Recovery Pro ===== */
+/* ===== v8.12.0 Camera Recovery Pro ===== */
 .cameraV8102Tools{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px}
 .cameraV8102Tools .btn{margin:0;text-align:center}
 .cameraV8102Error{display:none;margin-top:8px;padding:10px;border-radius:12px;background:#fff0e7;border:1px solid #e7b39d;color:#723d2a;font-size:10px;line-height:1.55;white-space:pre-wrap}
@@ -590,7 +590,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Mobile No-Scroll AI Body Scan ===== */
+/* ===== v8.12.0 Mobile No-Scroll AI Body Scan ===== */
 .scanTopV8103{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .scanCloseV8103{
   width:38px;height:38px;border:0;border-radius:50%;background:#e9e1d3;color:#083b2f;
@@ -748,7 +748,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Joint ROM CTA on Camera ===== */
+/* ===== v8.12.0 Joint ROM CTA on Camera ===== */
 .jointRomCtaV8111{
   width:100%;min-height:64px;border:1px solid #f6d36f;border-radius:16px;
   background:linear-gradient(135deg,#f7d878,#e9b93d);color:#083c30;
@@ -787,7 +787,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 Joint ROM with Live Camera ===== */
+/* ===== v8.12.0 Joint ROM with Live Camera ===== */
 .romCameraWrapV8112{
   position:relative;margin:10px 0 12px;border-radius:18px;overflow:hidden;
   background:#071a15;aspect-ratio:4/3;min-height:240px;border:1px solid #173e33
@@ -823,7 +823,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.11.3 ROM skeleton visibility fix ===== */
+/* ===== v8.12.0 ROM skeleton visibility fix ===== */
 .romCameraWrapV8112 video{z-index:1}
 .romCameraWrapV8112 canvas{
   z-index:3 !important;
@@ -831,6 +831,33 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
   mix-blend-mode:normal !important;
 }
 .romCamTagV8112,.romCamStatusV8112,.romCamGuideV8112,.romCameraActionsV8112{z-index:5}
+
+
+/* ===== v8.12 Verified Thai Medicine Provider Locator ===== */
+.verifiedBannerV812{display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:center;margin:10px 0;padding:11px;border-radius:14px;background:#e9f3ec;border:1px solid #c9ddcf;color:#315347;font-size:10px;line-height:1.5}
+.verifiedSealV812{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#0a4b3a;color:#f4d36d;font-size:20px;font-weight:900}
+.providerFiltersV812{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0}
+.providerFiltersV812 button{border:1px solid #d9ceba;background:#fff;border-radius:11px;min-height:37px;font:inherit;font-size:9px;font-weight:800;color:#435a51}
+.providerFiltersV812 button.active{background:#0a4b3a;color:#fff;border-color:#0a4b3a}
+.nearProvinceV812{margin:7px 0;font-size:10px;font-weight:800;color:#0a4b3a}
+.nearLegend{display:flex;flex-wrap:wrap;gap:6px 12px}
+.nearLegend span{white-space:nowrap}
+.nearHeadV812{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px}
+.nearHeadV812 h3{margin:0}
+.nearHeadV812 span{font-size:10px;font-weight:900;color:#0a4b3a;background:#e9f3ec;padding:5px 8px;border-radius:999px}
+.nearBadgeV812{display:inline-flex;align-items:center;gap:4px;font-size:8px;font-weight:900;border-radius:999px;padding:3px 6px;margin-top:5px}
+.nearBadgeV812.verified{background:#e8f4eb;color:#0a5a42}
+.nearBadgeV812.map{background:#edf1f6;color:#4a6179}
+.nearPlaceV812{position:relative}
+.nearPlaceSourceV812{font-size:8px;color:#728078;margin-top:4px}
+.nearPlaceActionsV812{display:flex;gap:5px;flex-wrap:wrap}
+.nearPlaceActionsV812 a{display:inline-block}
+.nearSourceButtonsV812{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+@media(max-width:720px){
+  .providerFiltersV812{grid-template-columns:repeat(2,1fr)}
+  .nearSourceButtonsV812{grid-template-columns:1fr}
+  .nearPlaceActionsV812{grid-column:1/-1}
+}
 
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
@@ -1166,27 +1193,57 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 
 
 
-<section id="s11" class="screen"><div class="card">
-  <div class="titleRow"><div class="num">11</div><div><h2>แพทย์แผนไทยใกล้ฉัน</h2><div class="sub">Thai Traditional Medicine Near Me • ขั้นตอนสุดท้าย</div></div></div>
+<section id="s11" class="screen"><div class="card nearVerifiedCardV812">
+  <div class="titleRow"><div class="num">11</div><div>
+    <h2>แพทย์แผนไทยใกล้ฉัน</h2>
+    <div class="sub">Verified Thai Medicine Provider Locator • DTAM + Live Map</div>
+  </div></div>
+
+  <div class="verifiedBannerV812">
+    <div class="verifiedSealV812">✓</div>
+    <div><b>Hybrid Verified Provider Locator</b><br>
+      ใช้รายชื่อสถานบริการจากแหล่ง DTAM/หน่วยงานทางการ ร่วมกับ GPS และข้อมูลพิกัดแผนที่สาธารณะ
+    </div>
+  </div>
 
   <div class="nearToolbar">
-    <button class="btn deep" style="margin:0" onclick="findThaiMedicineNearMe()">📍 ใช้ตำแหน่งของฉัน</button>
+    <button class="btn deep" style="margin:0" onclick="findThaiMedicineNearMe()">📍 ค้นหาใกล้ฉัน</button>
     <button class="btn soft" style="margin:0" onclick="refreshThaiMedicineSearch()">🔄 ค้นหาใหม่</button>
   </div>
 
-  <div id="nearStatus" class="nearStatus">กด “ใช้ตำแหน่งของฉัน” เพื่อค้นหาสถานบริการแพทย์แผนไทยรอบตัวคุณ</div>
+  <div class="providerFiltersV812">
+    <button class="active" data-filter="all" onclick="setProviderFilterV812('all',this)">ทั้งหมด</button>
+    <button data-filter="hospital" onclick="setProviderFilterV812('hospital',this)">โรงพยาบาล</button>
+    <button data-filter="clinic" onclick="setProviderFilterV812('clinic',this)">คลินิก</button>
+    <button data-filter="ttm" onclick="setProviderFilterV812('ttm',this)">แพทย์แผนไทย</button>
+  </div>
+
+  <div id="nearStatus" class="nearStatus">กด “ค้นหาใกล้ฉัน” เพื่ออ่าน GPS และค้นหาสถานบริการจริงรอบตัวคุณ</div>
+  <div id="nearProvinceV812" class="nearProvinceV812"></div>
 
   <div class="nearMapWrap"><div id="thaiNearMap"></div></div>
-  <div class="nearLegend">🏠 ไอคอนเรือนไทย = สถานบริการที่พบจากข้อมูลแผนที่สาธารณะ • 🔵 จุดสีน้ำเงิน = ตำแหน่งของคุณ</div>
+  <div class="nearLegend">
+    <span>🏠 รายชื่อจาก DTAM/หน่วยงานทางการ</span>
+    <span>📍 พิกัดจากข้อมูลแผนที่</span>
+    <span>🔵 ตำแหน่งของคุณ</span>
+  </div>
 
-  <h3>สถานบริการใกล้เคียง</h3>
+  <div class="nearHeadV812">
+    <h3>สถานบริการใกล้เคียง</h3>
+    <span id="nearCountV812">0 แห่ง</span>
+  </div>
   <div id="nearPlaces" class="nearList"></div>
 
   <div class="nearSource">
-    <b>แหล่งข้อมูล:</b> ระบบค้นหานี้ใช้ตำแหน่งจากอุปกรณ์และข้อมูล OpenStreetMap/Nominatim แบบเรียลไทม์เพื่อวางหมุดบนแผนที่
-    และมีลิงก์ไปยังหน้ารวมคลินิกแพทย์แผนไทยของกรมการแพทย์แผนไทยและการแพทย์ทางเลือกเพื่อช่วยตรวจสอบสถานบริการก่อนเดินทาง
+    <b>แหล่งข้อมูลหลัก:</b> กรมการแพทย์แผนไทยและการแพทย์ทางเลือก (DTAM) / DTAM Wellness Center
+    และใช้ OpenStreetMap/Nominatim เพื่อช่วยระบุตำแหน่งบนแผนที่และคำนวณระยะทาง
+    <br><b>หมายเหตุ:</b> ชื่อสถานบริการกับพิกัดมาจากคนละแหล่งข้อมูล จึงควรกด “ตรวจสอบ DTAM” หรือ “เปิด Google Maps” ก่อนเดินทาง
   </div>
-  <button class="btn gold" onclick="window.open('https://wellnesscenter.dtam.moph.go.th/contentSearch.php?assessmentType=4','_blank')">✓ ตรวจสอบรายชื่อคลินิกกับ DTAM</button>
+
+  <div class="nearSourceButtonsV812">
+    <button class="btn gold" onclick="window.open('https://wellnesscenter.dtam.moph.go.th/contentSearch.php?assessmentType=4','_blank')">✓ ตรวจสอบ DTAM Wellness Center</button>
+    <button class="btn soft" onclick="window.open('https://data.go.th/dataset/ttamc_op_11_01','_blank')">ฐานข้อมูล Open Data DTAM</button>
+  </div>
   <button class="btn soft" onclick="go(10)">← กลับ Analytics</button>
 </div></section>
 
@@ -1217,7 +1274,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 
 <script>
-/* ===== v8.11.3 Permission-first mobile camera bridge ===== */
+/* ===== v8.12.0 Permission-first mobile camera bridge ===== */
 window.__cameraBridgeStream = null;
 
 window.isThaiPainMobile = function(){
@@ -1417,7 +1474,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 
 <script>
-/* ===== ThaiPainAI v8.11.3 Camera Manager: independent from MediaPipe ===== */
+/* ===== ThaiPainAI v8.12.0 Camera Manager: independent from MediaPipe ===== */
 window.tpCamera = {
   stream:null,
   facing:'environment',
@@ -2116,7 +2173,7 @@ window.installPWA=async()=>{
   const isiOS=/iPad|iPhone|iPod/.test(ua);
   if(isiOS){const el=document.getElementById('iosInstall');if(el)el.style.display='block';}
   if('serviceWorker' in navigator){
-    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.11.3-rom-skeleton-lines').catch(()=>{}));
+    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.12.0-verified-nearme').catch(()=>{}));
   }
 })();
 </script>
@@ -2226,30 +2283,30 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 
 <script>
-let thaiNearMap=null, thaiNearLayer=null, thaiUserMarker=null, thaiLastPos=null;
+/* ===== v8.12 Verified Hybrid Near-Me Engine ===== */
+const VERIFIED_TTM_CATALOG=[{"name": "ศูนย์การแพทย์แผนไทย และการแพทย์ทางเลือก (ยศเส)", "province": "กรุงเทพมหานคร", "type": "hospital", "query": "693 ถนนบำรุงเมือง คลองมหานาค กรุงเทพ", "lat": 13.7497137, "lon": 100.5162442, "source": "DTAM"}, {"name": "คลินิกอายุรเวทแพทย์แผนไทยประยุกต์ศิริราช", "province": "กรุงเทพมหานคร", "type": "clinic", "query": "คลินิกอายุรเวทแพทย์แผนไทยประยุกต์ศิริราช กรุงเทพ", "source": "Siriraj"}, {"name": "ศูนย์ส่งเสริมสุขภาพแผนไทย กระทรวงสาธารณสุข", "province": "นนทบุรี", "type": "ttm", "query": "กระทรวงสาธารณสุข ติวานนท์ นนทบุรี แพทย์แผนไทย", "source": "DTAM"}, {"name": "คลินิกการแพทย์แผนไทย สำนักงานสาธารณสุขจังหวัดนนทบุรี", "province": "นนทบุรี", "type": "clinic", "query": "สำนักงานสาธารณสุขจังหวัดนนทบุรี", "source": "DTAM Wellness"}, {"name": "โรงพยาบาลกาฬสินธุ์", "province": "กาฬสินธุ์", "type": "hospital", "query": "โรงพยาบาลกาฬสินธุ์", "source": "DTAM Wellness"}, {"name": "สำนักงานสาธารณสุขอำเภอคำม่วง", "province": "กาฬสินธุ์", "type": "ttm", "query": "สำนักงานสาธารณสุขอำเภอคำม่วง กาฬสินธุ์", "source": "DTAM Wellness"}, {"name": "โรงพยาบาลดอนจาน", "province": "กาฬสินธุ์", "type": "hospital", "query": "โรงพยาบาลดอนจาน กาฬสินธุ์", "source": "DTAM Wellness"}, {"name": "โรงพยาบาลเปือยน้อย", "province": "ขอนแก่น", "type": "hospital", "query": "โรงพยาบาลเปือยน้อย ขอนแก่น", "source": "DTAM Wellness"}, {"name": "กลุ่มงานแพทย์แผนไทย โรงพยาบาลสมเด็จพระยุพราชกระนวน", "province": "ขอนแก่น", "type": "hospital", "query": "โรงพยาบาลสมเด็จพระยุพราชกระนวน ขอนแก่น", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย โรงพยาบาลบ้านไผ่", "province": "ขอนแก่น", "type": "clinic", "query": "โรงพยาบาลบ้านไผ่ ขอนแก่น", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลพล", "province": "ขอนแก่น", "type": "hospital", "query": "โรงพยาบาลพล ขอนแก่น", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย และการแพทย์ทางเลือก โรงพยาบาลจอมทอง", "province": "เชียงใหม่", "type": "clinic", "query": "โรงพยาบาลจอมทอง เชียงใหม่", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย และการแพทย์ทางเลือก โรงพยาบาลดอยหล่อ", "province": "เชียงใหม่", "type": "clinic", "query": "โรงพยาบาลดอยหล่อ เชียงใหม่", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย และการแพทย์ทางเลือก โรงพยาบาลสะเมิง", "province": "เชียงใหม่", "type": "clinic", "query": "โรงพยาบาลสะเมิง เชียงใหม่", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย และการแพทย์ทางเลือก โรงพยาบาลฮอด", "province": "เชียงใหม่", "type": "clinic", "query": "โรงพยาบาลฮอด เชียงใหม่", "source": "DTAM Wellness"}, {"name": "คลินิกแพทย์แผนไทย โรงพยาบาลชลบุรี", "province": "ชลบุรี", "type": "clinic", "query": "โรงพยาบาลชลบุรี", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย โรงพยาบาลชุมพรเขตรอุดมศักดิ์", "province": "ชุมพร", "type": "clinic", "query": "โรงพยาบาลชุมพรเขตรอุดมศักดิ์", "source": "DTAM Wellness"}, {"name": "คลินิกการเเพทย์แผนไทยเเละการเเพทย์ทางเลือก โรงพยาบาลหลังสวน", "province": "ชุมพร", "type": "clinic", "query": "โรงพยาบาลหลังสวน ชุมพร", "source": "DTAM Wellness"}, {"name": "คลินิกการเเพทย์แผนไทยเเละการเเพทย์ทางเลือก โรงพยาบาลสวี", "province": "ชุมพร", "type": "clinic", "query": "โรงพยาบาลสวี ชุมพร", "source": "DTAM Wellness"}, {"name": "คลินิกแพทย์แผนไทย โรงพยาบาลทุ่งตะโก", "province": "ชุมพร", "type": "clinic", "query": "โรงพยาบาลทุ่งตะโก ชุมพร", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลนครพนม", "province": "นครพนม", "type": "hospital", "query": "โรงพยาบาลนครพนม", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลนาหว้า", "province": "นครพนม", "type": "hospital", "query": "โรงพยาบาลนาหว้า นครพนม", "source": "DTAM Wellness"}, {"name": "คลินิกแพทย์แผนไทย โรงพยาบาลท่าอุเทน", "province": "นครพนม", "type": "clinic", "query": "โรงพยาบาลท่าอุเทน นครพนม", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลศรีสงคราม", "province": "นครพนม", "type": "hospital", "query": "โรงพยาบาลศรีสงคราม นครพนม", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย โรงพยาบาลพระนารายณ์มหาราช", "province": "ลพบุรี", "type": "clinic", "query": "โรงพยาบาลพระนารายณ์มหาราช ลพบุรี", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลท่าหลวง", "province": "ลพบุรี", "type": "hospital", "query": "โรงพยาบาลท่าหลวง ลพบุรี", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย โรงพยาบาลพัฒนานิคม", "province": "ลพบุรี", "type": "clinic", "query": "โรงพยาบาลพัฒนานิคม ลพบุรี", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลหนองม่วง", "province": "ลพบุรี", "type": "hospital", "query": "โรงพยาบาลหนองม่วง ลพบุรี", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลลำปาง", "province": "ลำปาง", "type": "hospital", "query": "โรงพยาบาลลำปาง", "source": "DTAM Wellness"}, {"name": "โรงพยาบาลการแพทย์แผนไทยและการแพทย์ทางเลือก เขตสุขภาพที่ 1 จังหวัดลำปาง", "province": "ลำปาง", "type": "hospital", "query": "13 หมู่ 9 ทุ่งฝาย เมืองลำปาง ลำปาง", "lat": 18.35975, "lon": 99.5488056, "source": "DTAM"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลเถิน", "province": "ลำปาง", "type": "hospital", "query": "โรงพยาบาลเถิน ลำปาง", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลบางพลี", "province": "สมุทรปราการ", "type": "hospital", "query": "โรงพยาบาลบางพลี สมุทรปราการ", "source": "DTAM Wellness"}, {"name": "คลินิกแพทย์แผนไทย โรงพยาบาลกะปงชัยพัฒน์", "province": "พังงา", "type": "clinic", "query": "โรงพยาบาลกะปงชัยพัฒน์ พังงา", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย โรงพยาบาลคุระบุรีชัยพัฒน์", "province": "พังงา", "type": "clinic", "query": "โรงพยาบาลคุระบุรีชัยพัฒน์ พังงา", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย และการแพทย์ทางเลือก โรงพยาบาลตะกั่วทุ่ง", "province": "พังงา", "type": "clinic", "query": "โรงพยาบาลตะกั่วทุ่ง พังงา", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย มหาวิทยาลัยราชภัฏเพชรบูรณ์", "province": "เพชรบูรณ์", "type": "clinic", "query": "มหาวิทยาลัยราชภัฏเพชรบูรณ์", "source": "DTAM Wellness"}, {"name": "คลินิกแพทย์แผนไทย สำนักงานสาธารณสุขจังหวัดเพชรบูรณ์", "province": "เพชรบูรณ์", "type": "clinic", "query": "สำนักงานสาธารณสุขจังหวัดเพชรบูรณ์", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลร้อยเอ็ด", "province": "ร้อยเอ็ด", "type": "hospital", "query": "โรงพยาบาลร้อยเอ็ด", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลธวัชบุรี", "province": "ร้อยเอ็ด", "type": "hospital", "query": "โรงพยาบาลธวัชบุรี ร้อยเอ็ด", "source": "DTAM Wellness"}, {"name": "กลุ่มงานแพทย์แผนไทยและแพทย์ทางเลือก โรงพยาบาลพนมไพร", "province": "ร้อยเอ็ด", "type": "hospital", "query": "โรงพยาบาลพนมไพร ร้อยเอ็ด", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลสุวรรณภูมิ", "province": "ร้อยเอ็ด", "type": "hospital", "query": "โรงพยาบาลสุวรรณภูมิ ร้อยเอ็ด", "source": "DTAM Wellness"}, {"name": "การแพทย์แผนไทยและการแพทย์ทางเลือก ศูนย์อนามัยที่ 5 ราชบุรี", "province": "ราชบุรี", "type": "ttm", "query": "ศูนย์อนามัยที่ 5 ราชบุรี", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย สถานีอนามัยเฉลิมพระเกียรติ คูบัว", "province": "ราชบุรี", "type": "clinic", "query": "สถานีอนามัยเฉลิมพระเกียรติ คูบัว ราชบุรี", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย โรงพยาบาลวังจันทร์", "province": "ระยอง", "type": "clinic", "query": "โรงพยาบาลวังจันทร์ ระยอง", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย โรงพยาบาลย่านตาขาว", "province": "ตรัง", "type": "clinic", "query": "โรงพยาบาลย่านตาขาว ตรัง", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย โรงพยาบาลคีรีมาศ", "province": "สุโขทัย", "type": "clinic", "query": "โรงพยาบาลคีรีมาศ สุโขทัย", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย โรงพยาบาลบ้านนาสาร", "province": "สุราษฎร์ธานี", "type": "clinic", "query": "โรงพยาบาลบ้านนาสาร สุราษฎร์ธานี", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย โรงพยาบาลบ้านนาเดิม", "province": "สุราษฎร์ธานี", "type": "clinic", "query": "โรงพยาบาลบ้านนาเดิม สุราษฎร์ธานี", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย รพ.สต.ทุ่งกง", "province": "สุราษฎร์ธานี", "type": "clinic", "query": "รพ.สต.ทุ่งกง สุราษฎร์ธานี", "source": "DTAM Wellness"}, {"name": "คลินิกการแพทย์แผนไทย โรงพยาบาลทัพทัน", "province": "อุทัยธานี", "type": "clinic", "query": "โรงพยาบาลทัพทัน อุทัยธานี", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลบ้านไร่", "province": "อุทัยธานี", "type": "hospital", "query": "โรงพยาบาลบ้านไร่ อุทัยธานี", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลเทพรัตน์นครราชสีมา", "province": "นครราชสีมา", "type": "hospital", "query": "โรงพยาบาลเทพรัตน์นครราชสีมา", "source": "DTAM Wellness"}, {"name": "กลุ่มงานการแพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลหนองบัวลำภู", "province": "หนองบัวลำภู", "type": "hospital", "query": "โรงพยาบาลหนองบัวลำภู", "source": "DTAM Wellness"}, {"name": "แพทย์แผนไทยและการแพทย์ทางเลือก โรงพยาบาลโซ่พิสัย", "province": "บึงกาฬ", "type": "hospital", "query": "โรงพยาบาลโซ่พิสัย บึงกาฬ", "source": "DTAM Wellness"}];
+let thaiNearMap=null,thaiNearLayer=null,thaiUserMarker=null,thaiLastPos=null;
+let thaiProviderFilterV812='all',thaiLastProvidersV812=[];
 
 function thaiHouseIcon(){
-  const html=`<div class="thaiHousePin">
-  <svg viewBox="0 0 42 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M21 49C17 42 6 34 6 20C6 9 12 2 21 2s15 7 15 18c0 14-11 22-15 29z" fill="#0a4b3a" stroke="#d9ae53" stroke-width="2"/>
-    <path d="M11 20l10-8 10 8-3-1v9H14v-9z" fill="#f4d77d"/>
-    <path d="M8 18l13-10 13 10-4-1-9-6-9 6z" fill="#fff4c8"/>
-    <path d="M17 21h8v7h-8z" fill="#0a4b3a"/>
-    <path d="M15 28v5m12-5v5m-14 0h16" stroke="#f4d77d" stroke-width="2" stroke-linecap="round"/>
+  const html=`<div class="thaiHousePin"><svg viewBox="0 0 64 76" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 31 L32 12 L55 31 L49 31 L49 57 L15 57 L15 31 Z" fill="#0a4b3a" stroke="#d9ae53" stroke-width="3"/>
+    <path d="M6 31 L32 8 L58 31" fill="none" stroke="#d9ae53" stroke-width="5" stroke-linecap="round"/>
+    <rect x="27" y="39" width="10" height="18" rx="2" fill="#f3d36c"/>
+    <path d="M14 60 H50 M20 67 H44" stroke="#0a4b3a" stroke-width="4" stroke-linecap="round"/>
   </svg></div>`;
-  return L.divIcon({className:'thaiHouseMarker',html,iconSize:[42,50],iconAnchor:[21,48],popupAnchor:[0,-44]});
+  return L.divIcon({className:'thaiHouseMarker',html,iconSize:[42,50],iconAnchor:[21,49],popupAnchor:[0,-46]});
 }
 function ensureThaiNearMap(){
   if(thaiNearMap)return thaiNearMap;
   thaiNearMap=L.map('thaiNearMap',{zoomControl:true}).setView([13.7563,100.5018],6);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    maxZoom:19,attribution:'© OpenStreetMap contributors'
+    maxZoom:19,attribution:'&copy; OpenStreetMap contributors'
   }).addTo(thaiNearMap);
   thaiNearLayer=L.layerGroup().addTo(thaiNearMap);
-  setTimeout(()=>thaiNearMap.invalidateSize(),120);
   return thaiNearMap;
 }
-window.initThaiNearMe=()=>{ensureThaiNearMap();setTimeout(()=>thaiNearMap.invalidateSize(),150);};
+window.initThaiNearMe=()=>{ensureThaiNearMap();setTimeout(()=>thaiNearMap.invalidateSize(),160)};
 
 function haversineKm(a,b,c,d){
   const R=6371,toRad=x=>x*Math.PI/180;
@@ -2259,83 +2316,161 @@ function haversineKm(a,b,c,d){
 }
 function escapeHtml(v){return String(v||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
 
-async function nominatimSearch(lat,lon){
-  const delta=.32;
-  const viewbox=[lon-delta,lat+delta,lon+delta,lat-delta].join(',');
-  const qs=[
-    'แพทย์แผนไทย',
-    'คลินิกแพทย์แผนไทย',
-    'Thai traditional medicine',
-    'traditional medicine clinic'
-  ];
-  let all=[];
-  for(const q of qs){
+async function reverseProvinceV812(lat,lon){
+  try{
+    const u='https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat='+lat+'&lon='+lon+'&zoom=8&addressdetails=1';
+    const r=await fetch(u,{headers:{'Accept-Language':'th,en'}});
+    if(!r.ok)return '';
+    const j=await r.json(),a=j.address||{};
+    return a.province||a.state||a.city||'';
+  }catch(e){return ''}
+}
+
+function normalizeProvinceV812(p){
+  return String(p||'').replace(/^จังหวัด/,'').replace('Bangkok','กรุงเทพมหานคร').replace('Krung Thep Maha Nakhon','กรุงเทพมหานคร').trim();
+}
+
+async function geocodeExactV812(item){
+  if(Number.isFinite(item.lat)&&Number.isFinite(item.lon))return {...item};
+  try{
+    const q=item.query||(`${item.name} ${item.province} ประเทศไทย`);
+    const u='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=th&addressdetails=1&q='+encodeURIComponent(q);
+    const r=await fetch(u,{headers:{'Accept-Language':'th,en'}});
+    if(!r.ok)return null;
+    const a=await r.json(); if(!a.length)return null;
+    return {...item,lat:+a[0].lat,lon:+a[0].lon,display:a[0].display_name||''};
+  }catch(e){return null}
+}
+
+async function fallbackOsmSearchV812(lat,lon){
+  const delta=.28,viewbox=[lon-delta,lat+delta,lon+delta,lat-delta].join(',');
+  const queries=['แพทย์แผนไทย','คลินิกแพทย์แผนไทย','Thai traditional medicine','โรงพยาบาล แพทย์แผนไทย'];
+  let out=[];
+  for(const q of queries){
     try{
-      const url='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=12&addressdetails=1&bounded=1'
-        +'&viewbox='+encodeURIComponent(viewbox)+'&q='+encodeURIComponent(q);
-      const r=await fetch(url,{headers:{'Accept-Language':'th,en'}});
-      if(r.ok) all=all.concat(await r.json());
+      const u='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=8&addressdetails=1&bounded=1&countrycodes=th&viewbox='+encodeURIComponent(viewbox)+'&q='+encodeURIComponent(q);
+      const r=await fetch(u,{headers:{'Accept-Language':'th,en'}});
+      if(r.ok)out=out.concat(await r.json());
     }catch(e){}
   }
   const seen=new Set();
-  return all.filter(x=>{
-    const key=(x.osm_type||'')+'-'+(x.osm_id||x.place_id);
-    if(seen.has(key))return false;seen.add(key);return true;
-  }).map(x=>({
-    name:x.display_name?.split(',')[0]||'สถานบริการแพทย์แผนไทย',
-    display:x.display_name||'',
-    lat:+x.lat,lon:+x.lon,
-    dist:haversineKm(lat,lon,+x.lat,+x.lon)
-  })).sort((a,b)=>a.dist-b.dist).slice(0,15);
+  return out.filter(x=>{const k=(x.osm_type||'')+'-'+(x.osm_id||x.place_id);if(seen.has(k))return false;seen.add(k);return true})
+    .map(x=>({
+      name:x.display_name?.split(',')[0]||'สถานบริการแพทย์แผนไทย',
+      province:'',type:/hospital|โรงพยาบาล/i.test(x.type+' '+x.display_name)?'hospital':'clinic',
+      source:'OpenStreetMap',verified:false,lat:+x.lat,lon:+x.lon,display:x.display_name||'',
+      dist:haversineKm(lat,lon,+x.lat,+x.lon)
+    }));
 }
-function renderNearPlaces(list){
+
+async function verifiedProvidersForProvinceV812(province,lat,lon){
+  const p=normalizeProvinceV812(province);
+  let candidates=VERIFIED_TTM_CATALOG.filter(x=>normalizeProvinceV812(x.province)===p);
+
+  // Bangkok/Nonthaburi border is close enough that both should be considered.
+  if(p==='กรุงเทพมหานคร')candidates=candidates.concat(VERIFIED_TTM_CATALOG.filter(x=>x.province==='นนทบุรี'));
+  if(p==='นนทบุรี')candidates=candidates.concat(VERIFIED_TTM_CATALOG.filter(x=>x.province==='กรุงเทพมหานคร'));
+
+  const resolved=[];
+  // Sequential geocoding avoids hammering Nominatim and is more reliable on mobile.
+  for(const item of candidates.slice(0,14)){
+    const g=await geocodeExactV812(item);
+    if(g&&Number.isFinite(g.lat)&&Number.isFinite(g.lon)){
+      g.verified=true;
+      g.dist=haversineKm(lat,lon,g.lat,g.lon);
+      resolved.push(g);
+    }
+    await new Promise(r=>setTimeout(r,120));
+  }
+  return resolved.sort((a,b)=>a.dist-b.dist);
+}
+
+function renderProvidersV812(list){
+  thaiLastProvidersV812=list;
+  const filtered=thaiProviderFilterV812==='all'?list:list.filter(x=>x.type===thaiProviderFilterV812 || (thaiProviderFilterV812==='ttm'&&x.verified));
   const box=document.getElementById('nearPlaces');
-  if(!list.length){
-    box.innerHTML='<div class="warn"><b>ยังไม่พบสถานบริการจากข้อมูลแผนที่รอบตำแหน่งนี้</b><br>ลองค้นหาใหม่ หรือใช้ปุ่มตรวจสอบรายชื่อกับ DTAM</div>';
+  const count=document.getElementById('nearCountV812');
+  if(count)count.textContent=filtered.length+' แห่ง';
+  if(!filtered.length){
+    box.innerHTML='<div class="warn"><b>ยังไม่พบสถานบริการในตัวกรองนี้</b><br>ลองเลือก “ทั้งหมด” หรือกดค้นหาใหม่</div>';
     return;
   }
-  box.innerHTML=list.map(p=>`
-    <div class="nearPlace">
+  box.innerHTML=filtered.slice(0,20).map(p=>`
+    <div class="nearPlace nearPlaceV812">
       <div class="nearPlaceIcon">${thaiHouseIcon().options.html}</div>
-      <div><div class="nearPlaceName">${escapeHtml(p.name)}</div><div class="nearPlaceMeta">${p.dist.toFixed(1)} กม. • ${escapeHtml(p.display)}</div></div>
-      <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}">นำทาง →</a>
+      <div>
+        <div class="nearPlaceName">${escapeHtml(p.name)}</div>
+        <div class="nearPlaceMeta">${p.dist.toFixed(1)} กม. • ${escapeHtml(p.province||p.display||'')}</div>
+        <span class="nearBadgeV812 ${p.verified?'verified':'map'}">${p.verified?'✓ รายชื่อจาก '+escapeHtml(p.source):'📍 พบจากแผนที่สาธารณะ'}</span>
+        <div class="nearPlaceSourceV812">${escapeHtml(p.display||'')}</div>
+      </div>
+      <div class="nearPlaceActionsV812">
+        <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}">นำทาง →</a>
+        <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name+' '+(p.province||''))}">ตรวจสอบสถานที่</a>
+      </div>
     </div>`).join('');
 }
+
+window.setProviderFilterV812=(f,b)=>{
+  thaiProviderFilterV812=f;
+  document.querySelectorAll('.providerFiltersV812 button').forEach(x=>x.classList.toggle('active',x===b));
+  renderProvidersV812(thaiLastProvidersV812);
+};
+
 async function searchAround(lat,lon){
   const map=ensureThaiNearMap();
   thaiNearLayer.clearLayers();
   if(thaiUserMarker)map.removeLayer(thaiUserMarker);
   thaiUserMarker=L.marker([lat,lon],{icon:L.divIcon({className:'',html:'<div class="mePin"></div>',iconSize:[18,18],iconAnchor:[9,9]})}).addTo(map).bindPopup('ตำแหน่งของฉัน');
-  map.setView([lat,lon],13);
+  map.setView([lat,lon],12);
+
   const st=document.getElementById('nearStatus');
-  st.innerHTML='กำลังค้นหาสถานบริการแพทย์แผนไทยใกล้คุณ…';
-  const places=await nominatimSearch(lat,lon);
-  places.forEach(p=>L.marker([p.lat,p.lon],{icon:thaiHouseIcon()}).addTo(thaiNearLayer)
-    .bindPopup(`<b>${escapeHtml(p.name)}</b><br>${p.dist.toFixed(1)} กม.<br><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}">เปิดเส้นทาง</a>`));
-  renderNearPlaces(places);
-  st.innerHTML=places.length
-    ? `พบสถานบริการจากข้อมูลแผนที่ <b>${places.length}</b> แห่งรอบตำแหน่งของคุณ • เรียงตามระยะทาง`
-    : 'ยังไม่พบสถานบริการจากข้อมูลแผนที่ในรัศมีที่ค้นหา กรุณาตรวจสอบรายชื่อกับ DTAM';
-  if(places.length){
-    const group=L.featureGroup([thaiUserMarker,...thaiNearLayer.getLayers()]);
-    map.fitBounds(group.getBounds().pad(.18),{maxZoom:14});
+  st.innerHTML='กำลังตรวจจังหวัดและค้นหารายชื่อสถานบริการจาก DTAM…';
+
+  const province=normalizeProvinceV812(await reverseProvinceV812(lat,lon));
+  const pe=document.getElementById('nearProvinceV812');
+  if(pe)pe.textContent=province?'📌 พื้นที่ที่ตรวจพบ: '+province:'📌 ไม่สามารถอ่านชื่อจังหวัดจากแผนที่ได้';
+
+  let verified=await verifiedProvidersForProvinceV812(province,lat,lon);
+  st.innerHTML=`พบรายชื่อทางการในพื้นที่ <b>${verified.length}</b> แห่ง • กำลังตรวจสถานบริการเพิ่มเติมจากแผนที่…`;
+
+  let fallback=await fallbackOsmSearchV812(lat,lon);
+
+  // Deduplicate likely duplicates by proximity/name.
+  const all=[...verified];
+  for(const p of fallback){
+    const dup=all.some(v=>haversineKm(v.lat,v.lon,p.lat,p.lon)<.25 || v.name===p.name);
+    if(!dup)all.push(p);
+  }
+  all.sort((a,b)=>a.dist-b.dist);
+
+  all.slice(0,30).forEach(p=>{
+    L.marker([p.lat,p.lon],{icon:thaiHouseIcon()}).addTo(thaiNearLayer)
+      .bindPopup(`<b>${escapeHtml(p.name)}</b><br>${p.dist.toFixed(1)} กม.<br>${p.verified?'✓ DTAM/official list':'Map result'}<br><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}">เปิดเส้นทาง</a>`);
+  });
+
+  renderProvidersV812(all);
+  st.innerHTML=`พบ <b>${all.length}</b> แห่ง • รายชื่อจาก DTAM/หน่วยงานทางการ <b>${verified.length}</b> แห่ง • เรียงตามระยะทางจาก GPS`;
+
+  if(all.length){
+    const layers=[thaiUserMarker,...thaiNearLayer.getLayers()];
+    const group=L.featureGroup(layers);
+    map.fitBounds(group.getBounds().pad(.15),{maxZoom:13});
   }
 }
+
 window.findThaiMedicineNearMe=()=>{
   ensureThaiNearMap();
   const st=document.getElementById('nearStatus');
-  if(!navigator.geolocation){st.textContent='อุปกรณ์นี้ไม่รองรับการระบุตำแหน่ง';return;}
-  st.textContent='กำลังขอสิทธิ์ตำแหน่ง…';
+  if(!navigator.geolocation){st.textContent='อุปกรณ์นี้ไม่รองรับการระบุตำแหน่ง';return}
+  st.textContent='กำลังขอสิทธิ์ตำแหน่ง GPS…';
   navigator.geolocation.getCurrentPosition(
-    p=>{thaiLastPos={lat:p.coords.latitude,lon:p.coords.longitude};searchAround(thaiLastPos.lat,thaiLastPos.lon);},
-    e=>{st.innerHTML='ไม่สามารถอ่านตำแหน่งได้ กรุณาอนุญาต Location สำหรับเว็บไซต์ แล้วลองอีกครั้ง';},
-    {enableHighAccuracy:true,timeout:12000,maximumAge:120000}
+    p=>{thaiLastPos={lat:p.coords.latitude,lon:p.coords.longitude};searchAround(thaiLastPos.lat,thaiLastPos.lon)},
+    e=>{st.innerHTML='ไม่สามารถอ่านตำแหน่งได้ • กรุณาอนุญาต Location สำหรับเว็บไซต์ แล้วลองอีกครั้ง'},
+    {enableHighAccuracy:true,timeout:15000,maximumAge:60000}
   );
 };
-window.refreshThaiMedicineSearch=()=>{
-  if(thaiLastPos)searchAround(thaiLastPos.lat,thaiLastPos.lon);
-  else findThaiMedicineNearMe();
-};
+window.refreshThaiMedicineSearch=()=>{if(thaiLastPos)searchAround(thaiLastPos.lat,thaiLastPos.lon);else findThaiMedicineNearMe()};
 </script>
 
 
@@ -2383,7 +2518,7 @@ window.copyAppLink=async()=>{
 
 
 <script>
-/* v8.11.3 final camera overrides — keep one path only */
+/* v8.12.0 final camera overrides — keep one path only */
 window.retryCameraFromHelp=function(){
   if(typeof closeCameraHelp==='function')closeCameraHelp();
   window.startCameraV8102();
@@ -2393,7 +2528,7 @@ window.startAI=function(){return window.startCameraV8102();};
 
 
 <script>
-/* ===== v8.11.3 Direct AI Joint ROM navigation ===== */
+/* ===== v8.12.0 Direct AI Joint ROM navigation ===== */
 window.openJointROMV8111=function(){
   if(window.fullRom){
     const first=document.querySelector('#romJointTabs button[data-joint="neck"]');
@@ -2408,7 +2543,7 @@ window.openJointROMV8111=function(){
 
 
 <script>
-/* ===== v8.11.3 ROM live camera bridge ===== */
+/* ===== v8.12.0 ROM live camera bridge ===== */
 window.romCameraLoopV8112Active=false;
 
 window.attachRomCameraV8112=async function(){
@@ -2446,7 +2581,7 @@ window.attachRomCameraV8112=async function(){
 };
 
 
-/* ===== v8.11.3 Robust ROM skeleton renderer =====
+/* ===== v8.12.0 Robust ROM skeleton renderer =====
    Draws lines manually so ROM screen does not depend on DrawingUtils.drawConnectors().
 */
 window.ROM_POSE_EDGES_V8113=[
