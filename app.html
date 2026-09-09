@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="theme-color" content="#062e24">
 <title>ThaiPain AI</title>
-<link rel="manifest" href="manifest.webmanifest?v=8.10.2-camera-recovery-pro">
+<link rel="manifest" href="manifest.webmanifest?v=8.11.0-fullbody-rom">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ThaiPain AI">
@@ -90,7 +90,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 
 .viewTabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0}.viewTab{border:1px solid #d9cfbd;background:#f4efe5;color:var(--deep);border-radius:12px;padding:8px 4px;font:inherit;font-size:10px;font-weight:800}.viewTab.active{background:var(--deep);color:#fff;border-color:#cda84d;box-shadow:0 0 0 2px #e5c56f inset}.selectedAreas{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.areaTag{font-size:9px;padding:5px 7px;border-radius:99px;background:#fff;border:1px solid #d7c9b2;color:var(--deep);font-weight:700}.realHumanMap img{object-position:center top}.painHot{touch-action:manipulation}.mapHint{font-size:10px;color:#fff;background:#0008;padding:7px 9px;border-radius:10px;position:absolute;left:10px;top:10px;z-index:6}.clearPain{position:absolute;right:10px;top:10px;z-index:6;border:0;border-radius:10px;padding:7px 9px;background:#fffE;color:var(--deep);font-weight:800}
 
-/* v8.10.2: all human assets fit identically on mobile; right view is mirrored left profile */
+/* v8.11.0: all human assets fit identically on mobile; right view is mirrored left profile */
 .realHumanMap img, #humanViewImg{
   width:100% !important;
   height:100% !important;
@@ -100,7 +100,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{ transform:scaleX(-1) !important; }
 
 
-/* v8.10.2 — Full body, no crop + reliable touch targets */
+/* v8.11.0 — Full body, no crop + reliable touch targets */
 .realHumanMap{
   position:relative !important;
   width:100% !important;
@@ -153,7 +153,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 #humanViewImg.view-right{transform:scaleX(-1) !important;}
 
 
-/* v8.10.2 — Four balanced real-human panels, mobile safe */
+/* v8.11.0 — Four balanced real-human panels, mobile safe */
 .painMapCardV887{padding-top:18px}
 .clearAllPainV887{float:right;margin-top:-42px;border:1px solid #d8cdb9;background:#fffaf0;color:var(--deep);border-radius:12px;padding:8px 11px;font:inherit;font-size:10px;font-weight:800}
 .fourPainGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
@@ -176,7 +176,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.2 Clean 4-view Pain Map ===== */
+/* ===== v8.11.0 Clean 4-view Pain Map ===== */
 .painMapV888{padding-top:16px}
 .viewTabsV888{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:14px 0 10px}
 .viewTabV888{border:1px solid #d8ccb7;border-radius:13px;background:#f7f1e6;color:var(--deep);padding:10px 5px;font:inherit;font-weight:800}
@@ -202,7 +202,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.2 Single-view Pain Map on desktop + mobile ===== */
+/* ===== v8.11.0 Single-view Pain Map on desktop + mobile ===== */
 .painDeskGridV888{
   display:block !important;
 }
@@ -227,7 +227,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.2 Anatomically aligned Pain Areas ===== */
+/* ===== v8.11.0 Anatomically aligned Pain Areas ===== */
 .painZoneV888{
   width:30px !important;
   height:30px !important;
@@ -254,7 +254,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.2 Thai Traditional Medicine Near Me ===== */
+/* ===== v8.11.0 Thai Traditional Medicine Near Me ===== */
 .nearMapWrap{position:relative;border-radius:18px;overflow:hidden;border:1px solid #d8cbb3;background:#eef1ec}
 #thaiNearMap{height:420px;width:100%;background:#e7ece8}
 .nearToolbar{display:grid;grid-template-columns:1.25fr .75fr;gap:8px;margin:10px 0}
@@ -279,7 +279,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.2 QR App Entry ===== */
+/* ===== v8.11.0 QR App Entry ===== */
 .appQrHero{display:grid;grid-template-columns:minmax(150px,190px) 1fr;gap:18px;align-items:center;margin-top:14px;background:#f2eadb;border:1px solid #dccfb8;border-radius:18px;padding:16px}
 .appQrBox{width:100%;aspect-ratio:1/1;max-width:190px;margin:auto;background:#fff;border-radius:16px;padding:10px;display:grid;place-items:center}
 .staticAppQR{display:block;width:100%;height:100%;object-fit:contain}
@@ -289,7 +289,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 @media(max-width:720px){.appQrHero{grid-template-columns:1fr;text-align:center}.appQrBox{width:min(62vw,230px);max-width:230px}.qrCopyBtn{width:100%}}
 
 
-/* ===== v8.10.2 Responsive Clean 4-View Pain Map ===== */
+/* ===== v8.11.0 Responsive Clean 4-View Pain Map ===== */
 .painMapV896{padding-top:16px}
 .viewTabsV896{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 12px}
 .viewTabV896{border:1px solid #d8ccb7;border-radius:13px;background:#f8f2e7;color:var(--deep);padding:11px 8px;font:inherit;font-weight:800}
@@ -356,7 +356,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.2 Balanced Pain Area ===== */
+/* ===== v8.11.0 Balanced Pain Area ===== */
 /* Desktop 4-view: small visible rings, large invisible touch target */
 .painZoneV896{
   width:20px !important;
@@ -406,7 +406,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.2 HARD FIX: Mobile = one view only ===== */
+/* ===== v8.11.0 HARD FIX: Mobile = one view only ===== */
 @media (max-width:900px), (hover:none) and (pointer:coarse){
   .viewTabsV896{
     display:grid !important;
@@ -454,7 +454,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.2 Mobile Full-Screen UX ===== */
+/* ===== v8.11.0 Mobile Full-Screen UX ===== */
 @media (max-width:900px), (hover:none) and (pointer:coarse){
   html,body{
     width:100%;
@@ -533,7 +533,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.2 Pain Area aligned to clean body assets ===== */
+/* ===== v8.11.0 Pain Area aligned to clean body assets ===== */
 @media (min-width:901px) and (hover:hover){
   .painZoneV896{
     width:18px !important;
@@ -551,7 +551,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.2 Camera recovery UI ===== */
+/* ===== v8.11.0 Camera recovery UI ===== */
 .cameraRecovery{
   margin-top:9px;padding:10px 11px;border-radius:13px;
   background:#fff5de;border:1px solid #e3c98e;
@@ -568,7 +568,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 .cameraDiag{margin-top:7px;padding:8px 10px;background:#eef3ef;border-radius:10px;font-size:9px;color:#516259;white-space:pre-wrap}
 
 
-/* v8.10.2 visible circles are small; touch targets remain large */
+/* v8.11.0 visible circles are small; touch targets remain large */
 @media(min-width:901px) and (hover:hover){
   .painZoneV896{width:16px!important;height:16px!important;border-width:1.5px!important}
   .painZoneV896::before{inset:-12px!important}
@@ -579,7 +579,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 }
 
 
-/* ===== v8.10.2 Camera Recovery Pro ===== */
+/* ===== v8.11.0 Camera Recovery Pro ===== */
 .cameraV8102Tools{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px}
 .cameraV8102Tools .btn{margin:0;text-align:center}
 .cameraV8102Error{display:none;margin-top:8px;padding:10px;border-radius:12px;background:#fff0e7;border:1px solid #e7b39d;color:#723d2a;font-size:10px;line-height:1.55;white-space:pre-wrap}
@@ -587,6 +587,164 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 @media(max-width:720px){
   .cameraV8102Tools{grid-template-columns:1fr}
   .cameraV8102Tools .btn{min-height:48px}
+}
+
+
+/* ===== v8.11.0 Mobile No-Scroll AI Body Scan ===== */
+.scanTopV8103{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.scanCloseV8103{
+  width:38px;height:38px;border:0;border-radius:50%;background:#e9e1d3;color:#083b2f;
+  font-size:20px;font-weight:900;flex:0 0 auto
+}
+.scanOverlayControlsV8103{display:none}
+.scanMiniRowV8103{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.scanMiniBtnV8103{
+  border:0;border-radius:12px;padding:10px 8px;font:inherit;font-size:12px;font-weight:900;
+  background:#ffffffdd;color:#073d30;backdrop-filter:blur(8px)
+}
+.scanMiniBtnV8103.goldMini{background:#f2cf69;color:#173026}
+.scanStatusV8103{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px}
+.scanStatusV8103 .conf,.scanStatusV8103 .camStatus{margin:0}
+.scanHelpV8103{margin-top:8px;border:1px solid #ddd0b9;border-radius:13px;padding:8px 10px;background:#f3ecde}
+.scanHelpV8103 summary{cursor:pointer;font-size:11px;font-weight:800;color:#214b3f}
+
+@media(max-width:900px),(hover:none) and (pointer:coarse){
+  body.scanModeV8103{
+    overflow:hidden !important;
+    height:100dvh !important;
+  }
+  body.scanModeV8103 .hero{
+    display:none !important;
+  }
+  body.scanModeV8103 .app{
+    min-height:100dvh !important;
+    height:100dvh !important;
+    padding:0 !important;
+    overflow:hidden !important;
+  }
+  body.scanModeV8103 #s3.scanScreenV8103.active{
+    position:fixed !important;
+    inset:0 !important;
+    z-index:9999 !important;
+    display:block !important;
+    padding:0 !important;
+    background:#071a15 !important;
+    overflow:hidden !important;
+  }
+  .scanScreenV8103 .scanCardV8103{
+    width:100vw !important;
+    height:100dvh !important;
+    min-height:100dvh !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:#071a15 !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
+  }
+  .scanScreenV8103 .scanCardV8103:before{display:none !important}
+  .scanTopV8103{
+    position:absolute !important;
+    z-index:30 !important;
+    top:max(8px,env(safe-area-inset-top)) !important;
+    left:10px !important;
+    right:10px !important;
+    color:white !important;
+    pointer-events:none;
+  }
+  .scanTopV8103 .titleRow,.scanTopV8103 .scanCloseV8103{pointer-events:auto}
+  .scanTopV8103 h2{color:white !important;font-size:18px !important;margin:0 !important}
+  .scanTopV8103 .sub{color:#dce8e3 !important;font-size:10px !important;margin:0 !important}
+  .scanTopV8103 .num{width:28px !important;height:28px !important;font-size:12px !important}
+  .scanCloseV8103{background:#0009 !important;color:white !important;border:1px solid #ffffff55 !important}
+
+  .scanCameraV8103{
+    position:absolute !important;
+    inset:0 !important;
+    width:100vw !important;
+    height:100dvh !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    border:0 !important;
+    border-radius:0 !important;
+    margin:0 !important;
+    background:#071a15 !important;
+  }
+  .scanCameraV8103 video,.scanCameraV8103 canvas{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+  }
+  .scanCameraV8103 .camTag{
+    top:max(58px,calc(env(safe-area-inset-top) + 52px)) !important;
+    left:10px !important;
+  }
+  .scanCameraV8103 .camStat{
+    top:max(58px,calc(env(safe-area-inset-top) + 52px)) !important;
+    right:10px !important;
+  }
+  .scanCameraV8103 .romLiveBadge{
+    top:max(96px,calc(env(safe-area-inset-top) + 90px)) !important;
+  }
+  .scanCameraV8103 .camGuide{
+    bottom:154px !important;
+    left:12px !important;
+    right:12px !important;
+    font-size:11px !important;
+  }
+
+  .scanOverlayControlsV8103{
+    display:block !important;
+    position:absolute !important;
+    z-index:40 !important;
+    left:10px !important;
+    right:10px !important;
+    bottom:max(12px,env(safe-area-inset-bottom)) !important;
+    padding:10px !important;
+    border-radius:18px !important;
+    background:linear-gradient(180deg,#071a1500,#071a15d9 22%,#071a15f2) !important;
+  }
+  .scanMainBtnV8103{
+    min-height:54px !important;
+    margin:0 0 7px !important;
+    font-size:15px !important;
+    border:1px solid #ffffff28 !important;
+    box-shadow:0 8px 22px #0006 !important;
+  }
+  .scanStatusV8103,.scanHelpV8103{
+    display:none !important;
+  }
+}
+
+@media(min-width:901px) and (hover:hover){
+  .scanOverlayControlsV8103{display:none !important}
+}
+
+
+/* ===== v8.11 Full Body AI ROM ===== */
+.romNoticeV811{margin:10px 0;padding:10px 12px;border-radius:13px;background:#fff4dc;border:1px solid #ead09b;color:#5b5548;font-size:10px;line-height:1.55}
+.romJointTabsV811{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:10px 0}
+.romJointTabsV811 button{border:1px solid #d8cfbf;background:#fff;border-radius:12px;padding:9px 5px;font:inherit;font-size:10px;font-weight:800;color:#395149}
+.romJointTabsV811 button.active{background:#0a4b3a;color:#fff;border-color:#0a4b3a}
+.romConfigV811{display:grid;grid-template-columns:1.5fr 1fr;gap:8px}
+.romSmallLabel{font-size:8px;font-weight:900;letter-spacing:.1em;color:#75827d;margin:0 0 4px}
+.romConfigV811 select{width:100%;min-height:43px;border-radius:12px;border:1px solid #d7cdbd;background:#fff;padding:0 10px;color:#173d32;font-weight:800}
+.romInstructionV811{margin:9px 0;padding:11px;border-radius:13px;background:#eef4ef;color:#35584c;font-size:10px;line-height:1.55;min-height:58px}
+.romLiveGridV811{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.romQualityV811{display:flex;justify-content:space-between;gap:8px;margin:8px 0;font-size:9px;color:#6d7d76}
+.romResultsV811{margin-top:10px;padding:10px;border-radius:14px;background:#f4eee2;border:1px solid #ded2bf}
+.romResultsHeadV811{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.romResultsHeadV811 button{border:0;background:transparent;color:#875c35;font:inherit;font-size:9px;font-weight:800}
+.romResultRowV811{display:grid;grid-template-columns:1.4fr .7fr .6fr;gap:6px;padding:7px 4px;border-top:1px solid #e3d9c9;font-size:9px;align-items:center}
+.romResultRowV811 b{color:#173d32}
+.romResultAngleV811{font-size:15px;font-weight:900;text-align:right;color:#0a4b3a}
+.romResultSideV811{text-align:center;color:#697a72}
+@media(max-width:700px){
+  .romJointTabsV811{grid-template-columns:repeat(3,1fr)}
+  .romJointTabsV811 button{min-height:42px;font-size:11px}
+  .romConfigV811{grid-template-columns:1fr 1fr}
+  .romCardV811{padding-bottom:20px}
 }
 
 </style>
@@ -702,41 +860,132 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
   <button class="btn gold" onclick="savePain();go(3)">เปิด AI Body Scan →</button>
 </div></section>
 
-<section id="s3" class="screen"><div class="card">
- <div class="titleRow"><div class="num">03</div><div><h2>AI Body Scan</h2><div class="sub">Real-time pose landmarks</div></div></div>
- <div class="camera"><video id="video" autoplay playsinline muted></video><canvas id="overlay"></canvas><div class="camTag">● LIVE POSE AI <span id="camFacingTag"></span></div><div id="aiStatus" class="camStat">Not started</div><div id="scanRomBadge" class="romLiveBadge"><div class="romLabel">LIVE ROM / HEAD-TURN PROXY</div><div id="scanRomLive" class="romValue">0°</div><div id="scanRomDir" class="romDir">ตรงกลาง</div></div><div class="camGuide">หันศีรษะซ้าย–ขวา • ค่ามุมจะแสดงแบบ Real-time</div></div>
- <div class="conf"><div class="confDot"></div><div><b>AI Data Quality:</b> <span id="confidenceUI">Ready</span><div class="sub" style="margin:0">ระบบจะแจ้งหากแสงน้อยหรือเห็นร่างกายไม่ครบ</div></div></div>
-<button class="btn deep" id="openCameraBtn" type="button" onclick="startCameraV8102()">📷 เปิดกล้องหลัง + AI Body Scan</button>
-<div id="mobileCameraHint" class="nearStatus" style="margin-top:8px">
-  บนมือถือระบบจะขอใช้ <b>กล้องหลัง</b> อัตโนมัติ • กรุณากด Allow/อนุญาต เมื่อเบราว์เซอร์ถามสิทธิ์กล้อง
-</div>
-<button class="btn soft" onclick="openCameraHelp()">🛠 แก้ปัญหากล้อง / Camera Permission</button>
-<div class="cameraV8102Tools">
-  <button type="button" class="btn soft" onclick="switchCameraV8102()">🔄 สลับกล้อง หน้า/หลัง</button>
-  <a class="btn soft" href="./camera-test.html?v=8.10.2" target="_blank" rel="noopener">🧪 ทดสอบกล้องแบบไม่ใช้ AI</a>
-</div>
-<div id="cameraV8102Error" class="cameraV8102Error"></div>
-
-<div id="camStatusBox" class="camStatus">📷 Camera status: <b id="camPermText">Checking…</b></div>
-<div id="cameraRecovery" class="cameraRecovery">
-  <b>กล้องยังเปิดไม่ได้</b><br>
-  หากเปิดจาก LINE / Facebook / Google app / QR preview ให้เปิดหน้าเว็บนี้ใน <b>Chrome โดยตรง</b>
-  แล้วอนุญาต Camera สำหรับ <b>narin6498.github.io</b>
-  <div class="row">
-    <button type="button" class="primary" onclick="startMobileCameraBridge()">📷 ลองเปิดกล้องอีกครั้ง</button>
-    <a id="openInChromeBtn" class="secondary" href="#">เปิดใน Chrome</a>
+<section id="s3" class="screen scanScreenV8103"><div class="card scanCardV8103">
+  <div class="scanTopV8103">
+    <div class="titleRow">
+      <div class="num">03</div>
+      <div><h2>AI Body Scan</h2><div class="sub">Real-time pose landmarks</div></div>
+    </div>
+    <button type="button" class="scanCloseV8103" onclick="go(2)" aria-label="กลับ">←</button>
   </div>
-  <div id="cameraDiag" class="cameraDiag"></div>
-</div>
- <button class="btn gold" onclick="go(4)">ไป ROM Test →</button>
+
+  <div class="camera scanCameraV8103">
+    <video id="video" autoplay playsinline muted></video>
+    <canvas id="overlay"></canvas>
+    <div class="camTag">● LIVE POSE AI <span id="camFacingTag"></span></div>
+    <div id="aiStatus" class="camStat">Not started</div>
+    <div id="scanRomBadge" class="romLiveBadge">
+      <div class="romLabel">LIVE ROM / HEAD-TURN PROXY</div>
+      <div id="scanRomLive" class="romValue">0°</div>
+      <div id="scanRomDir" class="romDir">ตรงกลาง</div>
+    </div>
+    <div class="camGuide">ยืนให้เห็นร่างกายชัด • หันศีรษะซ้าย–ขวา</div>
+
+    <div class="scanOverlayControlsV8103">
+      <button class="btn deep scanMainBtnV8103" id="openCameraBtn" type="button" onclick="startCameraV8102()">
+        📷 เปิดกล้องหลัง + AI Body Scan
+      </button>
+      <div class="scanMiniRowV8103">
+        <button type="button" class="scanMiniBtnV8103" onclick="switchCameraV8102()">🔄 สลับกล้อง</button>
+        <button type="button" class="scanMiniBtnV8103 goldMini" onclick="go(4)">Full Body ROM →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="scanStatusV8103">
+    <div class="conf">
+      <div class="confDot"></div>
+      <div><b>AI Data Quality:</b> <span id="confidenceUI">Ready</span></div>
+    </div>
+    <div id="camStatusBox" class="camStatus">📷 Camera: <b id="camPermText">Checking…</b></div>
+  </div>
+
+  <details class="scanHelpV8103">
+    <summary>กล้องเปิดไม่ได้ / เครื่องมือเพิ่มเติม</summary>
+    <div id="mobileCameraHint" class="nearStatus" style="margin-top:8px">
+      บนมือถือระบบจะขอใช้ <b>กล้องหลัง</b> อัตโนมัติ • กด Allow/อนุญาต เมื่อเบราว์เซอร์ถามสิทธิ์
+    </div>
+    <button class="btn soft" onclick="openCameraHelp()">🛠 Camera Permission</button>
+    <div class="cameraV8102Tools">
+      <button type="button" class="btn soft" onclick="switchCameraV8102()">🔄 สลับกล้อง หน้า/หลัง</button>
+      <a class="btn soft" href="./camera-test.html?v=8.10.3" target="_blank" rel="noopener">🧪 ทดสอบกล้องแบบไม่ใช้ AI</a>
+    </div>
+    <div id="cameraV8102Error" class="cameraV8102Error"></div>
+    <div id="cameraRecovery" class="cameraRecovery">
+      <b>กล้องยังเปิดไม่ได้</b><br>
+      หากเปิดจาก LINE / Facebook / Google app / QR preview ให้เปิดหน้าเว็บนี้ใน <b>Chrome โดยตรง</b>
+      <div class="row">
+        <button type="button" class="primary" onclick="startCameraV8102()">📷 ลองเปิดกล้องอีกครั้ง</button>
+        <a id="openInChromeBtn" class="secondary" href="#">เปิดใน Chrome</a>
+      </div>
+      <div id="cameraDiag" class="cameraDiag"></div>
+    </div>
+  </details>
 </div></section>
 
-<section id="s4" class="screen"><div class="card">
- <div class="titleRow"><div class="num">04</div><div><h2>ROM Test</h2><div class="sub">Camera-estimated head-turn proxy</div></div></div>
- <div class="grid2"><div class="metric dark"><div class="label">LEFT MAX</div><div id="leftMax" class="v">0°</div></div><div class="metric dark"><div class="label">RIGHT MAX</div><div id="rightMax" class="v">0°</div></div></div>
- <div class="metric" style="margin-top:8px"><div class="label">LIVE INDEX</div><div id="liveYaw" class="v">0°</div></div>
- <button class="btn gold" onclick="measureBefore()">จับค่าสูงสุด 8 วินาที</button>
- <button class="btn deep" onclick="finishBefore()">บันทึกผล →</button>
+<section id="s4" class="screen"><div class="card romCardV811">
+  <div class="titleRow">
+    <div class="num">04</div>
+    <div><h2>AI Joint ROM Assessment</h2><div class="sub">Camera-estimated ROM / ROM proxy • Full Body</div></div>
+  </div>
+
+  <div class="romNoticeV811">
+    เลือกข้อต่อและการเคลื่อนไหวก่อนวัด • ค่าจากกล้องเป็น <b>camera-estimated ROM</b> และควรทำ validation เทียบเครื่องมือมาตรฐานก่อนใช้ทางคลินิก
+  </div>
+
+  <div class="romJointTabsV811" id="romJointTabs">
+    <button type="button" data-joint="neck" class="active" onclick="selectRomJoint('neck',this)">คอ</button>
+    <button type="button" data-joint="shoulder" onclick="selectRomJoint('shoulder',this)">ไหล่</button>
+    <button type="button" data-joint="elbow" onclick="selectRomJoint('elbow',this)">ศอก</button>
+    <button type="button" data-joint="hip" onclick="selectRomJoint('hip',this)">สะโพก</button>
+    <button type="button" data-joint="knee" onclick="selectRomJoint('knee',this)">เข่า</button>
+    <button type="button" data-joint="ankle" onclick="selectRomJoint('ankle',this)">ข้อเท้า</button>
+  </div>
+
+  <div class="romConfigV811">
+    <div>
+      <div class="romSmallLabel">MOVEMENT</div>
+      <select id="romMovementSelect" onchange="setRomMovement(this.value)"></select>
+    </div>
+    <div>
+      <div class="romSmallLabel">SIDE</div>
+      <select id="romSideSelect" onchange="setRomSide(this.value)">
+        <option value="left">ซ้าย</option>
+        <option value="right">ขวา</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="romInstruction" class="romInstructionV811"></div>
+
+  <div class="romLiveGridV811">
+    <div class="metric dark">
+      <div class="label">LIVE ANGLE</div>
+      <div id="romLiveAngle" class="v">0°</div>
+    </div>
+    <div class="metric dark">
+      <div class="label">MAX ROM</div>
+      <div id="romMaxAngle" class="v">0°</div>
+    </div>
+  </div>
+
+  <div class="romQualityV811">
+    <span id="romPoseQuality">รอ AI Pose…</span>
+    <span id="romTimer">พร้อมวัด</span>
+  </div>
+
+  <button id="romMeasureBtn" class="btn gold" onclick="measureSelectedROM()">▶ วัด ROM 8 วินาที</button>
+  <button class="btn soft" onclick="saveSelectedROM()">＋ บันทึกค่านี้</button>
+
+  <div class="romResultsV811">
+    <div class="romResultsHeadV811">
+      <b>ผล ROM ที่บันทึก</b>
+      <button type="button" onclick="clearRomResults()">ล้างผล</button>
+    </div>
+    <div id="romResultsList" class="romResultsListV811"><div class="sub">ยังไม่มีผลการวัด</div></div>
+  </div>
+
+  <button class="btn deep" onclick="finishFullBodyROM()">บันทึก ROM Assessment →</button>
 </div></section>
 
 <section id="s5" class="screen"><div class="card">
@@ -857,7 +1106,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th,td{padding:7px;borde
 <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 
 <script>
-/* ===== v8.10.2 Permission-first mobile camera bridge ===== */
+/* ===== v8.11.0 Permission-first mobile camera bridge ===== */
 window.__cameraBridgeStream = null;
 
 window.isThaiPainMobile = function(){
@@ -1057,7 +1306,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 
 <script>
-/* ===== ThaiPainAI v8.10.2 Camera Manager: independent from MediaPipe ===== */
+/* ===== ThaiPainAI v8.11.0 Camera Manager: independent from MediaPipe ===== */
 window.tpCamera = {
   stream:null,
   facing:'environment',
@@ -1285,7 +1534,24 @@ progress.innerHTML=Array.from({length:11},(_,i)=>`<div class="prog"></div>`).joi
 
 window.loginAs=(r)=>{state.role=r;roleBadge.textContent=r==='patient'?'Patient':'Practitioner';go(1)};
 function makeQR(){}
-window.go=(n)=>{document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));const id=typeof n==='number'?'s'+n:n;document.getElementById(id).classList.add('active');document.querySelectorAll('.prog').forEach((x,i)=>x.classList.toggle('on',typeof n==='number'&&i<n));window.scrollTo({top:0,behavior:'smooth'})};
+window.go=(n)=>{
+  document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
+  const id=typeof n==='number'?'s'+n:n;
+  const target=document.getElementById(id);
+  if(target)target.classList.add('active');
+
+  document.body.classList.toggle('scanModeV8103', id==='s3');
+
+  document.querySelectorAll('.prog').forEach((x,i)=>
+    x.classList.toggle('on',typeof n==='number'&&i<n)
+  );
+
+  if(id==='s3'){
+    window.scrollTo(0,0);
+  }else{
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+};
 
 
 
@@ -1452,12 +1718,231 @@ function postureMetric(lm){
  const shoulderSlope=Math.abs(ls.y-rs.y);const hipSlope=Math.abs(lh.y-rh.y);const center=Math.abs(((ls.x+rs.x)/2)-((lh.x+rh.x)/2));
  const penalty=Math.min(45,(shoulderSlope*220)+(hipSlope*150)+(center*100));return Math.round(Math.max(0,100-penalty));
 }
+
+/* ===== v8.11 Full Body AI ROM Engine ===== */
+window.fullRom={
+  joint:'neck',
+  movement:'rotation',
+  side:'left',
+  measuring:false,
+  max:0,
+  last:0,
+  lastLandmarks:null,
+  results:[],
+  startedAt:0
+};
+
+const ROM_JOINTS={
+  neck:{
+    label:'คอ',
+    movements:[
+      {id:'rotation',label:'Rotation / หันศีรษะ',instruction:'หันหน้าเข้ากล้อง ให้ไหล่อยู่นิ่ง แล้วหันศีรษะไปด้านที่เลือกช้า ๆ จนสุดช่วงที่สบาย'}
+    ]
+  },
+  shoulder:{
+    label:'ไหล่',
+    movements:[
+      {id:'flexion',label:'Flexion / ยกแขนไปด้านหน้า',instruction:'ยืนด้านข้างกล้อง ลำตัวตรง เหยียดศอก แล้วค่อย ๆ ยกแขนไปด้านหน้าจนสุดช่วงที่สบาย'},
+      {id:'abduction',label:'Abduction / กางแขนด้านข้าง',instruction:'หันหน้าเข้ากล้อง ลำตัวตรง เหยียดศอก แล้วกางแขนด้านข้างขึ้นจนสุดช่วงที่สบาย'}
+    ]
+  },
+  elbow:{
+    label:'ศอก',
+    movements:[
+      {id:'flexion',label:'Flexion / งอศอก',instruction:'หันด้านข้างเข้ากล้อง ให้ต้นแขนอยู่นิ่ง แล้วงอศอกเข้าหาต้นแขนจนสุดช่วงที่สบาย'}
+    ]
+  },
+  hip:{
+    label:'สะโพก',
+    movements:[
+      {id:'flexion',label:'Flexion / งอสะโพก',instruction:'ยืนด้านข้างกล้อง ลำตัวตรง ยกต้นขาไปด้านหน้าโดยไม่เอนลำตัวมากเกินไป'}
+    ]
+  },
+  knee:{
+    label:'เข่า',
+    movements:[
+      {id:'flexion',label:'Flexion / งอเข่า',instruction:'ยืนด้านข้างกล้อง จับพยุงได้ถ้าจำเป็น แล้วงอเข่าให้ส้นเท้าเคลื่อนเข้าหาด้านหลัง'}
+    ]
+  },
+  ankle:{
+    label:'ข้อเท้า',
+    movements:[
+      {id:'dorsiflexion',label:'Dorsiflexion / กระดกข้อเท้าขึ้น',instruction:'หันด้านข้างเข้ากล้อง ให้เข่าและข้อเท้าเห็นชัด กระดกปลายเท้าขึ้นช้า ๆ ระบบแสดง ankle-angle proxy'},
+      {id:'plantarflexion',label:'Plantarflexion / กดปลายเท้าลง',instruction:'หันด้านข้างเข้ากล้อง ให้เข่าและข้อเท้าเห็นชัด เหยียดปลายเท้าลงช้า ๆ ระบบแสดง ankle-angle proxy'}
+    ]
+  }
+};
+
+function ptOK(p){return !!p && Number.isFinite(p.x) && Number.isFinite(p.y)}
+function angle3(a,b,c){
+  if(!ptOK(a)||!ptOK(b)||!ptOK(c))return null;
+  const ab={x:a.x-b.x,y:a.y-b.y}, cb={x:c.x-b.x,y:c.y-b.y};
+  const den=Math.hypot(ab.x,ab.y)*Math.hypot(cb.x,cb.y);
+  if(den<1e-6)return null;
+  const cos=Math.max(-1,Math.min(1,(ab.x*cb.x+ab.y*cb.y)/den));
+  return Math.acos(cos)*180/Math.PI;
+}
+function lmSide(side,leftIndex,rightIndex,lm){
+  return lm[side==='left'?leftIndex:rightIndex];
+}
+function romValueFromLandmarks(lm){
+  const joint=fullRom.joint,mv=fullRom.movement,side=fullRom.side;
+  if(!lm)return null;
+
+  if(joint==='neck' && mv==='rotation'){
+    const y=yaw(lm);
+    if(side==='left')return y<0?Math.abs(y):0;
+    return y>0?y:0;
+  }
+
+  if(joint==='shoulder'){
+    const shoulder=lmSide(side,11,12,lm);
+    const elbow=lmSide(side,13,14,lm);
+    const hip=lmSide(side,23,24,lm);
+    const a=angle3(hip,shoulder,elbow);
+    return a==null?null:Math.max(0,Math.min(180,a));
+  }
+
+  if(joint==='elbow'){
+    const shoulder=lmSide(side,11,12,lm);
+    const elbow=lmSide(side,13,14,lm);
+    const wrist=lmSide(side,15,16,lm);
+    const a=angle3(shoulder,elbow,wrist);
+    return a==null?null:Math.max(0,Math.min(180,180-a));
+  }
+
+  if(joint==='hip'){
+    const shoulder=lmSide(side,11,12,lm);
+    const hip=lmSide(side,23,24,lm);
+    const knee=lmSide(side,25,26,lm);
+    const a=angle3(shoulder,hip,knee);
+    return a==null?null:Math.max(0,Math.min(180,180-a));
+  }
+
+  if(joint==='knee'){
+    const hip=lmSide(side,23,24,lm);
+    const knee=lmSide(side,25,26,lm);
+    const ankle=lmSide(side,27,28,lm);
+    const a=angle3(hip,knee,ankle);
+    return a==null?null:Math.max(0,Math.min(180,180-a));
+  }
+
+  if(joint==='ankle'){
+    const knee=lmSide(side,25,26,lm);
+    const ankle=lmSide(side,27,28,lm);
+    const foot=lmSide(side,31,32,lm);
+    const a=angle3(knee,ankle,foot);
+    if(a==null)return null;
+    if(mv==='dorsiflexion')return Math.max(0,Math.min(70,90-a));
+    return Math.max(0,Math.min(80,a-90));
+  }
+  return null;
+}
+
+window.selectRomJoint=(joint,btn)=>{
+  fullRom.joint=joint;
+  document.querySelectorAll('#romJointTabs button').forEach(b=>b.classList.toggle('active',b.dataset.joint===joint));
+  const sel=document.getElementById('romMovementSelect');
+  const moves=ROM_JOINTS[joint].movements;
+  sel.innerHTML=moves.map(x=>`<option value="${x.id}">${x.label}</option>`).join('');
+  fullRom.movement=moves[0].id;
+  fullRom.max=0; fullRom.last=0;
+  romLiveAngle.textContent='0°'; romMaxAngle.textContent='0°';
+  updateRomInstruction();
+};
+window.setRomMovement=(v)=>{fullRom.movement=v;fullRom.max=0;fullRom.last=0;romLiveAngle.textContent='0°';romMaxAngle.textContent='0°';updateRomInstruction()};
+window.setRomSide=(v)=>{fullRom.side=v;fullRom.max=0;fullRom.last=0;romLiveAngle.textContent='0°';romMaxAngle.textContent='0°';updateRomInstruction()};
+function updateRomInstruction(){
+  const cfg=ROM_JOINTS[fullRom.joint];
+  const mv=cfg.movements.find(x=>x.id===fullRom.movement)||cfg.movements[0];
+  const side=fullRom.side==='left'?'ซ้าย':'ขวา';
+  const note=fullRom.joint==='ankle'?' • ข้อเท้าเป็น angle proxy จาก landmark เข่า–ข้อเท้า–ปลายเท้า':'';
+  romInstruction.innerHTML=`<b>${cfg.label} • ${mv.label} • ด้าน${side}</b><br>${mv.instruction}${note}`;
+}
+window.updateFullRomFromPose=(lm)=>{
+  fullRom.lastLandmarks=lm;
+  const val=romValueFromLandmarks(lm);
+  if(val==null || !Number.isFinite(val)){
+    if(window.romPoseQuality)romPoseQuality.textContent='Landmark ไม่ครบ';
+    return;
+  }
+  fullRom.last=val;
+  if(window.romLiveAngle)romLiveAngle.textContent=val.toFixed(0)+'°';
+  if(window.romPoseQuality)romPoseQuality.textContent='Pose detected ✓';
+  if(fullRom.measuring){
+    fullRom.max=Math.max(fullRom.max,val);
+    if(window.romMaxAngle)romMaxAngle.textContent=fullRom.max.toFixed(0)+'°';
+    const left=Math.max(0,8-(Date.now()-fullRom.startedAt)/1000);
+    if(window.romTimer)romTimer.textContent='กำลังวัด '+left.toFixed(1)+' s';
+  }
+};
+window.measureSelectedROM=()=>{
+  if(!ai.stream){alert('กรุณาเปิดกล้องในหน้า AI Body Scan ก่อน');go(3);return}
+  fullRom.max=0;fullRom.measuring=true;fullRom.startedAt=Date.now();
+  romMaxAngle.textContent='0°';
+  romTimer.textContent='กำลังวัด 8.0 s';
+  const btn=document.getElementById('romMeasureBtn');
+  if(btn){btn.disabled=true;btn.textContent='● กำลังวัด…'}
+  setTimeout(()=>{
+    fullRom.measuring=false;
+    if(btn){btn.disabled=false;btn.textContent='▶ วัด ROM 8 วินาที'}
+    romTimer.textContent='วัดเสร็จแล้ว';
+    if(fullRom.max<=0)alert('ยังจับค่ามุมไม่ได้ กรุณาจัดกล้องให้เห็น landmark ที่เกี่ยวข้องครบ');
+  },8000);
+};
+window.saveSelectedROM=()=>{
+  const val=Math.round(fullRom.max||fullRom.last||0);
+  if(val<=0){alert('ยังไม่มีค่า ROM กรุณาวัดก่อน');return}
+  const cfg=ROM_JOINTS[fullRom.joint];
+  const mv=cfg.movements.find(x=>x.id===fullRom.movement)||cfg.movements[0];
+  const item={
+    joint:fullRom.joint,jointLabel:cfg.label,
+    movement:fullRom.movement,movementLabel:mv.label,
+    side:fullRom.side,value:val,
+    phase:'before',timestamp:Date.now()
+  };
+  const ix=fullRom.results.findIndex(x=>x.joint===item.joint&&x.movement===item.movement&&x.side===item.side&&x.phase==='before');
+  if(ix>=0)fullRom.results[ix]=item; else fullRom.results.push(item);
+  renderRomResults();
+};
+window.clearRomResults=()=>{fullRom.results=[];renderRomResults()};
+function renderRomResults(){
+  const el=document.getElementById('romResultsList');if(!el)return;
+  if(!fullRom.results.length){el.innerHTML='<div class="sub">ยังไม่มีผลการวัด</div>';return}
+  el.innerHTML=fullRom.results.map(x=>`<div class="romResultRowV811">
+    <div><b>${x.jointLabel}</b><br>${x.movementLabel}</div>
+    <div class="romResultSideV811">${x.side==='left'?'ซ้าย':'ขวา'}</div>
+    <div class="romResultAngleV811">${x.value}°</div>
+  </div>`).join('');
+}
+window.finishFullBodyROM=()=>{
+  if(fullRom.results.length){
+    state.romResults=JSON.parse(JSON.stringify(fullRom.results));
+    const neckL=fullRom.results.find(x=>x.joint==='neck'&&x.side==='left');
+    const neckR=fullRom.results.find(x=>x.joint==='neck'&&x.side==='right');
+    if(neckL)state.left=neckL.value;
+    if(neckR)state.right=neckR.value;
+  }
+  state.posture=Math.round(ai.postureSamples.reduce((a,b)=>a+b,0)/Math.max(1,ai.postureSamples.length))||state.posture||78;
+  state.scoreBefore=calcScore(state.pain,state.func,state.left||35,state.right||35,state.posture);
+  resPain.textContent=state.pain+'/10';
+  resRom.textContent=(state.romResults?.length||0)+' tests';
+  postureScore.textContent=state.posture;
+  thaiScore.textContent=state.scoreBefore+' / 100';
+  evidenceUI.textContent='คำนวณจาก Pain, functional limitation, posture และ ROM assessment ที่บันทึกไว้ โดยค่า ROM เป็น camera-estimated proxy';
+  go(5);
+};
+document.addEventListener('DOMContentLoaded',()=>{
+  const first=document.querySelector('#romJointTabs button[data-joint="neck"]');
+  if(first)selectRomJoint('neck',first);
+});
+
 function loop(vv,cc,xx,phase){
  if(ai.landmarker&&vv.readyState>=2){fit(vv,cc);try{
   const r=ai.landmarker.detectForVideo(vv,performance.now());xx.clearRect(0,0,cc.width,cc.height);
   const stat=phase==='before'?aiStatus:aiStatusAfter;
   if(r.landmarks?.length){
-   const lm=r.landmarks[0],du=new DrawingUtils(xx);du.drawConnectors(lm,PoseLandmarker.POSE_CONNECTIONS,{color:'#55f0ad',lineWidth:4});du.drawLandmarks(lm,{color:'#f2ce72',radius:3});stat.textContent='Pose detected ✓';
+   const lm=r.landmarks[0],du=new DrawingUtils(xx); if(phase==='before'&&typeof window.updateFullRomFromPose==='function')window.updateFullRomFromPose(lm);du.drawConnectors(lm,PoseLandmarker.POSE_CONNECTIONS,{color:'#55f0ad',lineWidth:4});du.drawLandmarks(lm,{color:'#f2ce72',radius:3});stat.textContent='Pose detected ✓';
    const y=yaw(lm);const absY=Math.abs(y);const dir=absY<3?'ตรงกลาง':(y<0?'หันซ้าย':'หันขวา');if(phase==='before'){liveYaw.textContent=(y>=0?'+':'')+y.toFixed(0)+'°';if(window.scanRomLive)scanRomLive.textContent=absY.toFixed(0)+'°';if(window.scanRomDir)scanRomDir.textContent=dir;if(window.scanRomBadge)scanRomBadge.classList.toggle('measure',!!(ai.measuring&&ai.phase==='before'));ai.postureSamples.push(postureMetric(lm));if(ai.postureSamples.length>30)ai.postureSamples.shift();if(ai.measuring&&ai.phase==='before'){if(y<0)ai.leftMax=Math.max(ai.leftMax,absY);else ai.rightMax=Math.max(ai.rightMax,y);leftMax.textContent=ai.leftMax.toFixed(0)+'°';rightMax.textContent=ai.rightMax.toFixed(0)+'°'}}else{if(window.scanRomAfterLive)scanRomAfterLive.textContent=absY.toFixed(0)+'°';if(window.scanRomAfterDir)scanRomAfterDir.textContent=dir;if(window.scanRomAfterBadge)scanRomAfterBadge.classList.toggle('measure',!!(ai.measuring&&ai.phase==='after'));if(ai.measuring&&ai.phase==='after'){if(y<0)ai.leftAfterMax=Math.max(ai.leftAfterMax,absY);else ai.rightAfterMax=Math.max(ai.rightAfterMax,y);leftAfterMax.textContent=ai.leftAfterMax.toFixed(0)+'°';rightAfterMax.textContent=ai.rightAfterMax.toFixed(0)+'°'}}
   }else stat.textContent='No pose';
  }catch(e){}}
@@ -1520,7 +2005,7 @@ window.installPWA=async()=>{
   const isiOS=/iPad|iPhone|iPod/.test(ua);
   if(isiOS){const el=document.getElementById('iosInstall');if(el)el.style.display='block';}
   if('serviceWorker' in navigator){
-    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.10.2-camera-recovery-pro').catch(()=>{}));
+    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8.11.0-fullbody-rom').catch(()=>{}));
   }
 })();
 </script>
@@ -1787,7 +2272,7 @@ window.copyAppLink=async()=>{
 
 
 <script>
-/* v8.10.2 final camera overrides — keep one path only */
+/* v8.11.0 final camera overrides — keep one path only */
 window.retryCameraFromHelp=function(){
   if(typeof closeCameraHelp==='function')closeCameraHelp();
   window.startCameraV8102();
